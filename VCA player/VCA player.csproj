@@ -1,0 +1,216 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{ED5D7849-2F68-4484-BD42-DE0D2EDDAD22}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>VCA_player</RootNamespace>
+    <AssemblyName>VCA player</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>MainIcon.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Common.Logging, Version=1.2.0.0, Culture=neutral, PublicKeyToken=af08829b84f0328e">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\3rd-party\common-logging\Common.Logging.dll</HintPath>
+    </Reference>
+    <Reference Include="Common.Logging.Log4Net">
+      <HintPath>..\3rd-party\common-logging\Common.Logging.Log4Net.dll</HintPath>
+    </Reference>
+    <Reference Include="Common.Logging.NLog">
+      <HintPath>..\3rd-party\common-logging\Common.Logging.NLog.dll</HintPath>
+    </Reference>
+    <Reference Include="log4net">
+      <HintPath>..\3rd-party\common-logging\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="NAudio">
+      <HintPath>..\packages\NAudio.1.6\lib\net20\NAudio.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\packages\Newtonsoft.Json.5.0.6\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="NLog">
+      <HintPath>..\3rd-party\common-logging\NLog.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Xaml">
+      <RequiredTargetFramework>4.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="WindowsBase" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+    <Compile Include="Kernel\DelegateCommand.cs" />
+    <Compile Include="Kernel\EmptyTask.cs" />
+    <Compile Include="Kernel\FilterLogic\AudioFilterLogic.cs" />
+    <Compile Include="Kernel\FilterLogic\FilterLogicBase.cs" />
+    <Compile Include="Kernel\FilterLogic\FriendFilterLogic.cs" />
+    <Compile Include="Kernel\FilterLogic\GroupFilterLogic.cs" />
+    <Compile Include="Kernel\IKernelPlayer.cs" />
+    <Compile Include="Kernel\NAudioPlayer.cs" />
+    <Compile Include="Kernel\VLCPlayer.cs" />
+    <Compile Include="Model\AudioGetPlayLists.cs" />
+    <Page Include="View\AudioPlayerControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\AuthWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\MainWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Model\AudioPlayerModel.cs" />
+    <Compile Include="Model\List\VCAAudioList.cs" />
+    <Compile Include="Model\List\VCAFriendList.cs" />
+    <Compile Include="Model\List\VCAGroupList.cs" />
+    <Compile Include="Model\List\VCAList.cs" />
+    <Compile Include="Model\List\VCAListItem.cs" />
+    <Compile Include="ViewModel\AudioFilter\FriendsViewModel.cs" />
+    <Compile Include="ViewModel\AudioPlayerViewModel.cs" />
+    <Compile Include="ViewModel\AudioFilter\GroupsViewModel.cs" />
+    <Compile Include="ViewModel\Interface\IAudioFilterViewModel.cs" />
+    <Compile Include="ViewModel\MainViewModel.cs" />
+    <Compile Include="ViewModel\ViewModelBase.cs" />
+    <Compile Include="View\AudioPlayerControl.xaml.cs">
+      <DependentUpon>AudioPlayerControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\AuthWindow.xaml.cs">
+      <DependentUpon>AuthWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\MainWindow.xaml.cs">
+      <DependentUpon>MainWindow.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Page Include="View\Styles.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Model\GroupModel.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <AppDesigner Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="View\Icons\pause.png" />
+    <Resource Include="View\Icons\pause_down.png" />
+    <Resource Include="View\Icons\pause_over.png" />
+    <Resource Include="View\Icons\play.png" />
+    <Resource Include="View\Icons\play_down.png" />
+    <Resource Include="View\Icons\play_over.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="View\Icons\next.png" />
+    <Resource Include="View\Icons\prev.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\media-player-vlc\media-player-vlc.csproj">
+      <Project>{5af6c9fe-6b19-4c1d-bade-35bff33825b8}</Project>
+      <Name>media-player-vlc</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\VKapi\VKapi.csproj">
+      <Project>{428a37d0-a3b3-4bf4-8b98-417cf0cc2139}</Project>
+      <Name>VKapi</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="View\Icons\find.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="View\Icons\pause_mini.png" />
+    <Resource Include="View\Icons\play_mini.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="View\Icons\pause_mini_full.png" />
+    <Resource Include="View\Icons\play_mini_full.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="MainIcon.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="View\Icons\MainIcon.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="View\Icons\repeat.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,682 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>/Users/laurent/Projects/Mercurial/Monobjc/dist/2.0/Monobjc.Sparkle</name>
+    </assembly>
+    <members>
+        <member name="T:Monobjc.Sparkle.Properties.Resources">
+            <summary>
+            A strongly-typed resource class, for looking up localized strings, etc.
+            </summary>
+        </member>
+        <member name="P:Monobjc.Sparkle.Properties.Resources.ResourceManager">
+            <summary>
+            Returns the cached ResourceManager instance used by this class.
+            </summary>
+        </member>
+        <member name="P:Monobjc.Sparkle.Properties.Resources.Culture">
+            <summary>
+            Overrides the current thread's CurrentUICulture property for all
+            resource lookups using this strongly typed resource class.
+            </summary>
+        </member>
+        <member name="T:Monobjc.Sparkle.SUAppcast">
+            <summary>
+            Managed wrapper for SUAppcast Objective-C class.
+            </summary>
+        </member>
+        <member name="M:Monobjc.Sparkle.SUAppcast.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Monobjc.Sparkle.SUAppcast" /> class.
+            </summary>
+        </member>
+        <member name="M:Monobjc.Sparkle.SUAppcast.#ctor(System.IntPtr)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Monobjc.Sparkle.SUAppcast" /> class.
+            </summary>
+            <param name="nativePointer">The native pointer.</param>
+        </member>
+        <member name="M:Monobjc.Sparkle.SUAppcast.#ctor(System.String,System.Object,System.Object[])">
+            <summary>
+            Initializes a new instance of the <see cref="T:Monobjc.Sparkle.SUAppcast" /> class.
+            </summary>
+            <param name="selector">The selector.</param>
+            <param name="firstParam">The first param.</param>
+            <param name="parameters">The parameters.</param>
+        </member>
+        <member name="T:Monobjc.Sparkle.SUAppcast.SUAppcastEventDispatcher">
+            <summary>
+            Inner event handler that is exposed to the Objective-C runtime and relays delegate messages to listeners.
+            </summary>
+        </member>
+        <member name="M:Monobjc.Sparkle.SUAppcast.SUAppcastEventDispatcher.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Monobjc.Sparkle.SUAppcast.SUAppcastEventDispatcher" /> class.
+            </summary>
+        </member>
+        <member name="M:Monobjc.Sparkle.SUAppcast.SUAppcastEventDispatcher.#ctor(System.IntPtr)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Monobjc.Sparkle.SUAppcast.SUAppcastEventDispatcher" /> class.
+            </summary>
+            <param name="nativePointer">The native pointer.</param>
+        </member>
+        <member name="F:Monobjc.Sparkle.SUAppcast.SUAppcastEventDispatcher.SUAppcastEventDispatcherClass">
+            <summary>
+            Static field for a quick access to the SUAppcastEventDispatcher class.
+            </summary>
+        </member>
+        <member name="E:Monobjc.Sparkle.SUAppcast.SUAppcastEventDispatcher.AppcastDidFinishLoadingEvent">
+            <summary>
+            Event handler to dispatch calls to "appcastDidFinishLoading:".
+            </summary>
+        </member>
+        <member name="E:Monobjc.Sparkle.SUAppcast.SUAppcastEventDispatcher.AppcastFailedToLoadWithErrorEvent">
+            <summary>
+            Event handler to dispatch calls to "appcast:failedToLoadWithError:".
+            </summary>
+        </member>
+        <member name="M:Monobjc.Sparkle.SUAppcast.SUAppcastEventDispatcher.RespondsToSelector(System.IntPtr)">
+            <summary>
+                <para>Returns a Boolean value that indicates whether the receiver implements or inherits a method that can respond to a specified message.</para>
+                <para>Original signature is '- (BOOL)respondsToSelector:(SEL)aSelector'</para>
+                <para>Available in Mac OS X v10.0 and later.</para>
+            </summary>
+            <param name="aSelector">A selector that identifies a message.</param>
+            <returns>
+            YES if the receiver implements or inherits a method that can respond to aSelector, otherwise NO.
+            </returns>
+        </member>
+        <member name="M:Monobjc.Sparkle.SUAppcast.SUAppcastEventDispatcher.AppcastDidFinishLoading(Monobjc.Sparkle.SUAppcast)">
+            <summary>
+                <para>Original signature is '- (void)appcastDidFinishLoading:(SUAppcast *)appcast'</para>
+                <para>Available in Sparkle 1.5b6 and later.</para>
+            </summary>
+        </member>
+        <member name="M:Monobjc.Sparkle.SUAppcast.SUAppcastEventDispatcher.AppcastFailedToLoadWithError(Monobjc.Sparkle.SUAppcast,Monobjc.Cocoa.NSError)">
+            <summary>
+                <para>Original signature is '- (void)appcast:(SUAppcast *)appcast failedToLoadWithError:(NSError *)error'</para>
+                <para>Available in Sparkle 1.5b6 and later.</para>
+            </summary>
+        </member>
+        <member name="T:Monobjc.Sparkle.SUAppcast.AppcastDidFinishLoadingEventHandler">
+            <summary>
+            Delegate to subscribe to <see cref="E:Monobjc.Sparkle.SUAppcast.AppcastDidFinishLoading" />.
+            </summary>
+        </member>
+        <member name="T:Monobjc.Sparkle.SUAppcast.AppcastFailedToLoadWithErrorEventHandler">
+            <summary>
+            Delegate to subscribe to <see cref="E:Monobjc.Sparkle.SUAppcast.AppcastFailedToLoadWithError" />.
+            </summary>
+        </member>
+        <member name="F:Monobjc.Sparkle.SUAppcast.SUAppcastClass">
+            <summary>
+            Static field for a quick access to the SUAppcast class.
+            </summary>
+        </member>
+        <member name="E:Monobjc.Sparkle.SUAppcast.AppcastDidFinishLoading">
+            <summary>
+                <para>Original signature is '- (void)appcastDidFinishLoading:(SUAppcast *)appcast'</para>
+                <para>Available in Sparkle 1.5b6 and later.</para>
+            </summary>
+        </member>
+        <member name="E:Monobjc.Sparkle.SUAppcast.AppcastFailedToLoadWithError">
+            <summary>
+                <para>Original signature is '- (void)appcast:(SUAppcast *)appcast failedToLoadWithError:(NSError *)error'</para>
+                <para>Available in Sparkle 1.5b6 and later.</para>
+            </summary>
+        </member>
+        <member name="P:Monobjc.Sparkle.SUAppcast.Delegate">
+            <summary>
+                <para>Original signature is '- (void)setDelegate:(id)delegate'</para>
+                <para>Available in Sparkle 1.5b6 and later.</para>
+            </summary>
+        </member>
+        <member name="P:Monobjc.Sparkle.SUAppcast.Items">
+            <summary>
+                <para>Original signature is '- (NSArray *)items'</para>
+                <para>Available in Sparkle 1.5b6 and later.</para>
+            </summary>
+        </member>
+        <member name="M:Monobjc.Sparkle.SUAppcast.FetchAppcastFromURL(Monobjc.Cocoa.NSURL)">
+            <summary>
+                <para>Original signature is '- (void)fetchAppcastFromURL:(NSURL *)url'</para>
+                <para>Available in Sparkle 1.5b6 and later.</para>
+            </summary>
+        </member>
+        <member name="M:Monobjc.Sparkle.SUAppcast.SetUserAgentString(Monobjc.Cocoa.NSString)">
+            <summary>
+                <para>Original signature is '- (void)setUserAgentString:(NSString *)userAgentString'</para>
+                <para>Available in Sparkle 1.5b6 and later.</para>
+            </summary>
+        </member>
+        <member name="M:Monobjc.Sparkle.SUAppcast.GetEventDispatcher">
+            <summary>
+            Return the event handler that relays delegate messages.
+            </summary>
+        </member>
+        <member name="T:Monobjc.Sparkle.SUAppcastItem">
+            <summary>
+            Managed wrapper for SUAppcastItem Objective-C class.
+            </summary>
+        </member>
+        <member name="M:Monobjc.Sparkle.SUAppcastItem.#ctor(Monobjc.Cocoa.NSDictionary)">
+            <summary>
+                <para>Initializes with data from a dictionary provided by the RSS class.</para>
+                <para>Original signature is '- (id)initWithDictionary:(NSDictionary *)dict'</para>
+                <para>Available in Sparkle 1.5b6 and later.</para>
+            </summary>
+        </member>
+        <member name="M:Monobjc.Sparkle.SUAppcastItem.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Monobjc.Sparkle.SUAppcastItem" /> class.
+            </summary>
+        </member>
+        <member name="M:Monobjc.Sparkle.SUAppcastItem.#ctor(System.IntPtr)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Monobjc.Sparkle.SUAppcastItem" /> class.
+            </summary>
+            <param name="nativePointer">The native pointer.</param>
+        </member>
+        <member name="M:Monobjc.Sparkle.SUAppcastItem.#ctor(System.String,System.Object,System.Object[])">
+            <summary>
+            Initializes a new instance of the <see cref="T:Monobjc.Sparkle.SUAppcastItem" /> class.
+            </summary>
+            <param name="selector">The selector.</param>
+            <param name="firstParam">The first param.</param>
+            <param name="parameters">The parameters.</param>
+        </member>
+        <member name="F:Monobjc.Sparkle.SUAppcastItem.SUAppcastItemClass">
+            <summary>
+            Static field for a quick access to the SUAppcastItem class.
+            </summary>
+        </member>
+        <member name="P:Monobjc.Sparkle.SUAppcastItem.Title">
+            <summary>
+                <para>Original signature is '- (NSString *)title'</para>
+                <para>Available in Sparkle 1.5b6 and later.</para>
+            </summary>
+        </member>
+        <member name="P:Monobjc.Sparkle.SUAppcastItem.VersionString">
+            <summary>
+                <para>Original signature is '- (NSString *)versionString'</para>
+                <para>Available in Sparkle 1.5b6 and later.</para>
+            </summary>
+        </member>
+        <member name="P:Monobjc.Sparkle.SUAppcastItem.DisplayVersionString">
+            <summary>
+                <para>Original signature is '- (NSString *)displayVersionString'</para>
+                <para>Available in Sparkle 1.5b6 and later.</para>
+            </summary>
+        </member>
+        <member name="P:Monobjc.Sparkle.SUAppcastItem.Date">
+            <summary>
+                <para>Original signature is '- (NSDate *)date'</para>
+                <para>Available in Sparkle 1.5b6 and later.</para>
+            </summary>
+        </member>
+        <member name="P:Monobjc.Sparkle.SUAppcastItem.ItemDescription">
+            <summary>
+                <para>Original signature is '- (NSString *)itemDescription'</para>
+                <para>Available in Sparkle 1.5b6 and later.</para>
+            </summary>
+            <value>
+            </value>
+        </member>
+        <member name="P:Monobjc.Sparkle.SUAppcastItem.ReleaseNotesURL">
+            <summary>
+                <para>Original signature is '- (NSURL *)releaseNotesURL'</para>
+                <para>Available in Sparkle 1.5b6 and later.</para>
+            </summary>
+        </member>
+        <member name="P:Monobjc.Sparkle.SUAppcastItem.FileURL">
+            <summary>
+                <para>Original signature is '- (NSURL *)fileURL'</para>
+                <para>Available in Sparkle 1.5b6 and later.</para>
+            </summary>
+        </member>
+        <member name="P:Monobjc.Sparkle.SUAppcastItem.DSASignature">
+            <summary>
+                <para>Original signature is '- (NSString *)DSASignature'</para>
+                <para>Available in Sparkle 1.5b6 and later.</para>
+            </summary>
+        </member>
+        <member name="P:Monobjc.Sparkle.SUAppcastItem.MinimumSystemVersion">
+            <summary>
+                <para>Original signature is '- (NSString *)minimumSystemVersion'</para>
+                <para>Available in Sparkle 1.5b6 and later.</para>
+            </summary>
+        </member>
+        <member name="P:Monobjc.Sparkle.SUAppcastItem.PropertiesDictionary">
+            <summary>
+                <para>Returns the dictionary provided in initWithDictionary; this might be useful later for extensions.</para>
+                <para>Original signature is '- (NSDictionary *)propertiesDictionary'</para>
+                <para>Available in Sparkle 1.5b6 and later.</para>
+            </summary>
+        </member>
+        <member name="M:Monobjc.Sparkle.SUAppcastItem.InitWithDictionary(Monobjc.Cocoa.NSDictionary)">
+            <summary>
+                <para>Initializes with data from a dictionary provided by the RSS class.</para>
+                <para>Original signature is '- (id)initWithDictionary:(NSDictionary *)dict'</para>
+                <para>Available in Sparkle 1.5b6 and later.</para>
+            </summary>
+        </member>
+        <member name="T:Monobjc.Sparkle.SUUpdater">
+            <summary>
+            Managed wrapper for SUUpdater Objective-C class.
+            </summary>
+        </member>
+        <member name="M:Monobjc.Sparkle.SUUpdater.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Monobjc.Sparkle.SUUpdater" /> class.
+            </summary>
+        </member>
+        <member name="M:Monobjc.Sparkle.SUUpdater.#ctor(System.IntPtr)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Monobjc.Sparkle.SUUpdater" /> class.
+            </summary>
+            <param name="nativePointer">The native pointer.</param>
+        </member>
+        <member name="M:Monobjc.Sparkle.SUUpdater.#ctor(System.String,System.Object,System.Object[])">
+            <summary>
+            Initializes a new instance of the <see cref="T:Monobjc.Sparkle.SUUpdater" /> class.
+            </summary>
+            <param name="selector">The selector.</param>
+            <param name="firstParam">The first param.</param>
+            <param name="parameters">The parameters.</param>
+        </member>
+        <member name="T:Monobjc.Sparkle.SUUpdater.SUUpdaterEventDispatcher">
+            <summary>
+            Inner event handler that is exposed to the Objective-C runtime and relays delegate messages to listeners.
+            </summary>
+        </member>
+        <member name="M:Monobjc.Sparkle.SUUpdater.SUUpdaterEventDispatcher.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Monobjc.Sparkle.SUUpdater.SUUpdaterEventDispatcher" /> class.
+            </summary>
+        </member>
+        <member name="M:Monobjc.Sparkle.SUUpdater.SUUpdaterEventDispatcher.#ctor(System.IntPtr)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Monobjc.Sparkle.SUUpdater.SUUpdaterEventDispatcher" /> class.
+            </summary>
+            <param name="nativePointer">The native pointer.</param>
+        </member>
+        <member name="F:Monobjc.Sparkle.SUUpdater.SUUpdaterEventDispatcher.SUUpdaterEventDispatcherClass">
+            <summary>
+            Static field for a quick access to the SUAppcastEventDispatcher class.
+            </summary>
+        </member>
+        <member name="E:Monobjc.Sparkle.SUUpdater.SUUpdaterEventDispatcher.FeedParametersForUpdaterSendingSystemProfileEvent">
+            <summary>
+                <para>This method allows you to add extra parameters to the appcast URL, potentially based on whether or not Sparkle will also be sending along the system profile. This method should return an array of dictionaries with keys: "key", "value", "displayKey", "displayValue", the latter two being specifically for display to the user.</para>
+                <para>Original signature is '- (NSArray *)feedParametersForUpdater:(SUUpdater *)updater sendingSystemProfile:(BOOL)sendingProfile;'</para>
+                <para>Available in Sparkle 1.5b6 and later.</para>
+            </summary>
+        </member>
+        <member name="E:Monobjc.Sparkle.SUUpdater.SUUpdaterEventDispatcher.UpdaterShouldPromptForPermissionToCheckForUpdatesEvent">
+            <summary>
+                <para>Use this to override the default behavior for Sparkle prompting the user about automatic update checks.</para>
+                <para>Original signature is '- (BOOL)updaterShouldPromptForPermissionToCheckForUpdates:(SUUpdater *)bundle;'</para>
+                <para>Available in Sparkle 1.5b6 and later.</para>
+            </summary>
+        </member>
+        <member name="E:Monobjc.Sparkle.SUUpdater.SUUpdaterEventDispatcher.UpdaterDidFinishLoadingAppcastEvent">
+            <summary>
+                <para>Implement this if you want to do some special handling with the appcast once it finishes loading.</para>
+                <para>Original signature is '- (void)updater:(SUUpdater *)updater didFinishLoadingAppcast:(SUAppcast *)appcast;'</para>
+                <para>Available in Sparkle 1.5b6 and later.</para>
+            </summary>
+        </member>
+        <member name="E:Monobjc.Sparkle.SUUpdater.SUUpdaterEventDispatcher.BestValidUpdateInAppcastForUpdaterEvent">
+            <summary>
+                <para>If you're using special logic or extensions in your appcast, implement this to use your own logic for finding a valid update, if any, in the given appcast.</para>
+                <para>Original signature is '- (SUAppcastItem *)bestValidUpdateInAppcast:(SUAppcast *)appcast forUpdater:(SUUpdater *)bundle;'</para>
+                <para>Available in Sparkle 1.5b6 and later.</para>
+            </summary>
+        </member>
+        <member name="E:Monobjc.Sparkle.SUUpdater.SUUpdaterEventDispatcher.UpdaterDidFindValidUpdateEvent">
+            <summary>
+                <para>Sent when a valid update is found by the update driver.</para>
+                <para>Original signature is '- (void)updater:(SUUpdater *)updater didFindValidUpdate:(SUAppcastItem *)update;'</para>
+                <para>Available in Sparkle 1.5b6 and later.</para>
+            </summary>
+        </member>
+        <member name="E:Monobjc.Sparkle.SUUpdater.SUUpdaterEventDispatcher.UpdaterDidNotFindUpdateEvent">
+            <summary>
+                <para>Sent when a valid update is not found.</para>
+                <para>Original signature is '- (void)updaterDidNotFindUpdate:(SUUpdater *)update;'</para>
+                <para>Available in Sparkle 1.5b6 and later.</para>
+            </summary>
+        </member>
+        <member name="E:Monobjc.Sparkle.SUUpdater.SUUpdaterEventDispatcher.UpdaterWillInstallUpdateEvent">
+            <summary>
+                <para>Sent immediately before installing the specified update.</para>
+                <para>Original signature is '- (void)updater:(SUUpdater *)updater willInstallUpdate:(SUAppcastItem *)update;'</para>
+                <para>Available in Sparkle 1.5b6 and later.</para>
+            </summary>
+        </member>
+        <member name="E:Monobjc.Sparkle.SUUpdater.SUUpdaterEventDispatcher.UpdaterShouldPostponeRelaunchForUpdateUntilInvokingEvent">
+            <summary>
+                <para>Return YES to delay the relaunch until you do some processing; invoke the given NSInvocation to continue.</para>
+                <para>Original signature is '- (BOOL)updater:(SUUpdater *)updater shouldPostponeRelaunchForUpdate:(SUAppcastItem *)update untilInvoking:(NSInvocation *)invocation;'</para>
+                <para>Available in Sparkle 1.5b6 and later.</para>
+            </summary>
+        </member>
+        <member name="E:Monobjc.Sparkle.SUUpdater.SUUpdaterEventDispatcher.UpdaterWillRelaunchApplicationEvent">
+            <summary>
+                <para>Called immediately before relaunching.</para>
+                <para>Original signature is '- (void)updaterWillRelaunchApplication:(SUUpdater *)updater;'</para>
+                <para>Available in Sparkle 1.5b6 and later.</para>
+            </summary>
+        </member>
+        <member name="E:Monobjc.Sparkle.SUUpdater.SUUpdaterEventDispatcher.VersionComparatorForUpdaterEvent">
+            <summary>
+                <para>This method allows you to provide a custom version comparator.</para>
+                <para>If you don't implement this method or return nil, the standard version comparator will be used.</para>
+                <para>Original signature is '- (id &lt;SUVersionComparison&gt;)versionComparatorForUpdater:(SUUpdater *)updater;'</para>
+                <para>Available in Sparkle 1.5b6 and later.</para>
+            </summary>
+        </member>
+        <member name="E:Monobjc.Sparkle.SUUpdater.SUUpdaterEventDispatcher.PathToRelaunchForUpdaterEvent">
+            <summary>
+                <para>Returns the path which is used to relaunch the client after the update is installed. By default, the path of the host bundle.</para>
+                <para>Original signature is '- (NSString *)pathToRelaunchForUpdater:(SUUpdater *)updater;'</para>
+                <para>Available in Sparkle 1.5b6 and later.</para>
+            </summary>
+        </member>
+        <member name="M:Monobjc.Sparkle.SUUpdater.SUUpdaterEventDispatcher.RespondsToSelector(System.IntPtr)">
+            <summary>
+                <para>Returns a Boolean value that indicates whether the receiver implements or inherits a method that can respond to a specified message.</para>
+                <para>Original signature is '- (BOOL)respondsToSelector:(SEL)aSelector'</para>
+                <para>Available in Mac OS X v10.0 and later.</para>
+            </summary>
+            <param name="aSelector">A selector that identifies a message.</param>
+            <returns>
+            YES if the receiver implements or inherits a method that can respond to aSelector, otherwise NO.
+            </returns>
+        </member>
+        <member name="M:Monobjc.Sparkle.SUUpdater.SUUpdaterEventDispatcher.FeedParametersForUpdaterSendingSystemProfile(Monobjc.Sparkle.SUUpdater,System.Boolean)">
+            <summary>
+                <para>This method allows you to add extra parameters to the appcast URL, potentially based on whether or not Sparkle will also be sending along the system profile. This method should return an array of dictionaries with keys: "key", "value", "displayKey", "displayValue", the latter two being specifically for display to the user.</para>
+                <para>Original signature is '- (NSArray *)feedParametersForUpdater:(SUUpdater *)updater sendingSystemProfile:(BOOL)sendingProfile;'</para>
+                <para>Available in Sparkle 1.5b6 and later.</para>
+            </summary>
+        </member>
+        <member name="M:Monobjc.Sparkle.SUUpdater.SUUpdaterEventDispatcher.UpdaterShouldPromptForPermissionToCheckForUpdates(Monobjc.Sparkle.SUUpdater)">
+            <summary>
+                <para>Use this to override the default behavior for Sparkle prompting the user about automatic update checks.</para>
+                <para>Original signature is '- (BOOL)updaterShouldPromptForPermissionToCheckForUpdates:(SUUpdater *)bundle;'</para>
+                <para>Available in Sparkle 1.5b6 and later.</para>
+            </summary>
+        </member>
+        <member name="M:Monobjc.Sparkle.SUUpdater.SUUpdaterEventDispatcher.UpdaterDidFinishLoadingAppcast(Monobjc.Sparkle.SUUpdater,Monobjc.Sparkle.SUAppcast)">
+            <summary>
+                <para>Implement this if you want to do some special handling with the appcast once it finishes loading.</para>
+                <para>Original signature is '- (void)updater:(SUUpdater *)updater didFinishLoadingAppcast:(SUAppcast *)appcast;'</para>
+                <para>Available in Sparkle 1.5b6 and later.</para>
+            </summary>
+        </member>
+        <member name="M:Monobjc.Sparkle.SUUpdater.SUUpdaterEventDispatcher.BestValidUpdateInAppcastForUpdater(Monobjc.Sparkle.SUAppcast,Monobjc.Sparkle.SUUpdater)">
+            <summary>
+                <para>If you're using special logic or extensions in your appcast, implement this to use your own logic for finding a valid update, if any, in the given appcast.</para>
+                <para>Original signature is '- (SUAppcastItem *)bestValidUpdateInAppcast:(SUAppcast *)appcast forUpdater:(SUUpdater *)bundle;'</para>
+                <para>Available in Sparkle 1.5b6 and later.</para>
+            </summary>
+        </member>
+        <member name="M:Monobjc.Sparkle.SUUpdater.SUUpdaterEventDispatcher.UpdaterDidFindValidUpdate(Monobjc.Sparkle.SUUpdater,Monobjc.Sparkle.SUAppcastItem)">
+            <summary>
+                <para>Sent when a valid update is found by the update driver.</para>
+                <para>Original signature is '- (void)updater:(SUUpdater *)updater didFindValidUpdate:(SUAppcastItem *)update;'</para>
+                <para>Available in Sparkle 1.5b6 and later.</para>
+            </summary>
+        </member>
+        <member name="M:Monobjc.Sparkle.SUUpdater.SUUpdaterEventDispatcher.UpdaterDidNotFindUpdate(Monobjc.Sparkle.SUUpdater)">
+            <summary>
+                <para>Sent when a valid update is not found.</para>
+                <para>Original signature is '- (void)updaterDidNotFindUpdate:(SUUpdater *)update;'</para>
+                <para>Available in Sparkle 1.5b6 and later.</para>
+            </summary>
+        </member>
+        <member name="M:Monobjc.Sparkle.SUUpdater.SUUpdaterEventDispatcher.UpdaterWillInstallUpdate(Monobjc.Sparkle.SUUpdater,Monobjc.Sparkle.SUAppcastItem)">
+            <summary>
+                <para>Sent immediately before installing the specified update.</para>
+                <para>Original signature is '- (void)updater:(SUUpdater *)updater willInstallUpdate:(SUAppcastItem *)update;'</para>
+                <para>Available in Sparkle 1.5b6 and later.</para>
+            </summary>
+        </member>
+        <member name="M:Monobjc.Sparkle.SUUpdater.SUUpdaterEventDispatcher.UpdaterShouldPostponeRelaunchForUpdateUntilInvoking(Monobjc.Sparkle.SUUpdater,Monobjc.Sparkle.SUAppcastItem,Monobjc.Cocoa.NSInvocation)">
+            <summary>
+                <para>Return YES to delay the relaunch until you do some processing; invoke the given NSInvocation to continue.</para>
+                <para>Original signature is '- (BOOL)updater:(SUUpdater *)updater shouldPostponeRelaunchForUpdate:(SUAppcastItem *)update untilInvoking:(NSInvocation *)invocation;'</para>
+                <para>Available in Sparkle 1.5b6 and later.</para>
+            </summary>
+        </member>
+        <member name="M:Monobjc.Sparkle.SUUpdater.SUUpdaterEventDispatcher.UpdaterWillRelaunchApplication(Monobjc.Sparkle.SUUpdater)">
+            <summary>
+                <para>Called immediately before relaunching.</para>
+                <para>Original signature is '- (void)updaterWillRelaunchApplication:(SUUpdater *)updater;'</para>
+                <para>Available in Sparkle 1.5b6 and later.</para>
+            </summary>
+        </member>
+        <member name="M:Monobjc.Sparkle.SUUpdater.SUUpdaterEventDispatcher.VersionComparatorForUpdater(Monobjc.Sparkle.SUUpdater)">
+            <summary>
+                <para>This method allows you to provide a custom version comparator.</para>
+                <para>If you don't implement this method or return nil, the standard version comparator will be used.</para>
+                <para>Original signature is '- (id &lt;SUVersionComparison&gt;)versionComparatorForUpdater:(SUUpdater *)updater;'</para>
+                <para>Available in Sparkle 1.5b6 and later.</para>
+            </summary>
+        </member>
+        <member name="M:Monobjc.Sparkle.SUUpdater.SUUpdaterEventDispatcher.PathToRelaunchForUpdater(Monobjc.Sparkle.SUUpdater)">
+            <summary>
+                <para>Returns the path which is used to relaunch the client after the update is installed. By default, the path of the host bundle.</para>
+                <para>Original signature is '- (NSString *)pathToRelaunchForUpdater:(SUUpdater *)updater;'</para>
+                <para>Available in Sparkle 1.5b6 and later.</para>
+            </summary>
+        </member>
+        <member name="T:Monobjc.Sparkle.SUUpdater.FeedParametersForUpdaterSendingSystemProfileEventHandler">
+            <summary>
+                <para>This method allows you to add extra parameters to the appcast URL, potentially based on whether or not Sparkle will also be sending along the system profile. This method should return an array of dictionaries with keys: "key", "value", "displayKey", "displayValue", the latter two being specifically for display to the user.</para>
+                <para>Original signature is '- (NSArray *)feedParametersForUpdater:(SUUpdater *)updater sendingSystemProfile:(BOOL)sendingProfile;'</para>
+                <para>Available in Sparkle 1.5b6 and later.</para>
+            </summary>
+        </member>
+        <member name="T:Monobjc.Sparkle.SUUpdater.UpdaterShouldPromptForPermissionToCheckForUpdatesEventHandler">
+            <summary>
+                <para>Use this to override the default behavior for Sparkle prompting the user about automatic update checks.</para>
+                <para>Original signature is '- (BOOL)updaterShouldPromptForPermissionToCheckForUpdates:(SUUpdater *)bundle;'</para>
+                <para>Available in Sparkle 1.5b6 and later.</para>
+            </summary>
+        </member>
+        <member name="T:Monobjc.Sparkle.SUUpdater.UpdaterDidFinishLoadingAppcastEventHandler">
+            <summary>
+                <para>Implement this if you want to do some special handling with the appcast once it finishes loading.</para>
+                <para>Original signature is '- (void)updater:(SUUpdater *)updater didFinishLoadingAppcast:(SUAppcast *)appcast;'</para>
+                <para>Available in Sparkle 1.5b6 and later.</para>
+            </summary>
+        </member>
+        <member name="T:Monobjc.Sparkle.SUUpdater.BestValidUpdateInAppcastForUpdaterEventHandler">
+            <summary>
+                <para>If you're using special logic or extensions in your appcast, implement this to use your own logic for finding a valid update, if any, in the given appcast.</para>
+                <para>Original signature is '- (SUAppcastItem *)bestValidUpdateInAppcast:(SUAppcast *)appcast forUpdater:(SUUpdater *)bundle;'</para>
+                <para>Available in Sparkle 1.5b6 and later.</para>
+            </summary>
+        </member>
+        <member name="T:Monobjc.Sparkle.SUUpdater.UpdaterDidFindValidUpdateEventHandler">
+            <summary>
+                <para>Sent when a valid update is found by the update driver.</para>
+                <para>Original signature is '- (void)updater:(SUUpdater *)updater didFindValidUpdate:(SUAppcastItem *)update;'</para>
+                <para>Available in Sparkle 1.5b6 and later.</para>
+            </summary>
+        </member>
+        <member name="T:Monobjc.Sparkle.SUUpdater.UpdaterDidNotFindUpdateEventHandler">
+            <summary>
+                <para>Sent when a valid update is not found.</para>
+                <para>Original signature is '- (void)updaterDidNotFindUpdate:(SUUpdater *)update;'</para>
+                <para>Available in Sparkle 1.5b6 and later.</para>
+            </summary>
+        </member>
+        <member name="T:Monobjc.Sparkle.SUUpdater.UpdaterWillInstallUpdateEventHandler">
+            <summary>
+                <para>Sent immediately before installing the specified update.</para>
+                <para>Original signature is '- (void)updater:(SUUpdater *)updater willInstallUpdate:(SUAppcastItem *)update;'</para>
+                <para>Available in Sparkle 1.5b6 and later.</para>
+            </summary>
+        </member>
+        <member name="T:Monobjc.Sparkle.SUUpdater.UpdaterShouldPostponeRelaunchForUpdateUntilInvokingEventHandler">
+            <summary>
+                <para>Return YES to delay the relaunch until you do some processing; invoke the given NSInvocation to continue.</para>
+                <para>Original signature is '- (BOOL)updater:(SUUpdater *)updater shouldPostponeRelaunchForUpdate:(SUAppcastItem *)update untilInvoking:(NSInvocation *)invocation;'</para>
+                <para>Available in Sparkle 1.5b6 and later.</para>
+            </summary>
+        </member>
+        <member name="T:Monobjc.Sparkle.SUUpdater.UpdaterWillRelaunchApplicationEventHandler">
+            <summary>
+                <para>Called immediately before relaunching.</para>
+                <para>Original signature is '- (void)updaterWillRelaunchApplication:(SUUpdater *)updater;'</para>
+                <para>Available in Sparkle 1.5b6 and later.</para>
+            </summary>
+        </member>
+        <member name="T:Monobjc.Sparkle.SUUpdater.VersionComparatorForUpdaterEventHandler">
+            <summary>
+                <para>This method allows you to provide a custom version comparator.</para>
+                <para>If you don't implement this method or return nil, the standard version comparator will be used.</para>
+                <para>Original signature is '- (id &lt;SUVersionComparison&gt;)versionComparatorForUpdater:(SUUpdater *)updater;'</para>
+                <para>Available in Sparkle 1.5b6 and later.</para>
+            </summary>
+        </member>
+        <member name="T:Monobjc.Sparkle.SUUpdater.PathToRelaunchForUpdaterEventHandler">
+            <summary>
+                <para>Returns the path which is used to relaunch the client after the update is installed. By default, the path of the host bundle.</para>
+                <para>Original signature is '- (NSString *)pathToRelaunchForUpdater:(SUUpdater *)updater;'</para>
+                <para>Available in Sparkle 1.5b6 and later.</para>
+            </summary>
+        </member>
+        <member name="F:Monobjc.Sparkle.SUUpdater.SUUpdaterClass">
+            <summary>
+            Static field for a quick access to the SUUpdater class.
+            </summary>
+        </member>
+        <member name="P:Monobjc.Sparkle.SUUpdater.SharedUpdater">
+            <summary>
+                <para>Original signature is '+ (SUUpdater *)sharedUpdater'</para>
+                <para>Available in Sparkle 1.5b6 and later.</para>
+            </summary>
+        </member>
+        <member name="P:Monobjc.Sparkle.SUUpdater.HostBundle">
+            <summary>
+                <para>Original signature is '- (NSBundle *)hostBundle'</para>
+                <para>Available in Sparkle 1.5b6 and later.</para>
+            </summary>
+        </member>
+        <member name="P:Monobjc.Sparkle.SUUpdater.Delegate">
+            <summary>
+                <para>Original signature is '- (id)delegate'</para>
+                <para>Available in Sparkle 1.5b6 and later.</para>
+            </summary>
+        </member>
+        <member name="P:Monobjc.Sparkle.SUUpdater.AutomaticallyChecksForUpdates">
+            <summary>
+                <para>Original signature is '- (BOOL)automaticallyChecksForUpdates'</para>
+                <para>Available in Sparkle 1.5b6 and later.</para>
+            </summary>
+        </member>
+        <member name="P:Monobjc.Sparkle.SUUpdater.UpdateCheckInterval">
+            <summary>
+                <para>Original signature is '- (NSTimeInterval)updateCheckInterval'</para>
+                <para>Available in Sparkle 1.5b6 and later.</para>
+            </summary>
+        </member>
+        <member name="P:Monobjc.Sparkle.SUUpdater.FeedURL">
+            <summary>
+                <para>Original signature is '- (NSURL *)feedURL'</para>
+                <para>Available in Sparkle 1.5b6 and later.</para>
+            </summary>
+        </member>
+        <member name="P:Monobjc.Sparkle.SUUpdater.SendsSystemProfile">
+            <summary>
+                <para>Original signature is '- (BOOL)sendsSystemProfile'</para>
+                <para>Available in Sparkle 1.5b6 and later.</para>
+            </summary>
+        </member>
+        <member name="P:Monobjc.Sparkle.SUUpdater.AutomaticallyDownloadsUpdates">
+            <summary>
+                <para>Original signature is '- (BOOL)automaticallyDownloadsUpdates'</para>
+                <para>Available in Sparkle 1.5b6 and later.</para>
+            </summary>
+        </member>
+        <member name="P:Monobjc.Sparkle.SUUpdater.LastUpdateCheckDate">
+            <summary>
+                <para>Date of last update check. Returns null if no check has been performed.</para>
+                <para>Original signature is '- (NSDate *)lastUpdateCheckDate'</para>
+                <para>Available in Sparkle 1.5b6 and later.</para>
+            </summary>
+        </member>
+        <member name="P:Monobjc.Sparkle.SUUpdater.UpdateInProgress">
+            <summary>
+                <para>Original signature is '- (bool)updateInProgress'</para>
+                <para>Available in Sparkle 1.5b6 and later.</para>
+            </summary>
+        </member>
+        <member name="M:Monobjc.Sparkle.SUUpdater.UpdaterForBundle(Monobjc.Cocoa.NSBundle)">
+            <summary>
+                <para>Original signature is '+ (SUUpdater *)updaterForBundle:(NSBundle *)bundle'</para>
+                <para>Available in Sparkle 1.5b6 and later.</para>
+            </summary>
+        </member>
+        <member name="M:Monobjc.Sparkle.SUUpdater.CheckForUpdates(Monobjc.Id)">
+            <summary>
+                <para>This IBAction is meant for a main menu item. Hook up any menu item to this action,
+            and Sparkle will check for updates and report back its findings verbosely.</para>
+                <para>Original signature is '- (IBAction)checkForUpdates:sender'</para>
+                <para>Available in Sparkle 1.5b6 and later.</para>
+            </summary>
+        </member>
+        <member name="M:Monobjc.Sparkle.SUUpdater.CheckForUpdatesInBackground">
+            <summary>
+                <para>This kicks off an update meant to be programmatically initiated. That is, it will display no UI unless it actually finds an update,
+            in which case it proceeds as usual. If the fully automated updating is turned on, however, this will invoke that behavior, and if an
+            update is found, it will be downloaded and prepped for installation.</para>
+                <para>Original signature is '- (void)checkForUpdatesInBackground'</para>
+                <para>Available in Sparkle 1.5b6 and later.</para>
+            </summary>
+        </member>
+        <member name="M:Monobjc.Sparkle.SUUpdater.CheckForUpdateInformation">
+            <summary>
+                <para>This begins a "probing" check for updates which will not actually offer to update to that version. The delegate methods, though,
+            (up to updater:didFindValidUpdate: and updaterDidNotFindUpdate:), are called, so you can use that information in your UI.</para>
+                <para>Original signature is '- (void)checkForUpdateInformation'</para>
+                <para>Available in Sparkle 1.5b6 and later.</para>
+            </summary>
+        </member>
+        <member name="M:Monobjc.Sparkle.SUUpdater.ResetUpdateCycle">
+            <summary>
+                <para>Call this to appropriately schedule or cancel the update checking timer according to the preferences for time interval and automatic checks.</para>
+                <para>Original signature is '- (void)resetUpdateCycle'</para>
+                <para>Available in Sparkle 1.5b6 and later.</para>
+            </summary>
+        </member>
+        <member name="M:Monobjc.Sparkle.SUUpdater.SetDelegate(System.Action{Monobjc.Sparkle.SUUpdater.SUUpdaterEventDispatcher})">
+            <summary>
+            Sets the delegate of the <see cref="T:Monobjc.Sparkle.SUUpdater" /> instance.
+            </summary>
+            <param name="assignment">The assignment of delegation methods.</param>
+        </member>
+        <member name="T:Monobjc.Sparkle.ISUVersionComparisonProtocol">
+            <summary>
+                <para>Managed wrapper for "SUVersionComparison" Objective-C protocol.</para>
+                <para>Implement this protocol to provide version comparison facilities for Sparkle.</para>
+            </summary>
+        </member>
+        <member name="M:Monobjc.Sparkle.ISUVersionComparisonProtocol.CompareVersionToVersion(Monobjc.Cocoa.NSString,Monobjc.Cocoa.NSString)">
+            <summary>
+                <para>An abstract method to compare two version strings.</para>
+                <para>Original signature is '- (NSComparisonResult)compareVersion:(NSString *)versionA toVersion:(NSString *)versionB;'</para>
+                <para>Available in Sparkle 1.5b6.</para>
+            </summary>
+        </member>
+        <member name="T:Monobjc.Sparkle.SparkleFramework">
+            <summary>
+            Utility class to access Sparkle framework.
+            </summary>
+        </member>
+    </members>
+</doc>

@@ -1,0 +1,9 @@
+﻿<Window x:Class="VCA_player.View.AuthWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Авторизация" Height="396" Width="558" WindowStartupLocation="CenterScreen" Icon="/VCA player;component/MainIcon.ico" ResizeMode="NoResize">
+    <Grid>
+        <WebBrowser x:Name="AuthBrowser" Margin="0" Navigated="AuthBrowser_Navigated"/>
+
+    </Grid>
+</Window>

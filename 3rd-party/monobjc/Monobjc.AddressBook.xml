@@ -1,0 +1,1912 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>/Users/laurent/Projects/Mercurial/Monobjc/dist/2.0/Monobjc.AddressBook</name>
+    </assembly>
+    <members>
+        <member name="T:Monobjc.AddressBook.Properties.Resources">
+            <summary>
+            A strongly-typed resource class, for looking up localized strings, etc.
+            </summary>
+        </member>
+        <member name="P:Monobjc.AddressBook.Properties.Resources.ResourceManager">
+            <summary>
+            Returns the cached ResourceManager instance used by this class.
+            </summary>
+        </member>
+        <member name="P:Monobjc.AddressBook.Properties.Resources.Culture">
+            <summary>
+            Overrides the current thread's CurrentUICulture property for all
+            resource lookups using this strongly typed resource class.
+            </summary>
+        </member>
+        <member name="T:Monobjc.AddressBook.IABActionDelegate">
+            <summary>
+            Managed wrapper for "ABActionDelegate Protocol Objective-C Reference" Objective-C protocol.
+            </summary>
+        </member>
+        <member name="P:Monobjc.AddressBook.IABActionDelegate.ActionProperty">
+            <summary>
+                <para>Original signature is '- (NSString *)actionProperty'</para>
+                <para>Available in Mac OS X v10.3 and later.</para>
+            </summary>
+        </member>
+        <member name="M:Monobjc.AddressBook.IABActionDelegate.PerformActionForPersonIdentifier(Monobjc.AddressBook.ABPerson,Monobjc.Cocoa.NSString)">
+            <summary>
+                <para>Original signature is '- (void)performActionForPerson:(ABPerson *)person identifier:(NSString *)identifier'</para>
+                <para>Available in Mac OS X v10.3 and later.</para>
+            </summary>
+        </member>
+        <member name="M:Monobjc.AddressBook.IABActionDelegate.ShouldEnableActionForPersonIdentifier(Monobjc.AddressBook.ABPerson,Monobjc.Cocoa.NSString)">
+            <summary>
+                <para>Original signature is '- (BOOL)shouldEnableActionForPerson:(ABPerson *)person identifier:(NSString *)identifier'</para>
+                <para>Available in Mac OS X v10.3 or later.</para>
+            </summary>
+        </member>
+        <member name="M:Monobjc.AddressBook.IABActionDelegate.TitleForPersonIdentifier(Monobjc.AddressBook.ABPerson,Monobjc.Cocoa.NSString)">
+            <summary>
+                <para>Original signature is '- (NSString *)titleForPerson:(ABPerson *)person identifier:(NSString *)identifier'</para>
+                <para>Available in Mac OS X v10.3 and later.</para>
+            </summary>
+        </member>
+        <member name="T:Monobjc.AddressBook.ABAddressBook">
+            <summary>
+            Managed wrapper for ABAddressBook Objective-C class.
+            </summary>
+        </member>
+        <member name="M:Monobjc.AddressBook.ABAddressBook.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Monobjc.AddressBook.ABAddressBook" /> class.
+            </summary>
+        </member>
+        <member name="M:Monobjc.AddressBook.ABAddressBook.#ctor(System.IntPtr)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Monobjc.AddressBook.ABAddressBook" /> class.
+            </summary>
+            <param name="nativePointer">The native pointer.</param>
+        </member>
+        <member name="M:Monobjc.AddressBook.ABAddressBook.#ctor(System.String,System.Object,System.Object[])">
+            <summary>
+            Initializes a new instance of the <see cref="T:Monobjc.AddressBook.ABAddressBook" /> class.
+            </summary>
+            <param name="selector">The selector.</param>
+            <param name="firstParam">The first param.</param>
+            <param name="parameters">The parameters.</param>
+        </member>
+        <member name="F:Monobjc.AddressBook.ABAddressBook.kABDatabaseChangedNotification">
+            <summary>
+                <para>Notification for database changes</para>
+                <para>Available in Mac OS X v10.2 and later.</para>
+            </summary>
+        </member>
+        <member name="F:Monobjc.AddressBook.ABAddressBook.kABDatabaseChangedExternallyNotification">
+            <summary>
+                <para>Notification for external database changes</para>
+                <para>Available in Mac OS X v10.2 and later.</para>
+            </summary>
+        </member>
+        <member name="F:Monobjc.AddressBook.ABAddressBook.ABAddressBookClass">
+            <summary>
+            Static field for a quick access to the ABAddressBook class.
+            </summary>
+        </member>
+        <member name="P:Monobjc.AddressBook.ABAddressBook.AddressBook">
+            <summary>
+                <para>Returns a new instance of ABAddressBook.</para>
+                <para>Original signature is '+ (ABAddressBook *)addressBook'</para>
+                <para>Available in Mac OS X v10.5 and later.</para>
+            </summary>
+        </member>
+        <member name="P:Monobjc.AddressBook.ABAddressBook.SharedAddressBook">
+            <summary>
+                <para>Saves all the changes made since the last save.</para>
+                <para>Original signature is '+ (ABAddressBook *)sharedAddressBook'</para>
+                <para>Available in Mac OS X v10.2 and later.</para>
+            </summary>
+        </member>
+        <member name="P:Monobjc.AddressBook.ABAddressBook.DefaultCountryCode">
+            <summary>
+                <para>Saves all the changes made since the last save.</para>
+                <para>Original signature is '- (NSString *)defaultCountryCode'</para>
+                <para>Available in Mac OS X v10.3 and later.</para>
+            </summary>
+        </member>
+        <member name="P:Monobjc.AddressBook.ABAddressBook.DefaultNameOrdering">
+            <summary>
+                <para>Saves all the changes made since the last save.</para>
+                <para>Original signature is '- (NSInteger )defaultNameOrdering'</para>
+                <para>Available in Mac OS X v10.3 and later.</para>
+            </summary>
+        </member>
+        <member name="P:Monobjc.AddressBook.ABAddressBook.Groups">
+            <summary>
+                <para>Saves all the changes made since the last save.</para>
+                <para>Original signature is '- (NSArray *)groups'</para>
+                <para>Available in Mac OS X v10.2 and later.</para>
+            </summary>
+        </member>
+        <member name="P:Monobjc.AddressBook.ABAddressBook.HasUnsavedChanges">
+            <summary>
+                <para>Saves all the changes made since the last save.</para>
+                <para>Original signature is '- (BOOL)hasUnsavedChanges'</para>
+                <para>Available in Mac OS X v10.2 and later.</para>
+            </summary>
+        </member>
+        <member name="P:Monobjc.AddressBook.ABAddressBook.Me">
+            <summary>
+                <para>Saves all the changes made since the last save.</para>
+                <para>Original signature is '- (ABPerson *)me'</para>
+                <para>Available in Mac OS X v10.2 and later.</para>
+            </summary>
+        </member>
+        <member name="P:Monobjc.AddressBook.ABAddressBook.People">
+            <summary>
+                <para>Saves all the changes made since the last save.</para>
+                <para>Original signature is '- (NSArray *)people'</para>
+                <para>Available in Mac OS X v10.2 and later.</para>
+            </summary>
+        </member>
+        <member name="M:Monobjc.AddressBook.ABAddressBook.AddRecord(Monobjc.AddressBook.ABRecord)">
+            <summary>
+                <para>Saves all the changes made since the last save.</para>
+                <para>Original signature is '- (BOOL)addRecord:(ABRecord *)record'</para>
+                <para>Available in Mac OS X v10.2 and later.</para>
+            </summary>
+            <returns>YES if successful or there were no changes; otherwise, NO.</returns>
+        </member>
+        <member name="M:Monobjc.AddressBook.ABAddressBook.FormattedAddressFromDictionary(Monobjc.Cocoa.NSDictionary)">
+            <summary>
+                <para>Saves all the changes made since the last save.</para>
+                <para>Original signature is '- (NSAttributedString *)formattedAddressFromDictionary:(NSDictionary *)address'</para>
+                <para>Available in Mac OS X v10.3 and later.</para>
+            </summary>
+            <returns>YES if successful or there were no changes; otherwise, NO.</returns>
+        </member>
+        <member name="M:Monobjc.AddressBook.ABAddressBook.RecordClassFromUniqueId(Monobjc.Cocoa.NSString)">
+            <summary>
+                <para>Saves all the changes made since the last save.</para>
+                <para>Original signature is '- (NSString *)recordClassFromUniqueId:(NSString *)uniqueId'</para>
+                <para>Available in Mac OS X v10.3 and later.</para>
+            </summary>
+            <returns>YES if successful or there were no changes; otherwise, NO.</returns>
+        </member>
+        <member name="M:Monobjc.AddressBook.ABAddressBook.RecordForUniqueId(Monobjc.Cocoa.NSString)">
+            <summary>
+                <para>Saves all the changes made since the last save.</para>
+                <para>Original signature is '- (ABRecord *)recordForUniqueId:(NSString *)uniqueId'</para>
+                <para>Available in Mac OS X v10.2 and later.</para>
+            </summary>
+            <returns>YES if successful or there were no changes; otherwise, NO.</returns>
+        </member>
+        <member name="M:Monobjc.AddressBook.ABAddressBook.RecordsMatchingSearchElement(Monobjc.AddressBook.ABSearchElement)">
+            <summary>
+                <para>Saves all the changes made since the last save.</para>
+                <para>Original signature is '- (NSArray *)recordsMatchingSearchElement:(ABSearchElement *)search'</para>
+                <para>Available in Mac OS X v10.2 and later.</para>
+            </summary>
+            <returns>YES if successful or there were no changes; otherwise, NO.</returns>
+        </member>
+        <member name="M:Monobjc.AddressBook.ABAddressBook.RemoveRecord(Monobjc.AddressBook.ABRecord)">
+            <summary>
+                <para>Saves all the changes made since the last save.</para>
+                <para>Original signature is '- (BOOL)removeRecord:(ABRecord *)record'</para>
+                <para>Available in Mac OS X v10.2 and later.</para>
+            </summary>
+            <returns>YES if successful or there were no changes; otherwise, NO.</returns>
+        </member>
+        <member name="M:Monobjc.AddressBook.ABAddressBook.SaveAndReturnError(Monobjc.Cocoa.NSError@)">
+            <summary>
+                <para>Saves all the changes made since the last save.</para>
+                <para>Original signature is '- (BOOL)saveAndReturnError:(NSError **)error'</para>
+                <para>Available in Mac OS X v10.5 and later.</para>
+            </summary>
+            <param name="error">A pointer to an error object that is set to an NSError instance if an error occurs.</param>
+            <returns>YES if successful or there were no changes; otherwise, NO.</returns>
+        </member>
+        <member name="M:Monobjc.AddressBook.ABAddressBook.Save">
+            <summary>
+                <para>Saves all the changes made since the last save.</para>
+                <para>Original signature is '- (BOOL)save'</para>
+                <para>Available in Mac OS X v10.2 and later.</para>
+            </summary>
+        </member>
+        <member name="T:Monobjc.AddressBook.ABGroup">
+            <summary>
+            Managed wrapper for ABGroup Objective-C class.
+            </summary>
+        </member>
+        <member name="M:Monobjc.AddressBook.ABGroup.#ctor(Monobjc.AddressBook.ABAddressBook)">
+            <summary>
+                <para>Initializes the receiver and adds it to the given address book.</para>
+                <para>Original signature is '- (id)initWithAddressBook:(ABAddressBook *)addressBook'</para>
+                <para>Available in Mac OS X v10.5 and later.</para>
+            </summary>
+        </member>
+        <member name="M:Monobjc.AddressBook.ABGroup.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Monobjc.AddressBook.ABGroup" /> class.
+            </summary>
+        </member>
+        <member name="M:Monobjc.AddressBook.ABGroup.#ctor(System.IntPtr)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Monobjc.AddressBook.ABGroup" /> class.
+            </summary>
+            <param name="nativePointer">The native pointer.</param>
+        </member>
+        <member name="M:Monobjc.AddressBook.ABGroup.#ctor(System.String,System.Object,System.Object[])">
+            <summary>
+            Initializes a new instance of the <see cref="T:Monobjc.AddressBook.ABGroup" /> class.
+            </summary>
+            <param name="selector">The selector.</param>
+            <param name="firstParam">The first param.</param>
+            <param name="parameters">The parameters.</param>
+        </member>
+        <member name="F:Monobjc.AddressBook.ABGroup.ABGroupClass">
+            <summary>
+            Static field for a quick access to the ABGroup class.
+            </summary>
+        </member>
+        <member name="P:Monobjc.AddressBook.ABGroup.Properties">
+            <summary>
+                <para>This is one of the properties that an ABGroup record contains by default.ABRecord describes some properties that all records contain, in “Constants”</para>
+                <para>Original signature is '+ (NSArray *)properties'</para>
+                <para>Available in Mac OS X v10.2 and later.</para>
+            </summary>
+        </member>
+        <member name="P:Monobjc.AddressBook.ABGroup.Members">
+            <summary>
+                <para>This is one of the properties that an ABGroup record contains by default.ABRecord describes some properties that all records contain, in “Constants”</para>
+                <para>Original signature is '- (NSArray *)members'</para>
+                <para>Available in Mac OS X v10.2 and later.</para>
+            </summary>
+        </member>
+        <member name="P:Monobjc.AddressBook.ABGroup.ParentGroups">
+            <summary>
+                <para>This is one of the properties that an ABGroup record contains by default.ABRecord describes some properties that all records contain, in “Constants”</para>
+                <para>Original signature is '- (NSArray *)parentGroups'</para>
+                <para>Available in Mac OS X v10.2 and later.</para>
+            </summary>
+        </member>
+        <member name="P:Monobjc.AddressBook.ABGroup.Subgroups">
+            <summary>
+                <para>This is one of the properties that an ABGroup record contains by default.ABRecord describes some properties that all records contain, in “Constants”</para>
+                <para>Original signature is '- (NSArray *)subgroups'</para>
+                <para>Available in Mac OS X v10.2 and later.</para>
+            </summary>
+        </member>
+        <member name="M:Monobjc.AddressBook.ABGroup.AddPropertiesAndTypes(Monobjc.Cocoa.NSDictionary)">
+            <summary>
+                <para>This is one of the properties that an ABGroup record contains by default.ABRecord describes some properties that all records contain, in “Constants”</para>
+                <para>Original signature is '+ (NSInteger )addPropertiesAndTypes:(NSDictionary *)properties'</para>
+                <para>Available in Mac OS X v10.2 and later.</para>
+            </summary>
+        </member>
+        <member name="M:Monobjc.AddressBook.ABGroup.RemoveProperties(Monobjc.Cocoa.NSArray)">
+            <summary>
+                <para>This is one of the properties that an ABGroup record contains by default.ABRecord describes some properties that all records contain, in “Constants”</para>
+                <para>Original signature is '+ (NSInteger )removeProperties:(NSArray *)properties'</para>
+                <para>Available in Mac OS X v10.2 and later.</para>
+            </summary>
+        </member>
+        <member name="M:Monobjc.AddressBook.ABGroup.SearchElementForPropertyLabelKeyValueComparison(Monobjc.Cocoa.NSString,Monobjc.Cocoa.NSString,Monobjc.Cocoa.NSString,Monobjc.Id,Monobjc.AddressBook.ABSearchComparison)">
+            <summary>
+                <para>This is one of the properties that an ABGroup record contains by default.ABRecord describes some properties that all records contain, in “Constants”</para>
+                <para>Original signature is '+ (ABSearchElement *)searchElementForProperty:(NSString *)property label:(NSString *)label key:(NSString *)key value:(id)value comparison:(ABSearchComparison)comparison'</para>
+                <para>Available in Mac OS X v10.2 and later.</para>
+            </summary>
+        </member>
+        <member name="M:Monobjc.AddressBook.ABGroup.TypeOfProperty(Monobjc.Cocoa.NSString)">
+            <summary>
+                <para>This is one of the properties that an ABGroup record contains by default.ABRecord describes some properties that all records contain, in “Constants”</para>
+                <para>Original signature is '+ (ABPropertyType)typeOfProperty:(NSString *)property'</para>
+                <para>Available in Mac OS X v10.2 and later.</para>
+            </summary>
+        </member>
+        <member name="M:Monobjc.AddressBook.ABGroup.AddMember(Monobjc.AddressBook.ABPerson)">
+            <summary>
+                <para>This is one of the properties that an ABGroup record contains by default.ABRecord describes some properties that all records contain, in “Constants”</para>
+                <para>Original signature is '- (BOOL)addMember:(ABPerson *)person'</para>
+                <para>Available in Mac OS X v10.2 and later.</para>
+            </summary>
+        </member>
+        <member name="M:Monobjc.AddressBook.ABGroup.AddSubgroup(Monobjc.AddressBook.ABGroup)">
+            <summary>
+                <para>This is one of the properties that an ABGroup record contains by default.ABRecord describes some properties that all records contain, in “Constants”</para>
+                <para>Original signature is '- (BOOL)addSubgroup:(ABGroup *)group'</para>
+                <para>Available in Mac OS X v10.2 and later.</para>
+            </summary>
+        </member>
+        <member name="M:Monobjc.AddressBook.ABGroup.DistributionIdentifierForPropertyPerson(Monobjc.Cocoa.NSString,Monobjc.AddressBook.ABPerson)">
+            <summary>
+                <para>This is one of the properties that an ABGroup record contains by default.ABRecord describes some properties that all records contain, in “Constants”</para>
+                <para>Original signature is '- (NSString *)distributionIdentifierForProperty:(NSString *)property person:(ABPerson *)person'</para>
+                <para>Available in Mac OS X v10.2 and later.</para>
+            </summary>
+        </member>
+        <member name="M:Monobjc.AddressBook.ABGroup.RemoveMember(Monobjc.AddressBook.ABPerson)">
+            <summary>
+                <para>This is one of the properties that an ABGroup record contains by default.ABRecord describes some properties that all records contain, in “Constants”</para>
+                <para>Original signature is '- (BOOL)removeMember:(ABPerson *)person'</para>
+                <para>Available in Mac OS X v10.2 and later.</para>
+            </summary>
+        </member>
+        <member name="M:Monobjc.AddressBook.ABGroup.RemoveSubgroup(Monobjc.AddressBook.ABGroup)">
+            <summary>
+                <para>This is one of the properties that an ABGroup record contains by default.ABRecord describes some properties that all records contain, in “Constants”</para>
+                <para>Original signature is '- (BOOL)removeSubgroup:(ABGroup *)group'</para>
+                <para>Available in Mac OS X v10.2 and later.</para>
+            </summary>
+        </member>
+        <member name="M:Monobjc.AddressBook.ABGroup.SetDistributionIdentifierForPropertyPerson(Monobjc.Cocoa.NSString,Monobjc.Cocoa.NSString,Monobjc.AddressBook.ABPerson)">
+            <summary>
+                <para>This is one of the properties that an ABGroup record contains by default.ABRecord describes some properties that all records contain, in “Constants”</para>
+                <para>Original signature is '- (BOOL)setDistributionIdentifier:(NSString *)identifier forProperty:(NSString *)property person:(ABPerson *)person'</para>
+                <para>Available in Mac OS X v10.2 and later.</para>
+            </summary>
+        </member>
+        <member name="T:Monobjc.AddressBook.ABIdentityPicker">
+            <summary>
+            Managed wrapper for ABIdentityPicker Objective-C class.
+            </summary>
+        </member>
+        <member name="M:Monobjc.AddressBook.ABIdentityPicker.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Monobjc.AddressBook.ABIdentityPicker" /> class.
+            </summary>
+        </member>
+        <member name="M:Monobjc.AddressBook.ABIdentityPicker.#ctor(System.IntPtr)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Monobjc.AddressBook.ABIdentityPicker" /> class.
+            </summary>
+            <param name="nativePointer">The native pointer.</param>
+        </member>
+        <member name="M:Monobjc.AddressBook.ABIdentityPicker.#ctor(System.String,System.Object,System.Object[])">
+            <summary>
+            Initializes a new instance of the <see cref="T:Monobjc.AddressBook.ABIdentityPicker" /> class.
+            </summary>
+            <param name="selector">The selector.</param>
+            <param name="firstParam">The first param.</param>
+            <param name="parameters">The parameters.</param>
+        </member>
+        <member name="T:Monobjc.AddressBook.ABIdentityPicker.ABIdentityPickerSheetDispatcher">
+            <summary>
+            Dispatcher to connect .NET delegate to Objective-C event selector.
+            </summary>
+        </member>
+        <member name="M:Monobjc.AddressBook.ABIdentityPicker.ABIdentityPickerSheetDispatcher.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Monobjc.AddressBook.ABIdentityPicker.ABIdentityPickerSheetDispatcher" /> class.
+            </summary>
+        </member>
+        <member name="M:Monobjc.AddressBook.ABIdentityPicker.ABIdentityPickerSheetDispatcher.#ctor(System.IntPtr)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Monobjc.AddressBook.ABIdentityPicker.ABIdentityPickerSheetDispatcher" /> class.
+            </summary>
+            <param name="nativePointer">The native pointer.</param>
+        </member>
+        <member name="E:Monobjc.AddressBook.ABIdentityPicker.ABIdentityPickerSheetDispatcher.SheetDidEnd">
+            <summary>
+            Occurs when the save panel ends.
+            </summary>
+        </member>
+        <member name="M:Monobjc.AddressBook.ABIdentityPicker.ABIdentityPickerSheetDispatcher.IdentityPickerDidEndIdentitiesContextInfo(Monobjc.AddressBook.ABIdentityPicker,Monobjc.Cocoa.NSArray,System.IntPtr)">
+            <summary>
+            Callback method to dispatch message.
+            </summary>
+        </member>
+        <member name="T:Monobjc.AddressBook.ABIdentityPicker.IdentityPickerDidEndIdentitiesContextInfoEventHandler">
+            <summary>
+                <para>This delegate is used when dealing with asynchronous callback when using <see cref="T:Monobjc.AddressBook.ABIdentityPicker" />.</para>
+            </summary>
+        </member>
+        <member name="F:Monobjc.AddressBook.ABIdentityPicker.ABIdentityPickerClass">
+            <summary>
+            Static field for a quick access to the ABIdentityPicker class.
+            </summary>
+        </member>
+        <member name="P:Monobjc.AddressBook.ABIdentityPicker.AllowsMultipleSelection">
+            <summary>
+                <para>Returns a Boolean value indicating whether the user is allowed to select multiple records.</para>
+                <para>Original signature is '- (BOOL)allowsMultipleSelection'</para>
+                <para>Available in Mac OS X v10.5 and later.</para>
+            </summary>
+        </member>
+        <member name="P:Monobjc.AddressBook.ABIdentityPicker.RunModalIdentityPicker">
+            <summary>
+                <para>Runs the receiver as an application-modal dialog and returns the selected records.</para>
+                <para>Original signature is '- (NSArray *)runModalIdentityPicker'</para>
+                <para>Available in Mac OS X v10.5 and later.</para>
+            </summary>
+        </member>
+        <member name="M:Monobjc.AddressBook.ABIdentityPicker.BeginSheetModalForWindowModalDelegateDidEndSelectorContextInfo(Monobjc.Cocoa.NSWindow,Monobjc.Id,System.IntPtr,System.IntPtr)">
+            <summary>
+                <para>Runs the receiver modally as a sheet attached to a specified window.</para>
+                <para>Original signature is '- (void)beginSheetModalForWindow:(NSWindow *)window modalDelegate:(id)delegate didEndSelector:(SEL)didEndSelector contextInfo:(void *)contextInfo'</para>
+                <para>Available in Mac OS X v10.5 and later.</para>
+            </summary>
+            <param name="window">The parent window for the sheet.</param>
+            <param name="dlgt">The delegate for the modal session.</param>
+            <param name="didEndSelector">A message sent to the delegate after the user responds but before the sheet is dismissed.</param>
+            <param name="contextInfo">Contextual data passed to the delegate in the didEndSelector message.</param>
+            <returns>An array containing the ABRecord objects that the user selected in the panel.</returns>
+        </member>
+        <member name="M:Monobjc.AddressBook.ABIdentityPicker.Init">
+            <summary>
+                <para>Initializes the receiver immediately after memory for it has been allocated.</para>
+                <para>Original signature is '- (id)init'</para>
+                <para>Available in Mac OS X v10.5 and later.</para>
+            </summary>
+        </member>
+        <member name="M:Monobjc.AddressBook.ABIdentityPicker.BeginSheetModalForWindowModalDelegateDidEndSelectorContextInfo(Monobjc.Cocoa.NSWindow,Monobjc.AddressBook.ABIdentityPicker.IdentityPickerDidEndIdentitiesContextInfoEventHandler,System.IntPtr)">
+            <summary>
+                <para>Runs the receiver modally as a sheet attached to a specified window.</para>
+                <para>Original signature is '- (void)beginSheetModalForWindow:(NSWindow *)window modalDelegate:(id)delegate didEndSelector:(SEL)didEndSelector contextInfo:(void *)contextInfo'</para>
+                <para>Available in Mac OS X v10.5 and later.</para>
+            </summary>
+            <param name="window">The parent window for the sheet.</param>
+            <param name="didEndSelector">A message sent to the delegate after the user responds but before the sheet is dismissed.</param>
+            <param name="contextInfo">Contextual data passed to the delegate in the didEndSelector message.</param>
+        </member>
+        <member name="T:Monobjc.AddressBook.IABImageClient">
+            <summary>
+            Managed wrapper for "ABImageClient Protocol Objective-C Reference" Objective-C protocol.
+            </summary>
+        </member>
+        <member name="M:Monobjc.AddressBook.IABImageClient.ConsumeImageDataForTag(Monobjc.Cocoa.NSData,System.Int32)">
+            <summary>
+                <para>Original signature is '- (void)consumeImageData:(NSData *)data forTag:(NSInteger )tag'</para>
+                <para>Available in Mac OS X v10.2 and later.</para>
+            </summary>
+        </member>
+        <member name="T:Monobjc.AddressBook.ABMultiValue">
+            <summary>
+            Managed wrapper for ABMultiValue Objective-C class.
+            </summary>
+        </member>
+        <member name="M:Monobjc.AddressBook.ABMultiValue.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Monobjc.AddressBook.ABMultiValue" /> class.
+            </summary>
+        </member>
+        <member name="M:Monobjc.AddressBook.ABMultiValue.#ctor(System.IntPtr)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Monobjc.AddressBook.ABMultiValue" /> class.
+            </summary>
+            <param name="nativePointer">The native pointer.</param>
+        </member>
+        <member name="M:Monobjc.AddressBook.ABMultiValue.#ctor(System.String,System.Object,System.Object[])">
+            <summary>
+            Initializes a new instance of the <see cref="T:Monobjc.AddressBook.ABMultiValue" /> class.
+            </summary>
+            <param name="selector">The selector.</param>
+            <param name="firstParam">The first param.</param>
+            <param name="parameters">The parameters.</param>
+        </member>
+        <member name="F:Monobjc.AddressBook.ABMultiValue.ABMultiValueClass">
+            <summary>
+            Static field for a quick access to the ABMultiValue class.
+            </summary>
+        </member>
+        <member name="P:Monobjc.AddressBook.ABMultiValue.Count">
+            <summary>
+                <para>Original signature is '- (NSUInteger )count'</para>
+                <para>Available in Mac OS X v10.2 and later.</para>
+            </summary>
+        </member>
+        <member name="P:Monobjc.AddressBook.ABMultiValue.PrimaryIdentifier">
+            <summary>
+                <para>Original signature is '- (NSString *)primaryIdentifier'</para>
+                <para>Available in Mac OS X v10.2 and later.</para>
+            </summary>
+        </member>
+        <member name="P:Monobjc.AddressBook.ABMultiValue.PropertyType">
+            <summary>
+                <para>Original signature is '- (ABPropertyType)propertyType'</para>
+                <para>Available in Mac OS X v10.2 and later.</para>
+            </summary>
+        </member>
+        <member name="M:Monobjc.AddressBook.ABMultiValue.IdentifierAtIndex(System.UInt32)">
+            <summary>
+                <para>Original signature is '- (NSString *)identifierAtIndex:( NSUInteger)index'</para>
+                <para>Available in Mac OS X v10.2 and later.</para>
+            </summary>
+        </member>
+        <member name="M:Monobjc.AddressBook.ABMultiValue.IndexForIdentifier(Monobjc.Cocoa.NSString)">
+            <summary>
+                <para>Original signature is '- (NSUInteger )indexForIdentifier:(NSString *)identifier'</para>
+                <para>Available in Mac OS X v10.2 and later.</para>
+            </summary>
+        </member>
+        <member name="M:Monobjc.AddressBook.ABMultiValue.LabelAtIndex(System.UInt32)">
+            <summary>
+                <para>Original signature is '- (NSString *)labelAtIndex:(NSUInteger )index'</para>
+                <para>Available in Mac OS X v10.2 and later.</para>
+            </summary>
+        </member>
+        <member name="M:Monobjc.AddressBook.ABMultiValue.LabelForIdentifier(Monobjc.Cocoa.NSString)">
+            <summary>
+                <para>Original signature is '- (id)labelForIdentifier:(NSString *)identifier'</para>
+                <para>Available in Mac OS X v10.5 and later.</para>
+            </summary>
+        </member>
+        <member name="M:Monobjc.AddressBook.ABMultiValue.ValueAtIndex(System.UInt32)">
+            <summary>
+                <para>Original signature is '- (id)valueAtIndex:( NSUInteger)index'</para>
+                <para>Available in Mac OS X v10.2 and later.</para>
+            </summary>
+        </member>
+        <member name="M:Monobjc.AddressBook.ABMultiValue.ValueForIdentifier(Monobjc.Cocoa.NSString)">
+            <summary>
+                <para>Original signature is '- (id)valueForIdentifier:(NSString *)identifier'</para>
+                <para>Available in Mac OS X v10.5 and later.</para>
+            </summary>
+        </member>
+        <member name="M:Monobjc.AddressBook.ABMultiValue.CopyWithZone(System.IntPtr)">
+            <summary>
+                <para>Returns a new instance that’s a copy of the receiver.</para>
+                <para>Original signature is '- (id)copyWithZone:(NSZone *)zone'</para>
+                <para>Available in Mac OS X v10.0 and later.</para>
+            </summary>
+            <param name="zone">The zone identifies an area of memory from which to allocate for the new instance. If zone is NULL, the new instance is allocated from the default zone, which is returned from the function NSDefaultMallocZone.</param>
+        </member>
+        <member name="M:Monobjc.AddressBook.ABMultiValue.CountByEnumeratingWithStateObjectsCount(Monobjc.Cocoa.NSFastEnumerationState,Monobjc.Id,System.UInt32)">
+            <summary>
+                <para>Returns by reference a C array of objects over which the sender should iterate, and as the return value the number of objects in the array.</para>
+                <para>Original signature is '- (NSUInteger )countByEnumeratingWithState:( NSFastEnumerationState *)state objects:(id *)stackbuf count:(NSUInteger )len'</para>
+                <para>Available in Mac OS X v10.5 and later.</para>
+            </summary>
+            <param name="state">Context information that is used in the enumeration to, in addition to other possibilities, ensure that the collection has not been mutated.</param>
+            <param name="stackbuf">A C array of objects over which the sender is to iterate.</param>
+            <param name="len">The maximum number of objects to return in stackbuf.</param>
+            <returns>The number of objects returned in stackbuf. Returns 0 when the iteration is finished.</returns>
+        </member>
+        <member name="M:Monobjc.AddressBook.ABMultiValue.MutableCopyWithZone(System.IntPtr)">
+            <summary>
+                <para>Returns a new instance that’s a mutable copy of the receiver.</para>
+                <para>Original signature is '- (id)mutableCopyWithZone:(NSZone *)zone'</para>
+                <para>Available in Mac OS X v10.0 and later.</para>
+            </summary>
+            <param name="zone">The zone from which memory is allocated for the new instance. If zone is NULL, the new instance is allocated from the default zone, which is returned by NSDefaultMallocZone.</param>
+        </member>
+        <member name="T:Monobjc.AddressBook.ABMutableMultiValue">
+            <summary>
+            Managed wrapper for ABMutableMultiValue Objective-C class.
+            </summary>
+        </member>
+        <member name="M:Monobjc.AddressBook.ABMutableMultiValue.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Monobjc.AddressBook.ABMutableMultiValue" /> class.
+            </summary>
+        </member>
+        <member name="M:Monobjc.AddressBook.ABMutableMultiValue.#ctor(System.IntPtr)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Monobjc.AddressBook.ABMutableMultiValue" /> class.
+            </summary>
+            <param name="nativePointer">The native pointer.</param>
+        </member>
+        <member name="M:Monobjc.AddressBook.ABMutableMultiValue.#ctor(System.String,System.Object,System.Object[])">
+            <summary>
+            Initializes a new instance of the <see cref="T:Monobjc.AddressBook.ABMutableMultiValue" /> class.
+            </summary>
+            <param name="selector">The selector.</param>
+            <param name="firstParam">The first param.</param>
+            <param name="parameters">The parameters.</param>
+        </member>
+        <member name="F:Monobjc.AddressBook.ABMutableMultiValue.ABMutableMultiValueClass">
+            <summary>
+            Static field for a quick access to the ABMutableMultiValue class.
+            </summary>
+        </member>
+        <member name="M:Monobjc.AddressBook.ABMutableMultiValue.AddValueWithLabel(Monobjc.Id,Monobjc.Cocoa.NSString)">
+            <summary>
+                <para>Original signature is '- (NSString *)addValue:(id)value withLabel:(NSString *)label'</para>
+                <para>Available in Mac OS X v10.2 and later.</para>
+            </summary>
+        </member>
+        <member name="M:Monobjc.AddressBook.ABMutableMultiValue.InsertValueWithLabelAtIndex(Monobjc.Id,Monobjc.Cocoa.NSString,System.UInt32)">
+            <summary>
+                <para>Original signature is '- (NSString *)insertValue:(id)value withLabel:(NSString *)label atIndex:( NSUInteger)index'</para>
+                <para>Available in Mac OS X v10.2 and later.</para>
+            </summary>
+        </member>
+        <member name="M:Monobjc.AddressBook.ABMutableMultiValue.RemoveValueAndLabelAtIndex(System.UInt32)">
+            <summary>
+                <para>Original signature is '- (BOOL)removeValueAndLabelAtIndex:( NSUInteger)index'</para>
+                <para>Available in Mac OS X v10.2 and later.</para>
+            </summary>
+        </member>
+        <member name="M:Monobjc.AddressBook.ABMutableMultiValue.ReplaceLabelAtIndexWithLabel(System.UInt32,Monobjc.Cocoa.NSString)">
+            <summary>
+                <para>Original signature is '- (BOOL)replaceLabelAtIndex:( NSUInteger)index withLabel:(NSString *)label'</para>
+                <para>Available in Mac OS X v10.2 and later.</para>
+            </summary>
+        </member>
+        <member name="M:Monobjc.AddressBook.ABMutableMultiValue.ReplaceValueAtIndexWithValue(System.UInt32,Monobjc.Id)">
+            <summary>
+                <para>Original signature is '- (BOOL)replaceValueAtIndex:( NSUInteger)index withValue:(id)value'</para>
+                <para>Available in Mac OS X v10.2 and later.</para>
+            </summary>
+        </member>
+        <member name="M:Monobjc.AddressBook.ABMutableMultiValue.SetPrimaryIdentifier(Monobjc.Cocoa.NSString)">
+            <summary>
+                <para>Original signature is '- (BOOL)setPrimaryIdentifier:(NSString *)identifier'</para>
+                <para>Available in Mac OS X v10.2 and later.</para>
+            </summary>
+        </member>
+        <member name="T:Monobjc.AddressBook.ABPeoplePickerSelectionBehavior">
+            <summary>
+            These constants are of the type ABPeoplePickerSelectionBehavior and are used by <see cref="P:Monobjc.AddressBook.ABPeoplePickerView.ValueSelectionBehavior" />.
+            </summary>
+        </member>
+        <member name="F:Monobjc.AddressBook.ABPeoplePickerSelectionBehavior.ABNoValueSelection">
+            <summary>
+            Doesn�t allow the user to select individual values.
+            </summary>
+        </member>
+        <member name="F:Monobjc.AddressBook.ABPeoplePickerSelectionBehavior.ABSingleValueSelection">
+            <summary>
+            Allows the user to select a single value.
+            </summary>
+        </member>
+        <member name="F:Monobjc.AddressBook.ABPeoplePickerSelectionBehavior.ABMultipleValueSelection">
+            <summary>
+            Allows the user to select multiple values.
+            </summary>
+        </member>
+        <member name="T:Monobjc.AddressBook.ABPeoplePickerView">
+            <summary>
+            Managed wrapper for ABPeoplePickerView Objective-C class.
+            </summary>
+        </member>
+        <member name="M:Monobjc.AddressBook.ABPeoplePickerView.#ctor(Monobjc.Cocoa.NSRect)">
+            <summary>
+                <para>Initializes and returns a newly allocated NSView object with a specified frame rectangle.</para>
+                <para>Original signature is '- (id)initWithFrame:(NSRect)frameRect'</para>
+                <para>Available in Mac OS X v10.0 and later.</para>
+            </summary>
+        </member>
+        <member name="M:Monobjc.AddressBook.ABPeoplePickerView.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Monobjc.AddressBook.ABPeoplePickerView" /> class.
+            </summary>
+        </member>
+        <member name="M:Monobjc.AddressBook.ABPeoplePickerView.#ctor(System.IntPtr)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Monobjc.AddressBook.ABPeoplePickerView" /> class.
+            </summary>
+            <param name="nativePointer">The native pointer.</param>
+        </member>
+        <member name="M:Monobjc.AddressBook.ABPeoplePickerView.#ctor(System.String,System.Object,System.Object[])">
+            <summary>
+            Initializes a new instance of the <see cref="T:Monobjc.AddressBook.ABPeoplePickerView" /> class.
+            </summary>
+            <param name="selector">The selector.</param>
+            <param name="firstParam">The first param.</param>
+            <param name="parameters">The parameters.</param>
+        </member>
+        <member name="F:Monobjc.AddressBook.ABPeoplePickerView.ABPeoplePickerGroupSelectionDidChangeNotification">
+            <summary>
+                <para>Posted when the selection in the group list is changed.</para>
+                <para>Available in Mac OS X v10.3 and later.</para>
+            </summary>
+        </member>
+        <member name="F:Monobjc.AddressBook.ABPeoplePickerView.ABPeoplePickerNameSelectionDidChangeNotification">
+            <summary>
+                <para>Posted when the selection in the name list is changed.</para>
+                <para>Available in Mac OS X v10.3 and later.</para>
+            </summary>
+        </member>
+        <member name="F:Monobjc.AddressBook.ABPeoplePickerView.ABPeoplePickerValueSelectionDidChangeNotification">
+            <summary>
+                <para>Posted when the selection in a multi-value property is changed.</para>
+                <para>Available in Mac OS X v10.3 and later.</para>
+            </summary>
+        </member>
+        <member name="F:Monobjc.AddressBook.ABPeoplePickerView.ABPeoplePickerDisplayedPropertyDidChangeNotification">
+            <summary>
+                <para>Posted when the displayed property in the record list is changed.</para>
+                <para>Available in Mac OS X v10.3 and later.</para>
+            </summary>
+        </member>
+        <member name="F:Monobjc.AddressBook.ABPeoplePickerView.ABPeoplePickerViewClass">
+            <summary>
+            Static field for a quick access to the ABPeoplePickerView class.
+            </summary>
+        </member>
+        <member name="P:Monobjc.AddressBook.ABPeoplePickerView.AccessoryView">
+            <summary>
+                <para>These constants are of the type ABPeoplePickerSelectionBehavior and are used by setValueSelectionBehavior: and .</para>
+                <para>Original signature is '- (NSView *)accessoryView'</para>
+                <para>Available in Mac OS X v10.3 and later.</para>
+            </summary>
+        </member>
+        <member name="P:Monobjc.AddressBook.ABPeoplePickerView.AllowsGroupSelection">
+            <summary>
+                <para>These constants are of the type ABPeoplePickerSelectionBehavior and are used by setValueSelectionBehavior: and .</para>
+                <para>Original signature is '- (BOOL)allowsGroupSelection'</para>
+                <para>Available in Mac OS X v10.3 and later.</para>
+            </summary>
+        </member>
+        <member name="P:Monobjc.AddressBook.ABPeoplePickerView.AllowsMultipleSelection">
+            <summary>
+                <para>These constants are of the type ABPeoplePickerSelectionBehavior and are used by setValueSelectionBehavior: and .</para>
+                <para>Original signature is '- (BOOL)allowsMultipleSelection'</para>
+                <para>Available in Mac OS X v10.3 and later.</para>
+            </summary>
+        </member>
+        <member name="P:Monobjc.AddressBook.ABPeoplePickerView.AutosaveName">
+            <summary>
+                <para>These constants are of the type ABPeoplePickerSelectionBehavior and are used by setValueSelectionBehavior: and .</para>
+                <para>Original signature is '- (NSString *)autosaveName'</para>
+                <para>Available in Mac OS X v10.3 and later.</para>
+            </summary>
+        </member>
+        <member name="P:Monobjc.AddressBook.ABPeoplePickerView.DisplayedProperty">
+            <summary>
+                <para>These constants are of the type ABPeoplePickerSelectionBehavior and are used by setValueSelectionBehavior: and .</para>
+                <para>Original signature is '- (NSString *)displayedProperty'</para>
+                <para>Available in Mac OS X v10.3 and later.</para>
+            </summary>
+        </member>
+        <member name="P:Monobjc.AddressBook.ABPeoplePickerView.GroupDoubleAction">
+            <summary>
+                <para>These constants are of the type ABPeoplePickerSelectionBehavior and are used by setValueSelectionBehavior: and .</para>
+                <para>Original signature is '- (SEL)groupDoubleAction'</para>
+                <para>Available in Mac OS X v10.3 and later.</para>
+            </summary>
+        </member>
+        <member name="P:Monobjc.AddressBook.ABPeoplePickerView.NameDoubleAction">
+            <summary>
+                <para>These constants are of the type ABPeoplePickerSelectionBehavior and are used by setValueSelectionBehavior: and .</para>
+                <para>Original signature is '- (SEL)nameDoubleAction'</para>
+                <para>Available in Mac OS X v10.3 and later.</para>
+            </summary>
+        </member>
+        <member name="P:Monobjc.AddressBook.ABPeoplePickerView.Properties">
+            <summary>
+                <para>These constants are of the type ABPeoplePickerSelectionBehavior and are used by setValueSelectionBehavior: and .</para>
+                <para>Original signature is '- (NSArray *)properties'</para>
+                <para>Available in Mac OS X v10.3 and later.</para>
+            </summary>
+        </member>
+        <member name="P:Monobjc.AddressBook.ABPeoplePickerView.SelectedGroups">
+            <summary>
+                <para>These constants are of the type ABPeoplePickerSelectionBehavior and are used by setValueSelectionBehavior: and .</para>
+                <para>Original signature is '- (NSArray *)selectedGroups'</para>
+                <para>Available in Mac OS X v10.3 and later.</para>
+            </summary>
+        </member>
+        <member name="P:Monobjc.AddressBook.ABPeoplePickerView.SelectedRecords">
+            <summary>
+                <para>These constants are of the type ABPeoplePickerSelectionBehavior and are used by setValueSelectionBehavior: and .</para>
+                <para>Original signature is '- (NSArray *)selectedRecords'</para>
+                <para>Available in Mac OS X v10.3 and later.</para>
+            </summary>
+        </member>
+        <member name="P:Monobjc.AddressBook.ABPeoplePickerView.SelectedValues">
+            <summary>
+                <para>These constants are of the type ABPeoplePickerSelectionBehavior and are used by setValueSelectionBehavior: and .</para>
+                <para>Original signature is '- (NSArray *)selectedValues'</para>
+                <para>Available in Mac OS X v10.3 and later.</para>
+            </summary>
+        </member>
+        <member name="P:Monobjc.AddressBook.ABPeoplePickerView.Target">
+            <summary>
+                <para>These constants are of the type ABPeoplePickerSelectionBehavior and are used by setValueSelectionBehavior: and .</para>
+                <para>Original signature is '- (id)target'</para>
+                <para>Available in Mac OS X v10.3 and later.</para>
+            </summary>
+        </member>
+        <member name="P:Monobjc.AddressBook.ABPeoplePickerView.ValueSelectionBehavior">
+            <summary>
+                <para>These constants are of the type ABPeoplePickerSelectionBehavior and are used by setValueSelectionBehavior: and .</para>
+                <para>Original signature is '- (ABPeoplePickerSelectionBehavior)valueSelectionBehavior'</para>
+                <para>Available in Mac OS X v10.3 and later.</para>
+            </summary>
+        </member>
+        <member name="M:Monobjc.AddressBook.ABPeoplePickerView.AddProperty(Monobjc.Cocoa.NSString)">
+            <summary>
+                <para>These constants are of the type ABPeoplePickerSelectionBehavior and are used by setValueSelectionBehavior: and .</para>
+                <para>Original signature is '- (void)addProperty:(NSString *)property'</para>
+                <para>Available in Mac OS X v10.3 and later.</para>
+            </summary>
+        </member>
+        <member name="M:Monobjc.AddressBook.ABPeoplePickerView.ClearSearchField(Monobjc.Id)">
+            <summary>
+                <para>These constants are of the type ABPeoplePickerSelectionBehavior and are used by setValueSelectionBehavior: and .</para>
+                <para>Original signature is '- (void)clearSearchField:(id)sender'</para>
+                <para>Available in Mac OS X v10.3 and later.</para>
+            </summary>
+        </member>
+        <member name="M:Monobjc.AddressBook.ABPeoplePickerView.ColumnTitleForProperty(Monobjc.Cocoa.NSString)">
+            <summary>
+                <para>These constants are of the type ABPeoplePickerSelectionBehavior and are used by setValueSelectionBehavior: and .</para>
+                <para>Original signature is '- (NSString *)columnTitleForProperty:(NSString *)property'</para>
+                <para>Available in Mac OS X v10.3 and later.</para>
+            </summary>
+        </member>
+        <member name="M:Monobjc.AddressBook.ABPeoplePickerView.DeselectAll(Monobjc.Id)">
+            <summary>
+                <para>These constants are of the type ABPeoplePickerSelectionBehavior and are used by setValueSelectionBehavior: and .</para>
+                <para>Original signature is '- (void)deselectAll:(id)sender'</para>
+                <para>Available in Mac OS X v10.3 and later.</para>
+            </summary>
+        </member>
+        <member name="M:Monobjc.AddressBook.ABPeoplePickerView.DeselectGroup(Monobjc.AddressBook.ABGroup)">
+            <summary>
+                <para>These constants are of the type ABPeoplePickerSelectionBehavior and are used by setValueSelectionBehavior: and .</para>
+                <para>Original signature is '- (void)deselectGroup:(ABGroup *)group'</para>
+                <para>Available in Mac OS X v10.3 and later.</para>
+            </summary>
+        </member>
+        <member name="M:Monobjc.AddressBook.ABPeoplePickerView.DeselectIdentifierForPerson(Monobjc.Cocoa.NSString,Monobjc.AddressBook.ABPerson)">
+            <summary>
+                <para>These constants are of the type ABPeoplePickerSelectionBehavior and are used by setValueSelectionBehavior: and .</para>
+                <para>Original signature is '- (void)deselectIdentifier:(NSString *)identifier forPerson:(ABPerson *)person'</para>
+                <para>Available in Mac OS X v10.3 and later.</para>
+            </summary>
+        </member>
+        <member name="M:Monobjc.AddressBook.ABPeoplePickerView.DeselectRecord(Monobjc.AddressBook.ABRecord)">
+            <summary>
+                <para>These constants are of the type ABPeoplePickerSelectionBehavior and are used by setValueSelectionBehavior: and .</para>
+                <para>Original signature is '- (void)deselectRecord:(ABRecord *)record'</para>
+                <para>Available in Mac OS X v10.3 and later.</para>
+            </summary>
+        </member>
+        <member name="M:Monobjc.AddressBook.ABPeoplePickerView.EditInAddressBook(Monobjc.Id)">
+            <summary>
+                <para>These constants are of the type ABPeoplePickerSelectionBehavior and are used by setValueSelectionBehavior: and .</para>
+                <para>Original signature is '- (void)editInAddressBook:(id)sender'</para>
+                <para>Available in Mac OS X v10.3 and later.</para>
+            </summary>
+        </member>
+        <member name="M:Monobjc.AddressBook.ABPeoplePickerView.RemoveProperty(Monobjc.Cocoa.NSString)">
+            <summary>
+                <para>These constants are of the type ABPeoplePickerSelectionBehavior and are used by setValueSelectionBehavior: and .</para>
+                <para>Original signature is '- (void)removeProperty:(NSString *)property'</para>
+                <para>Available in Mac OS X v10.3 and later.</para>
+            </summary>
+        </member>
+        <member name="M:Monobjc.AddressBook.ABPeoplePickerView.SelectedIdentifiersForPerson(Monobjc.AddressBook.ABPerson)">
+            <summary>
+                <para>These constants are of the type ABPeoplePickerSelectionBehavior and are used by setValueSelectionBehavior: and .</para>
+                <para>Original signature is '- (NSArray *)selectedIdentifiersForPerson:(ABPerson *)person'</para>
+                <para>Available in Mac OS X v10.3 and later.</para>
+            </summary>
+        </member>
+        <member name="M:Monobjc.AddressBook.ABPeoplePickerView.SelectGroupByExtendingSelection(Monobjc.AddressBook.ABGroup,System.Boolean)">
+            <summary>
+                <para>These constants are of the type ABPeoplePickerSelectionBehavior and are used by setValueSelectionBehavior: and .</para>
+                <para>Original signature is '- (void)selectGroup:(ABGroup *)group byExtendingSelection:(BOOL)extend'</para>
+                <para>Available in Mac OS X v10.3 and later.</para>
+            </summary>
+        </member>
+        <member name="M:Monobjc.AddressBook.ABPeoplePickerView.SelectIdentifierForPersonByExtendingSelection(Monobjc.Cocoa.NSString,Monobjc.AddressBook.ABPerson,System.Boolean)">
+            <summary>
+                <para>These constants are of the type ABPeoplePickerSelectionBehavior and are used by setValueSelectionBehavior: and .</para>
+                <para>Original signature is '- (void)selectIdentifier:(NSString *)identifier forPerson:(ABPerson *)person byExtendingSelection:(BOOL)extend'</para>
+                <para>Available in Mac OS X v10.3 and later.</para>
+            </summary>
+        </member>
+        <member name="M:Monobjc.AddressBook.ABPeoplePickerView.SelectInAddressBook(Monobjc.Id)">
+            <summary>
+                <para>These constants are of the type ABPeoplePickerSelectionBehavior and are used by setValueSelectionBehavior: and .</para>
+                <para>Original signature is '- (void)selectInAddressBook:(id)sender'</para>
+                <para>Available in Mac OS X v10.3 and later.</para>
+            </summary>
+        </member>
+        <member name="M:Monobjc.AddressBook.ABPeoplePickerView.SelectRecordByExtendingSelection(Monobjc.AddressBook.ABRecord,System.Boolean)">
+            <summary>
+                <para>These constants are of the type ABPeoplePickerSelectionBehavior and are used by setValueSelectionBehavior: and .</para>
+                <para>Original signature is '- (void)selectRecord:(ABRecord *)record byExtendingSelection:(BOOL)extend'</para>
+                <para>Available in Mac OS X v10.3 and later.</para>
+            </summary>
+        </member>
+        <member name="M:Monobjc.AddressBook.ABPeoplePickerView.SetColumnTitleForProperty(Monobjc.Cocoa.NSString,Monobjc.Cocoa.NSString)">
+            <summary>
+                <para>These constants are of the type ABPeoplePickerSelectionBehavior and are used by setValueSelectionBehavior: and .</para>
+                <para>Original signature is '- (void)setColumnTitle:(NSString *)title forProperty:(NSString *)property'</para>
+                <para>Available in Mac OS X v10.3 and later.</para>
+            </summary>
+        </member>
+        <member name="T:Monobjc.AddressBook.ABPerson">
+            <summary>
+            Managed wrapper for ABPerson Objective-C class.
+            </summary>
+        </member>
+        <member name="M:Monobjc.AddressBook.ABPerson.#ctor(Monobjc.AddressBook.ABAddressBook)">
+            <summary>
+                <para>Initializes the receiver and adds it to the given address book.</para>
+                <para>Original signature is '- (id)initWithAddressBook:(ABAddressBook *)addressBook'</para>
+                <para>Available in Mac OS X v10.5 and later.</para>
+            </summary>
+        </member>
+        <member name="M:Monobjc.AddressBook.ABPerson.#ctor(Monobjc.Cocoa.NSData)">
+            <summary>
+                <para>These are the properties that an ABPerson record contains by default. ABRecord describes additional properties that all records contain, in �Constants�. Note that some of these properties are not displayed in the Address Book application. Developers can add their own properties with the ABRecord method addPropertiesAndTypes:.</para>
+                <para>Original signature is '- (id)initWithVCardRepresentation:(NSData *)vCardData'</para>
+                <para>Available in Mac OS X v10.2 and later.</para>
+            </summary>
+        </member>
+        <member name="M:Monobjc.AddressBook.ABPerson.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Monobjc.AddressBook.ABPerson" /> class.
+            </summary>
+        </member>
+        <member name="M:Monobjc.AddressBook.ABPerson.#ctor(System.IntPtr)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Monobjc.AddressBook.ABPerson" /> class.
+            </summary>
+            <param name="nativePointer">The native pointer.</param>
+        </member>
+        <member name="M:Monobjc.AddressBook.ABPerson.#ctor(System.String,System.Object,System.Object[])">
+            <summary>
+            Initializes a new instance of the <see cref="T:Monobjc.AddressBook.ABPerson" /> class.
+            </summary>
+            <param name="selector">The selector.</param>
+            <param name="firstParam">The first param.</param>
+            <param name="parameters">The parameters.</param>
+        </member>
+        <member name="F:Monobjc.AddressBook.ABPerson.ABPersonClass">
+            <summary>
+            Static field for a quick access to the ABPerson class.
+            </summary>
+        </member>
+        <member name="P:Monobjc.AddressBook.ABPerson.Properties">
+            <summary>
+                <para>Returns the CSIdentityRef object associated with a person.</para>
+                <para>Original signature is '+ (NSArray *)properties'</para>
+                <para>Available in Mac OS X v10.2 and later.</para>
+            </summary>
+        </member>
+        <member name="P:Monobjc.AddressBook.ABPerson.Identity">
+            <summary>
+                <para>Returns the CSIdentityRef object associated with a person.</para>
+                <para>Original signature is '- (CSIdentityRef)identity'</para>
+                <para>Available in Mac OS X v10.5 and later.</para>
+            </summary>
+        </member>
+        <member name="P:Monobjc.AddressBook.ABPerson.IdentityUniqueId">
+            <summary>
+                <para>Returns the unique identifier for a person.</para>
+                <para>Original signature is '- (NSString*)identityUniqueId'</para>
+                <para>Available in Mac OS X v10.5 and later.</para>
+            </summary>
+        </member>
+        <member name="P:Monobjc.AddressBook.ABPerson.ImageData">
+            <summary>
+                <para>These are the properties that an ABPerson record contains by default. ABRecord describes additional properties that all records contain, in �Constants�. Note that some of these properties are not displayed in the Address Book application. Developers can add their own properties with the ABRecord method addPropertiesAndTypes:.</para>
+                <para>Original signature is '- (NSData *)imageData'</para>
+                <para>Available in Mac OS X v10.2 and later.</para>
+            </summary>
+        </member>
+        <member name="P:Monobjc.AddressBook.ABPerson.ParentGroups">
+            <summary>
+                <para>These are the properties that an ABPerson record contains by default. ABRecord describes additional properties that all records contain, in �Constants�. Note that some of these properties are not displayed in the Address Book application. Developers can add their own properties with the ABRecord method addPropertiesAndTypes:.</para>
+                <para>Original signature is '- (NSArray *)parentGroups'</para>
+                <para>Available in Mac OS X v10.2 and later.</para>
+            </summary>
+        </member>
+        <member name="P:Monobjc.AddressBook.ABPerson.VCardRepresentation">
+            <summary>
+                <para>These are the properties that an ABPerson record contains by default. ABRecord describes additional properties that all records contain, in �Constants�. Note that some of these properties are not displayed in the Address Book application. Developers can add their own properties with the ABRecord method addPropertiesAndTypes:.</para>
+                <para>Original signature is '- (NSData *)vCardRepresentation'</para>
+                <para>Available in Mac OS X v10.2 and later.</para>
+            </summary>
+        </member>
+        <member name="M:Monobjc.AddressBook.ABPerson.ConsumeImageDataForTag(Monobjc.Cocoa.NSData,System.Int32)">
+            <summary>
+                <para>Original signature is '- (void)consumeImageData:(NSData *)data forTag:(NSInteger )tag'</para>
+                <para>Available in Mac OS X v10.2 and later.</para>
+            </summary>
+        </member>
+        <member name="M:Monobjc.AddressBook.ABPerson.AddPropertiesAndTypes(Monobjc.Cocoa.NSDictionary)">
+            <summary>
+                <para>Returns the CSIdentityRef object associated with a person.</para>
+                <para>Original signature is '+ (NSInteger )addPropertiesAndTypes:(NSDictionary *)properties'</para>
+                <para>Available in Mac OS X v10.2 and later.</para>
+            </summary>
+            <returns>A CSIdentityRef object associated with the receiver or NULL if it doesn�t exist.</returns>
+        </member>
+        <member name="M:Monobjc.AddressBook.ABPerson.CancelLoadingImageDataForTag(System.Int32)">
+            <summary>
+                <para>Returns the CSIdentityRef object associated with a person.</para>
+                <para>Original signature is '+ (void)cancelLoadingImageDataForTag:( NSInteger)tag'</para>
+                <para>Available in Mac OS X v10.2 and later.</para>
+            </summary>
+            <returns>A CSIdentityRef object associated with the receiver or NULL if it doesn�t exist.</returns>
+        </member>
+        <member name="M:Monobjc.AddressBook.ABPerson.RemoveProperties(Monobjc.Cocoa.NSArray)">
+            <summary>
+                <para>Returns the CSIdentityRef object associated with a person.</para>
+                <para>Original signature is '+ (NSInteger )removeProperties:(NSArray *)properties'</para>
+                <para>Available in Mac OS X v10.2 and later.</para>
+            </summary>
+            <returns>A CSIdentityRef object associated with the receiver or NULL if it doesn�t exist.</returns>
+        </member>
+        <member name="M:Monobjc.AddressBook.ABPerson.SearchElementForPropertyLabelKeyValueComparison(Monobjc.Cocoa.NSString,Monobjc.Cocoa.NSString,Monobjc.Cocoa.NSString,Monobjc.Id,Monobjc.AddressBook.ABSearchComparison)">
+            <summary>
+                <para>Returns the CSIdentityRef object associated with a person.</para>
+                <para>Original signature is '+ (ABSearchElement *)searchElementForProperty:(NSString *)property label:(NSString *)label key:(NSString *)key value:(id)value comparison:(ABSearchComparison)comparison'</para>
+                <para>Available in Mac OS X v10.2 and later.</para>
+            </summary>
+            <returns>A CSIdentityRef object associated with the receiver or NULL if it doesn�t exist.</returns>
+        </member>
+        <member name="M:Monobjc.AddressBook.ABPerson.TypeOfProperty(Monobjc.Cocoa.NSString)">
+            <summary>
+                <para>Returns the CSIdentityRef object associated with a person.</para>
+                <para>Original signature is '+ (ABPropertyType)typeOfProperty:(NSString *)property'</para>
+                <para>Available in Mac OS X v10.2 and later.</para>
+            </summary>
+            <returns>A CSIdentityRef object associated with the receiver or NULL if it doesn�t exist.</returns>
+        </member>
+        <member name="M:Monobjc.AddressBook.ABPerson.BeginLoadingImageDataForClient(Monobjc.AddressBook.IABImageClient)">
+            <summary>
+                <para>Returns the CSIdentityRef object associated with a person.</para>
+                <para>Original signature is '- (NSInteger )beginLoadingImageDataForClient:(id &lt;ABImageClient&gt;)client'</para>
+                <para>Available in Mac OS X v10.2 and later.</para>
+            </summary>
+            <returns>A CSIdentityRef object associated with the receiver or NULL if it doesn�t exist.</returns>
+        </member>
+        <member name="M:Monobjc.AddressBook.ABPerson.InitWithVCardRepresentation(Monobjc.Cocoa.NSData)">
+            <summary>
+                <para>These are the properties that an ABPerson record contains by default. ABRecord describes additional properties that all records contain, in �Constants�. Note that some of these properties are not displayed in the Address Book application. Developers can add their own properties with the ABRecord method addPropertiesAndTypes:.</para>
+                <para>Original signature is '- (id)initWithVCardRepresentation:(NSData *)vCardData'</para>
+                <para>Available in Mac OS X v10.2 and later.</para>
+            </summary>
+        </member>
+        <member name="M:Monobjc.AddressBook.ABPerson.SetImageData(Monobjc.Cocoa.NSData)">
+            <summary>
+                <para>These are the properties that an ABPerson record contains by default. ABRecord describes additional properties that all records contain, in �Constants�. Note that some of these properties are not displayed in the Address Book application. Developers can add their own properties with the ABRecord method addPropertiesAndTypes:.</para>
+                <para>Original signature is '- (BOOL)setImageData:(NSData *)data'</para>
+                <para>Available in Mac OS X v10.2 and later.</para>
+            </summary>
+        </member>
+        <member name="T:Monobjc.AddressBook.ABPersonFlags">
+            <summary>
+            Settings that determine how person records are displayed.
+            </summary>
+        </member>
+        <member name="F:Monobjc.AddressBook.ABPersonFlags.kABShowAsMask">
+            <summary>
+                <para>Used in conjuction with <see cref="F:Monobjc.AddressBook.ABPersonFlags.kABShowAsPerson" /> and <see cref="F:Monobjc.AddressBook.ABPersonFlags.kABShowAsCompany" /> to determine record configuration.</para>
+                <para>Available in Mac OS X v10.3 and later.</para>
+            </summary>
+        </member>
+        <member name="F:Monobjc.AddressBook.ABPersonFlags.kABShowAsPerson">
+            <summary>
+                <para>Record is displayed as a person.</para>
+                <para>Available in Mac OS X v10.3 and later.</para>
+            </summary>
+        </member>
+        <member name="F:Monobjc.AddressBook.ABPersonFlags.kABShowAsCompany">
+            <summary>
+                <para>Record is displayed as a company.</para>
+                <para>Available in Mac OS X v10.3 and later.</para>
+            </summary>
+        </member>
+        <member name="F:Monobjc.AddressBook.ABPersonFlags.kABNameOrderingMask">
+            <summary>
+                <para>Used in conjunction with <see cref="F:Monobjc.AddressBook.ABPersonFlags.kABDefaultNameOrdering" />, <see cref="F:Monobjc.AddressBook.ABPersonFlags.kABFirstNameFirst" />, and <see cref="F:Monobjc.AddressBook.ABPersonFlags.kABLastNameFirst" /> to determine name ordering.</para>
+                <para>Available in Mac OS X v10.3 and later.</para>
+            </summary>
+        </member>
+        <member name="F:Monobjc.AddressBook.ABPersonFlags.kABDefaultNameOrdering">
+            <summary>
+                <para>Default name ordering (whether a person�s first name or last name is displayed first) the Address Book application.</para>
+                <para>Available in Mac OS X v10.3 and later.</para>
+            </summary>
+        </member>
+        <member name="F:Monobjc.AddressBook.ABPersonFlags.kABFirstNameFirst">
+            <summary>
+                <para>First name is displayed first in Address Book.</para>
+                <para>Available in Mac OS X v10.3 and later.</para>
+            </summary>
+        </member>
+        <member name="F:Monobjc.AddressBook.ABPersonFlags.kABLastNameFirst">
+            <summary>
+                <para>Last name is displayed first in Address Book.</para>
+                <para>Available in Mac OS X v10.3 and later.</para>
+            </summary>
+        </member>
+        <member name="T:Monobjc.AddressBook.ABPropertyType">
+            <summary>
+            Defines the possible types of ABRecord properties.
+            </summary>
+        </member>
+        <member name="F:Monobjc.AddressBook.ABPropertyType.kABErrorInProperty">
+            <summary>
+            Returned by some methods when an invalid property is used.
+            </summary>
+        </member>
+        <member name="F:Monobjc.AddressBook.ABPropertyType.kABStringProperty">
+            <summary>
+            Indicates a NSString object.
+            </summary>
+        </member>
+        <member name="F:Monobjc.AddressBook.ABPropertyType.kABIntegerProperty">
+            <summary>
+            Indicates a NSNumber object representing an integer.
+            </summary>
+        </member>
+        <member name="F:Monobjc.AddressBook.ABPropertyType.kABRealProperty">
+            <summary>
+            Indicates a NSNumber object representing a real number.
+            </summary>
+        </member>
+        <member name="F:Monobjc.AddressBook.ABPropertyType.kABDateProperty">
+            <summary>
+            Indicates a NSDate object.
+            </summary>
+        </member>
+        <member name="F:Monobjc.AddressBook.ABPropertyType.kABArrayProperty">
+            <summary>
+            Indicates a NSArray object.
+            </summary>
+        </member>
+        <member name="F:Monobjc.AddressBook.ABPropertyType.kABDictionaryProperty">
+            <summary>
+            Indicates a NSDictionary object.
+            </summary>
+        </member>
+        <member name="F:Monobjc.AddressBook.ABPropertyType.kABDataProperty">
+            <summary>
+            Indicates a NSData object.
+            </summary>
+        </member>
+        <member name="F:Monobjc.AddressBook.ABPropertyType.kABMultiStringProperty">
+            <summary>
+            Indicates a ABMultiValue containing NSString objects.
+            </summary>
+        </member>
+        <member name="F:Monobjc.AddressBook.ABPropertyType.kABMultiIntegerProperty">
+            <summary>
+            Indicates a ABMultiValue containing NSNumber objects representing integers.
+            </summary>
+        </member>
+        <member name="F:Monobjc.AddressBook.ABPropertyType.kABMultiRealProperty">
+            <summary>
+            Indicates a ABMultiValue containing NSNumber objects representing real numbers.
+            </summary>
+        </member>
+        <member name="F:Monobjc.AddressBook.ABPropertyType.kABMultiDateProperty">
+            <summary>
+            Indicates a ABMultiValue containing NSDate objects.
+            </summary>
+        </member>
+        <member name="F:Monobjc.AddressBook.ABPropertyType.kABMultiArrayProperty">
+            <summary>
+            Indicates a ABMultiValue containing NSArray objects.
+            </summary>
+        </member>
+        <member name="F:Monobjc.AddressBook.ABPropertyType.kABMultiDictionaryProperty">
+            <summary>
+            Indicates a ABMultiValue containing NSDictionary objects.
+            </summary>
+        </member>
+        <member name="F:Monobjc.AddressBook.ABPropertyType.kABMultiDataProperty">
+            <summary>
+            Indicates a ABMultiValue containing NSData objects.
+            </summary>
+        </member>
+        <member name="T:Monobjc.AddressBook.ABRecord">
+            <summary>
+            Managed wrapper for ABRecord Objective-C class.
+            </summary>
+        </member>
+        <member name="M:Monobjc.AddressBook.ABRecord.#ctor(Monobjc.AddressBook.ABAddressBook)">
+            <summary>
+                <para>Initializes the receiver and adds it to the given address book.</para>
+                <para>Original signature is '- (id)initWithAddressBook:(ABAddressBook *)addressBook'</para>
+                <para>Available in Mac OS X v10.5 and later.</para>
+            </summary>
+        </member>
+        <member name="M:Monobjc.AddressBook.ABRecord.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Monobjc.AddressBook.ABRecord" /> class.
+            </summary>
+        </member>
+        <member name="M:Monobjc.AddressBook.ABRecord.#ctor(System.IntPtr)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Monobjc.AddressBook.ABRecord" /> class.
+            </summary>
+            <param name="nativePointer">The native pointer.</param>
+        </member>
+        <member name="M:Monobjc.AddressBook.ABRecord.#ctor(System.String,System.Object,System.Object[])">
+            <summary>
+            Initializes a new instance of the <see cref="T:Monobjc.AddressBook.ABRecord" /> class.
+            </summary>
+            <param name="selector">The selector.</param>
+            <param name="firstParam">The first param.</param>
+            <param name="parameters">The parameters.</param>
+        </member>
+        <member name="F:Monobjc.AddressBook.ABRecord.ABRecordClass">
+            <summary>
+            Static field for a quick access to the ABRecord class.
+            </summary>
+        </member>
+        <member name="P:Monobjc.AddressBook.ABRecord.IsReadOnly">
+            <summary>
+                <para>These are of type ABPropertyType and describe the possible types for ABRecord properties:</para>
+                <para>Original signature is '- (BOOL)isReadOnly'</para>
+                <para>Available in Mac OS X v10.4 and later.</para>
+            </summary>
+        </member>
+        <member name="P:Monobjc.AddressBook.ABRecord.UniqueId">
+            <summary>
+                <para>These are of type ABPropertyType and describe the possible types for ABRecord properties:</para>
+                <para>Original signature is '- (NSString *)uniqueId'</para>
+                <para>Available in Mac OS X v10.2 and later.</para>
+            </summary>
+        </member>
+        <member name="M:Monobjc.AddressBook.ABRecord.InitWithAddressBook(Monobjc.AddressBook.ABAddressBook)">
+            <summary>
+                <para>Initializes the receiver and adds it to the given address book.</para>
+                <para>Original signature is '- (id)initWithAddressBook:(ABAddressBook *)addressBook'</para>
+                <para>Available in Mac OS X v10.5 and later.</para>
+            </summary>
+            <param name="addressBook">An address book that you want to initialize the receiver with.</param>
+        </member>
+        <member name="M:Monobjc.AddressBook.ABRecord.RemoveValueForProperty(Monobjc.Cocoa.NSString)">
+            <summary>
+                <para>These are of type ABPropertyType and describe the possible types for ABRecord properties:</para>
+                <para>Original signature is '- (BOOL)removeValueForProperty:(NSString *)property'</para>
+                <para>Available in Mac OS X v10.2 and later.</para>
+            </summary>
+        </member>
+        <member name="M:Monobjc.AddressBook.ABRecord.SetValueForProperty(Monobjc.Id,Monobjc.Cocoa.NSString)">
+            <summary>
+                <para>These are of type ABPropertyType and describe the possible types for ABRecord properties:</para>
+                <para>Original signature is '- (BOOL)setValue:(id)value forProperty:(NSString *)property'</para>
+                <para>Available in Mac OS X v10.2 and later.</para>
+            </summary>
+        </member>
+        <member name="M:Monobjc.AddressBook.ABRecord.ValueForProperty(Monobjc.Cocoa.NSString)">
+            <summary>
+                <para>These are of type ABPropertyType and describe the possible types for ABRecord properties:</para>
+                <para>Original signature is '- (id)valueForProperty:(NSString *)property'</para>
+                <para>Available in Mac OS X v10.2 and later.</para>
+            </summary>
+        </member>
+        <member name="T:Monobjc.AddressBook.ABSearchComparison">
+            <summary>
+            These constants are of the type <see cref="T:Monobjc.AddressBook.ABSearchComparison" /> and are used by the <see cref="T:Monobjc.AddressBook.ABPerson" /> method
+            <see cref="M:Monobjc.AddressBook.ABPerson.SearchElementForPropertyLabelKeyValueComparison(Monobjc.Cocoa.NSString,Monobjc.Cocoa.NSString,Monobjc.Cocoa.NSString,Monobjc.Id,Monobjc.AddressBook.ABSearchComparison)" /> and the <see cref="T:Monobjc.AddressBook.ABGroup" /> method
+            <see cref="M:Monobjc.AddressBook.ABGroup.SearchElementForPropertyLabelKeyValueComparison(Monobjc.Cocoa.NSString,Monobjc.Cocoa.NSString,Monobjc.Cocoa.NSString,Monobjc.Id,Monobjc.AddressBook.ABSearchComparison)" />.
+            </summary>
+        </member>
+        <member name="F:Monobjc.AddressBook.ABSearchComparison.kABEqual">
+            <summary>
+            Search for elements that are equal to the value.
+            </summary>
+        </member>
+        <member name="F:Monobjc.AddressBook.ABSearchComparison.kABNotEqual">
+            <summary>
+            Search for elements that are not equal to the value.
+            </summary>
+        </member>
+        <member name="F:Monobjc.AddressBook.ABSearchComparison.kABLessThan">
+            <summary>
+            Search for elements that are less than the value.
+            </summary>
+        </member>
+        <member name="F:Monobjc.AddressBook.ABSearchComparison.kABLessThanOrEqual">
+            <summary>
+            Search for elements that are less than or equal to the value.
+            </summary>
+        </member>
+        <member name="F:Monobjc.AddressBook.ABSearchComparison.kABGreaterThan">
+            <summary>
+            Search for elements that are greater than the value.
+            </summary>
+        </member>
+        <member name="F:Monobjc.AddressBook.ABSearchComparison.kABGreaterThanOrEqual">
+            <summary>
+            Search for elements that are greater than or equal to the value.
+            </summary>
+        </member>
+        <member name="F:Monobjc.AddressBook.ABSearchComparison.kABEqualCaseInsensitive">
+            <summary>
+            Search for elements that are greater than or equal to the value.
+            </summary>
+        </member>
+        <member name="F:Monobjc.AddressBook.ABSearchComparison.kABContainsSubString">
+            <summary>
+            Search for elements that contain the value.
+            </summary>
+        </member>
+        <member name="F:Monobjc.AddressBook.ABSearchComparison.kABContainsSubStringCaseInsensitive">
+            <summary>
+            Search for elements that contain the value, ignoring case.
+            </summary>
+        </member>
+        <member name="F:Monobjc.AddressBook.ABSearchComparison.kABPrefixMatch">
+            <summary>
+            Search for elements that begin with the value.
+            </summary>
+        </member>
+        <member name="F:Monobjc.AddressBook.ABSearchComparison.kABPrefixMatchCaseInsensitive">
+            <summary>
+            Search for elements that begin with the value, ignoring case.
+            </summary>
+        </member>
+        <member name="F:Monobjc.AddressBook.ABSearchComparison.kABBitsInBitFieldMatch">
+            <summary>
+            Search for elements that match the bits in ABPersonFlags. (Available in Mac OS X v10.3 and later.)
+            </summary>
+        </member>
+        <member name="F:Monobjc.AddressBook.ABSearchComparison.kABDoesNotContainSubString">
+            <summary>
+            Search for elements that do not contain the value. (Available in Mac OS X v10.4 and later.)
+            </summary>
+        </member>
+        <member name="F:Monobjc.AddressBook.ABSearchComparison.kABDoesNotContainSubStringCaseInsensitive">
+            <summary>
+            Search for elements that do not contain the value, ignoring case. (Available in Mac OS X v10.4 and later.)
+            </summary>
+        </member>
+        <member name="F:Monobjc.AddressBook.ABSearchComparison.kABNotEqualCaseInsensitive">
+            <summary>
+            Search for elements that are not equal to the value, ignoring case. (Available in Mac OS X v10.4 and later.)
+            </summary>
+        </member>
+        <member name="F:Monobjc.AddressBook.ABSearchComparison.kABSuffixMatch">
+            <summary>
+            Search for elements that end with the value. (Available in Mac OS X v10.4 and later.)
+            </summary>
+        </member>
+        <member name="F:Monobjc.AddressBook.ABSearchComparison.kABSuffixMatchCaseInsensitive">
+            <summary>
+            Search for elements that end with the value, ignoring case. (Available in Mac OS X v10.4 and later.)
+            </summary>
+        </member>
+        <member name="F:Monobjc.AddressBook.ABSearchComparison.kABWithinIntervalAroundToday">
+            <summary>
+            Search for elements that are within a time interval (in seconds) forward or backward from today. (Available in Mac OS X v10.4 and later.)
+            </summary>
+        </member>
+        <member name="F:Monobjc.AddressBook.ABSearchComparison.kABWithinIntervalAroundTodayYearless">
+            <summary>
+            Search for elements that are within a time interval (in seconds) forward or backward from this day in any year. (Available in Mac OS X v10.4 and later.)
+            </summary>
+        </member>
+        <member name="F:Monobjc.AddressBook.ABSearchComparison.kABNotWithinIntervalAroundToday">
+            <summary>
+            Search for elements that are not within a time interval (in seconds) forward or backward from today. (Available in Mac OS X v10.4 and later.)
+            </summary>
+        </member>
+        <member name="F:Monobjc.AddressBook.ABSearchComparison.kABNotWithinIntervalAroundTodayYearless">
+            <summary>
+            Search for elements that are not within a time interval (in seconds) forward or backward from this day in any year. (Available in Mac OS X v10.4 and later.)
+            </summary>
+        </member>
+        <member name="F:Monobjc.AddressBook.ABSearchComparison.kABWithinIntervalFromToday">
+            <summary>
+            Search for elements that are within a time interval (in seconds) forward from today. (Available in Mac OS X v10.4 and later.)
+            </summary>
+        </member>
+        <member name="F:Monobjc.AddressBook.ABSearchComparison.kABWithinIntervalFromTodayYearless">
+            <summary>
+            Search for elements that are within a time interval (in seconds) forward from this day in any year. (Available in Mac OS X v10.4 and later.)
+            </summary>
+        </member>
+        <member name="F:Monobjc.AddressBook.ABSearchComparison.kABNotWithinIntervalFromToday">
+            <summary>
+            Search for elements that are not within a time interval (in seconds) forward from today. (Available in Mac OS X v10.4 and later.)
+            </summary>
+        </member>
+        <member name="F:Monobjc.AddressBook.ABSearchComparison.kABNotWithinIntervalFromTodayYearless">
+            <summary>
+            Search for elements that are not within a time interval (in seconds) forward from this day in any year. (Available in Mac OS X v10.4 and later.)
+            </summary>
+        </member>
+        <member name="T:Monobjc.AddressBook.ABSearchConjunction">
+            <summary>
+            Defines constants used to combine search elements.
+            </summary>
+        </member>
+        <member name="F:Monobjc.AddressBook.ABSearchConjunction.kABSearchAnd">
+            <summary>
+            Join the search elements together with the AND operand.
+            </summary>
+        </member>
+        <member name="F:Monobjc.AddressBook.ABSearchConjunction.kABSearchOr">
+            <summary>
+            Join the search elements together with the OR operand.
+            </summary>
+        </member>
+        <member name="T:Monobjc.AddressBook.ABSearchElement">
+            <summary>
+            Managed wrapper for ABSearchElement Objective-C class.
+            </summary>
+        </member>
+        <member name="M:Monobjc.AddressBook.ABSearchElement.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Monobjc.AddressBook.ABSearchElement" /> class.
+            </summary>
+        </member>
+        <member name="M:Monobjc.AddressBook.ABSearchElement.#ctor(System.IntPtr)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Monobjc.AddressBook.ABSearchElement" /> class.
+            </summary>
+            <param name="nativePointer">The native pointer.</param>
+        </member>
+        <member name="M:Monobjc.AddressBook.ABSearchElement.#ctor(System.String,System.Object,System.Object[])">
+            <summary>
+            Initializes a new instance of the <see cref="T:Monobjc.AddressBook.ABSearchElement" /> class.
+            </summary>
+            <param name="selector">The selector.</param>
+            <param name="firstParam">The first param.</param>
+            <param name="parameters">The parameters.</param>
+        </member>
+        <member name="F:Monobjc.AddressBook.ABSearchElement.ABSearchElementClass">
+            <summary>
+            Static field for a quick access to the ABSearchElement class.
+            </summary>
+        </member>
+        <member name="M:Monobjc.AddressBook.ABSearchElement.SearchElementForConjunctionChildren(Monobjc.AddressBook.ABSearchConjunction,Monobjc.Cocoa.NSArray)">
+            <summary>
+                <para>These constants are of the type ABSearchConjunction and are used by searchElementForConjunction:children:.</para>
+                <para>Original signature is '+ (ABSearchElement *)searchElementForConjunction:(ABSearchConjunction)conjunction children:(NSArray *)children'</para>
+                <para>Available in Mac OS X v10.2 and later.</para>
+            </summary>
+        </member>
+        <member name="M:Monobjc.AddressBook.ABSearchElement.MatchesRecord(Monobjc.AddressBook.ABRecord)">
+            <summary>
+                <para>These constants are of the type ABSearchConjunction and are used by searchElementForConjunction:children:.</para>
+                <para>Original signature is '- (BOOL)matchesRecord:(ABRecord *)record'</para>
+                <para>Available in Mac OS X v10.2 and later.</para>
+            </summary>
+        </member>
+        <member name="T:Monobjc.AddressBook.AddressBookFramework">
+            <summary>
+            Utility class to access AddressBook framework.
+            </summary>
+        </member>
+        <member name="F:Monobjc.AddressBook.AddressBookFramework.kABUIDProperty">
+            <summary>
+                <para>The UID property</para>
+                <para>Available in Mac OS X v10.2 and later.</para>
+            </summary>
+        </member>
+        <member name="F:Monobjc.AddressBook.AddressBookFramework.kABCreationDateProperty">
+            <summary>
+                <para>Creation Date (when first saved) (date)</para>
+                <para>Available in Mac OS X v10.2 and later.</para>
+            </summary>
+        </member>
+        <member name="F:Monobjc.AddressBook.AddressBookFramework.kABModificationDateProperty">
+            <summary>
+                <para>Last saved date (date)</para>
+                <para>Available in Mac OS X v10.2 and later.</para>
+            </summary>
+        </member>
+        <member name="F:Monobjc.AddressBook.AddressBookFramework.kABFirstNameProperty">
+            <summary>
+                <para>First name (string)</para>
+                <para>Available in Mac OS X v10.2 and later.</para>
+            </summary>
+        </member>
+        <member name="F:Monobjc.AddressBook.AddressBookFramework.kABLastNameProperty">
+            <summary>
+                <para>Last name  (string)</para>
+                <para>Available in Mac OS X v10.2 and later.</para>
+            </summary>
+        </member>
+        <member name="F:Monobjc.AddressBook.AddressBookFramework.kABFirstNamePhoneticProperty">
+            <summary>
+                <para>First name Phonetic (string)</para>
+                <para>Available in Mac OS X v10.2 and later.</para>
+            </summary>
+        </member>
+        <member name="F:Monobjc.AddressBook.AddressBookFramework.kABLastNamePhoneticProperty">
+            <summary>
+                <para>Last name Phonetic (string)</para>
+                <para>Available in Mac OS X v10.2 and later.</para>
+            </summary>
+        </member>
+        <member name="F:Monobjc.AddressBook.AddressBookFramework.kABBirthdayProperty">
+            <summary>
+                <para>Birth date  (date)</para>
+                <para>Available in Mac OS X v10.2 and later.</para>
+            </summary>
+        </member>
+        <member name="F:Monobjc.AddressBook.AddressBookFramework.kABOrganizationProperty">
+            <summary>
+                <para>Company name  (string)</para>
+                <para>Available in Mac OS X v10.2 and later.</para>
+            </summary>
+        </member>
+        <member name="F:Monobjc.AddressBook.AddressBookFramework.kABJobTitleProperty">
+            <summary>
+                <para>Job Title  (string)</para>
+                <para>Available in Mac OS X v10.2 and later.</para>
+            </summary>
+        </member>
+        <member name="F:Monobjc.AddressBook.AddressBookFramework.kABHomePageProperty">
+            <summary>
+                <para>Home Web page  (string)</para>
+                <para>Available in Mac OS X v10.2 and later.</para>
+            </summary>
+        </member>
+        <member name="F:Monobjc.AddressBook.AddressBookFramework.kABURLsProperty">
+            <summary>
+                <para>Labels used by the kABURLsProperty property.</para>
+                <para>Available in Mac OS X v10.4 and later.</para>
+            </summary>
+        </member>
+        <member name="F:Monobjc.AddressBook.AddressBookFramework.kABCalendarURIsProperty">
+            <summary>
+                <para>Calendar URIs(multi-string).</para>
+                <para>Available in Mac OS X v10.5 and later.</para>
+            </summary>
+        </member>
+        <member name="F:Monobjc.AddressBook.AddressBookFramework.kABEmailProperty">
+            <summary>
+                <para>Email(s) (multi-string)</para>
+                <para>Available in Mac OS X v10.2 and later.</para>
+            </summary>
+        </member>
+        <member name="F:Monobjc.AddressBook.AddressBookFramework.kABAddressProperty">
+            <summary>
+                <para>Street Addresses (multi-dictionary)</para>
+                <para>Available in Mac OS X v10.2 and later.</para>
+            </summary>
+        </member>
+        <member name="F:Monobjc.AddressBook.AddressBookFramework.kABPhoneProperty">
+            <summary>
+                <para>Generic phone number (multi-string)</para>
+                <para>Available in Mac OS X v10.2 and later.</para>
+            </summary>
+        </member>
+        <member name="F:Monobjc.AddressBook.AddressBookFramework.kABAIMInstantProperty">
+            <summary>
+                <para>AIM Instant Messaging (multi-string)</para>
+                <para>Available in Mac OS X v10.2 and later.</para>
+            </summary>
+        </member>
+        <member name="F:Monobjc.AddressBook.AddressBookFramework.kABJabberInstantProperty">
+            <summary>
+                <para>Jabber Instant Messaging (multi-string)</para>
+                <para>Available in Mac OS X v10.2 and later.</para>
+            </summary>
+        </member>
+        <member name="F:Monobjc.AddressBook.AddressBookFramework.kABMSNInstantProperty">
+            <summary>
+                <para>MSN Instant Messaging  (multi-string)</para>
+                <para>Available in Mac OS X v10.2 and later.</para>
+            </summary>
+        </member>
+        <member name="F:Monobjc.AddressBook.AddressBookFramework.kABYahooInstantProperty">
+            <summary>
+                <para>Yahoo Instant Messaging  (multi-string)</para>
+                <para>Available in Mac OS X v10.2 and later.</para>
+            </summary>
+        </member>
+        <member name="F:Monobjc.AddressBook.AddressBookFramework.kABICQInstantProperty">
+            <summary>
+                <para>ICQ Instant Messaging  (multi-string)</para>
+                <para>Available in Mac OS X v10.2 and later.</para>
+            </summary>
+        </member>
+        <member name="F:Monobjc.AddressBook.AddressBookFramework.kABNoteProperty">
+            <summary>
+                <para>Note (string)</para>
+                <para>Available in Mac OS X v10.2 and later.</para>
+            </summary>
+        </member>
+        <member name="F:Monobjc.AddressBook.AddressBookFramework.kABMiddleNameProperty">
+            <summary>
+                <para>Middle name</para>
+                <para>Available in Mac OS X v10.2 and later.</para>
+            </summary>
+        </member>
+        <member name="F:Monobjc.AddressBook.AddressBookFramework.kABMiddleNamePhoneticProperty">
+            <summary>
+                <para>Middle name</para>
+                <para>Available in Mac OS X v10.2 and later.</para>
+            </summary>
+        </member>
+        <member name="F:Monobjc.AddressBook.AddressBookFramework.kABTitleProperty">
+            <summary>
+                <para>String "Sir" "Duke" "General" "Lord"</para>
+                <para>Available in Mac OS X v10.2 and later.</para>
+            </summary>
+        </member>
+        <member name="F:Monobjc.AddressBook.AddressBookFramework.kABSuffixProperty">
+            <summary>
+                <para>String "Sr." "Jr." "III"</para>
+                <para>Available in Mac OS X v10.2 and later.</para>
+            </summary>
+        </member>
+        <member name="F:Monobjc.AddressBook.AddressBookFramework.kABNicknameProperty">
+            <summary>
+                <para>Nick name</para>
+                <para>Available in Mac OS X v10.2 and later.</para>
+            </summary>
+        </member>
+        <member name="F:Monobjc.AddressBook.AddressBookFramework.kABMaidenNameProperty">
+            <summary>
+                <para>Maiden name</para>
+                <para>Available in Mac OS X v10.2 and later.</para>
+            </summary>
+        </member>
+        <member name="F:Monobjc.AddressBook.AddressBookFramework.kABOtherDatesProperty">
+            <summary>
+                <para>Dates associated with a person (ABMultiDateProperty containing dates).</para>
+                <para>Available in Mac OS X v10.3 and later.</para>
+            </summary>
+        </member>
+        <member name="F:Monobjc.AddressBook.AddressBookFramework.kABRelatedNamesProperty">
+            <summary>
+                <para>Names of people related to a person (ABMultiStringProperty containing names).</para>
+                <para>Available in Mac OS X v10.3 and later.</para>
+            </summary>
+        </member>
+        <member name="F:Monobjc.AddressBook.AddressBookFramework.kABDepartmentProperty">
+            <summary>
+                <para>Department name (string).</para>
+                <para>Available in Mac OS X v10.3 and later.</para>
+            </summary>
+        </member>
+        <member name="F:Monobjc.AddressBook.AddressBookFramework.kABPersonFlags">
+            <summary>
+                <para>Property that specifies the name ordering and user configuration of a record in the Address Book application.</para>
+                <para>Available in Mac OS X v10.3 and later.</para>
+            </summary>
+        </member>
+        <member name="F:Monobjc.AddressBook.AddressBookFramework.kABEmailWorkLabel">
+            <summary>
+                <para>Home email</para>
+                <para>Available in Mac OS X v10.2 and later.</para>
+            </summary>
+        </member>
+        <member name="F:Monobjc.AddressBook.AddressBookFramework.kABEmailHomeLabel">
+            <summary>
+                <para>Work email</para>
+                <para>Available in Mac OS X v10.2 and later.</para>
+            </summary>
+        </member>
+        <member name="F:Monobjc.AddressBook.AddressBookFramework.kABAddressHomeLabel">
+            <summary>
+                <para>Home Address</para>
+                <para>Available in Mac OS X v10.2 and later.</para>
+            </summary>
+        </member>
+        <member name="F:Monobjc.AddressBook.AddressBookFramework.kABAddressWorkLabel">
+            <summary>
+                <para>Work Address</para>
+                <para>Available in Mac OS X v10.2 and later.</para>
+            </summary>
+        </member>
+        <member name="F:Monobjc.AddressBook.AddressBookFramework.kABAddressStreetKey">
+            <summary>
+                <para>Street</para>
+                <para>Available in Mac OS X v10.2 and later.</para>
+            </summary>
+        </member>
+        <member name="F:Monobjc.AddressBook.AddressBookFramework.kABAddressCityKey">
+            <summary>
+                <para>City</para>
+                <para>Available in Mac OS X v10.2 and later.</para>
+            </summary>
+        </member>
+        <member name="F:Monobjc.AddressBook.AddressBookFramework.kABAddressStateKey">
+            <summary>
+                <para>State</para>
+                <para>Available in Mac OS X v10.2 and later.</para>
+            </summary>
+        </member>
+        <member name="F:Monobjc.AddressBook.AddressBookFramework.kABAddressZIPKey">
+            <summary>
+                <para>Zip</para>
+                <para>Available in Mac OS X v10.2 and later.</para>
+            </summary>
+        </member>
+        <member name="F:Monobjc.AddressBook.AddressBookFramework.kABAddressCountryKey">
+            <summary>
+                <para>Country</para>
+                <para>Available in Mac OS X v10.2 and later.</para>
+            </summary>
+        </member>
+        <member name="F:Monobjc.AddressBook.AddressBookFramework.kABAddressCountryCodeKey">
+            <summary>
+                <para>Country Code</para>
+                <para>Available in Mac OS X v10.2 and later.</para>
+            </summary>
+        </member>
+        <member name="F:Monobjc.AddressBook.AddressBookFramework.kABPhoneWorkLabel">
+            <summary>
+                <para>Work phone</para>
+                <para>Available in Mac OS X v10.2 and later.</para>
+            </summary>
+        </member>
+        <member name="F:Monobjc.AddressBook.AddressBookFramework.kABPhoneHomeLabel">
+            <summary>
+                <para>Home phone</para>
+                <para>Available in Mac OS X v10.2 and later.</para>
+            </summary>
+        </member>
+        <member name="F:Monobjc.AddressBook.AddressBookFramework.kABPhoneMobileLabel">
+            <summary>
+                <para>Cell phone</para>
+                <para>Available in Mac OS X v10.2 and later.</para>
+            </summary>
+        </member>
+        <member name="F:Monobjc.AddressBook.AddressBookFramework.kABPhoneMainLabel">
+            <summary>
+                <para>Main phone</para>
+                <para>Available in Mac OS X v10.2 and later.</para>
+            </summary>
+        </member>
+        <member name="F:Monobjc.AddressBook.AddressBookFramework.kABPhoneHomeFAXLabel">
+            <summary>
+                <para>FAX number</para>
+                <para>Available in Mac OS X v10.2 and later.</para>
+            </summary>
+        </member>
+        <member name="F:Monobjc.AddressBook.AddressBookFramework.kABPhoneWorkFAXLabel">
+            <summary>
+                <para>FAX number</para>
+                <para>Available in Mac OS X v10.2 and later.</para>
+            </summary>
+        </member>
+        <member name="F:Monobjc.AddressBook.AddressBookFramework.kABPhonePagerLabel">
+            <summary>
+                <para>Pager number</para>
+                <para>Available in Mac OS X v10.2 and later.</para>
+            </summary>
+        </member>
+        <member name="F:Monobjc.AddressBook.AddressBookFramework.kABMotherLabel">
+            <summary>
+                <para>Mother</para>
+                <para>Available in Mac OS X v10.2 and later.</para>
+            </summary>
+        </member>
+        <member name="F:Monobjc.AddressBook.AddressBookFramework.kABFatherLabel">
+            <summary>
+                <para>Father</para>
+                <para>Available in Mac OS X v10.2 and later.</para>
+            </summary>
+        </member>
+        <member name="F:Monobjc.AddressBook.AddressBookFramework.kABParentLabel">
+            <summary>
+                <para>Parent</para>
+                <para>Available in Mac OS X v10.2 and later.</para>
+            </summary>
+        </member>
+        <member name="F:Monobjc.AddressBook.AddressBookFramework.kABSisterLabel">
+            <summary>
+                <para>Sister</para>
+                <para>Available in Mac OS X v10.2 and later.</para>
+            </summary>
+        </member>
+        <member name="F:Monobjc.AddressBook.AddressBookFramework.kABChildLabel">
+            <summary>
+                <para>Child</para>
+                <para>Available in Mac OS X v10.2 and later.</para>
+            </summary>
+        </member>
+        <member name="F:Monobjc.AddressBook.AddressBookFramework.kABFriendLabel">
+            <summary>
+                <para>Friend</para>
+                <para>Available in Mac OS X v10.2 and later.</para>
+            </summary>
+        </member>
+        <member name="F:Monobjc.AddressBook.AddressBookFramework.kABSpouseLabel">
+            <summary>
+                <para>Spouse</para>
+                <para>Available in Mac OS X v10.2 and later.</para>
+            </summary>
+        </member>
+        <member name="F:Monobjc.AddressBook.AddressBookFramework.kABPartnerLabel">
+            <summary>
+                <para>Partner</para>
+                <para>Available in Mac OS X v10.2 and later.</para>
+            </summary>
+        </member>
+        <member name="F:Monobjc.AddressBook.AddressBookFramework.kABAssistantLabel">
+            <summary>
+                <para>Assistant</para>
+                <para>Available in Mac OS X v10.2 and later.</para>
+            </summary>
+        </member>
+        <member name="F:Monobjc.AddressBook.AddressBookFramework.kABManagerLabel">
+            <summary>
+                <para>Manager</para>
+                <para>Available in Mac OS X v10.2 and later.</para>
+            </summary>
+        </member>
+        <member name="F:Monobjc.AddressBook.AddressBookFramework.kABAIMWorkLabel">
+            <summary>
+                <para>AIM Instant Messaging (multi-string)</para>
+                <para>Available in Mac OS X v10.2 and later.</para>
+            </summary>
+        </member>
+        <member name="F:Monobjc.AddressBook.AddressBookFramework.kABAIMHomeLabel">
+            <summary>
+                <para>AIM Instant Messaging (multi-string)</para>
+                <para>Available in Mac OS X v10.2 and later.</para>
+            </summary>
+        </member>
+        <member name="F:Monobjc.AddressBook.AddressBookFramework.kABJabberWorkLabel">
+            <summary>
+                <para>Jabber Instant Messaging (multi-string)</para>
+                <para>Available in Mac OS X v10.2 and later.</para>
+            </summary>
+        </member>
+        <member name="F:Monobjc.AddressBook.AddressBookFramework.kABJabberHomeLabel">
+            <summary>
+                <para>Jabber Instant Messaging (multi-string)</para>
+                <para>Available in Mac OS X v10.2 and later.</para>
+            </summary>
+        </member>
+        <member name="F:Monobjc.AddressBook.AddressBookFramework.kABMSNWorkLabel">
+            <summary>
+                <para>MSN Instant Messaging  (multi-string)</para>
+                <para>Available in Mac OS X v10.2 and later.</para>
+            </summary>
+        </member>
+        <member name="F:Monobjc.AddressBook.AddressBookFramework.kABMSNHomeLabel">
+            <summary>
+                <para>MSN Instant Messaging  (multi-string)</para>
+                <para>Available in Mac OS X v10.2 and later.</para>
+            </summary>
+        </member>
+        <member name="F:Monobjc.AddressBook.AddressBookFramework.kABYahooWorkLabel">
+            <summary>
+                <para>Yahoo Instant Messaging  (multi-string)</para>
+                <para>Available in Mac OS X v10.2 and later.</para>
+            </summary>
+        </member>
+        <member name="F:Monobjc.AddressBook.AddressBookFramework.kABYahooHomeLabel">
+            <summary>
+                <para>Yahoo Instant Messaging  (multi-string)</para>
+                <para>Available in Mac OS X v10.2 and later.</para>
+            </summary>
+        </member>
+        <member name="F:Monobjc.AddressBook.AddressBookFramework.kABICQWorkLabel">
+            <summary>
+                <para>ICQ Instant Messaging  (multi-string)</para>
+                <para>Available in Mac OS X v10.2 and later.</para>
+            </summary>
+        </member>
+        <member name="F:Monobjc.AddressBook.AddressBookFramework.kABICQHomeLabel">
+            <summary>
+                <para>ICQ Instant Messaging  (multi-string)</para>
+                <para>Available in Mac OS X v10.2 and later.</para>
+            </summary>
+        </member>
+        <member name="F:Monobjc.AddressBook.AddressBookFramework.kABWorkLabel">
+            <summary>
+                <para>Work label</para>
+                <para>Available in Mac OS X v10.2 and later.</para>
+            </summary>
+        </member>
+        <member name="F:Monobjc.AddressBook.AddressBookFramework.kABHomeLabel">
+            <summary>
+                <para>Home Label</para>
+                <para>Available in Mac OS X v10.2 and later.</para>
+            </summary>
+        </member>
+        <member name="F:Monobjc.AddressBook.AddressBookFramework.kABOtherLabel">
+            <summary>
+                <para>Other lable</para>
+                <para>Available in Mac OS X v10.2 and later.</para>
+            </summary>
+        </member>
+        <member name="F:Monobjc.AddressBook.AddressBookFramework.kABGroupNameProperty">
+            <summary>
+                <para>Name of the group</para>
+                <para>Available in Mac OS X v10.2 and later.</para>
+            </summary>
+        </member>
+        <member name="M:Monobjc.AddressBook.AddressBookFramework.ABLocalizedPropertyOrLabel(Monobjc.Cocoa.NSString)">
+            <summary>
+            Returns the localized version of a built in property, label, or key.
+            </summary>
+            <param name="propertyOrLabel">The property, label, or key you wish to localize.</param>
+            <returns>Returns propertyOrLabel if a localized string can not be found.</returns>
+        </member>
+    </members>
+</doc>

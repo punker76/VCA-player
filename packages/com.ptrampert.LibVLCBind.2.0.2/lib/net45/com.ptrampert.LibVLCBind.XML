@@ -1,0 +1,3138 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>com.ptrampert.LibVLCBind</name>
+    </assembly>
+    <members>
+        <member name="T:com.ptrampert.LibVLCBind.IMedia">
+            <summary>
+            Exposes methods, events, and properties associated with media.
+            </summary>
+        </member>
+        <member name="M:com.ptrampert.LibVLCBind.IMedia.AddOption(System.String)">
+            <summary>
+            Adds an option to the VLCMedia.
+            </summary>
+            <param name="options">Option to add.</param>
+        </member>
+        <member name="M:com.ptrampert.LibVLCBind.IMedia.AddOptionFlag(System.String,System.UInt32)">
+            <summary>
+            Adds an option flag to the VLCMedia.
+            </summary>
+            <param name="options">Option to add.</param>
+            <param name="flags">Flag value (0 or 1)</param>
+        </member>
+        <member name="M:com.ptrampert.LibVLCBind.IMedia.Parse">
+            <summary>
+            Parses the media's local metadata and tracks information. 
+            Needs to be called before much of the media's metadata can be accessed.
+            The ParsedChanged event is called when parsing is complete.
+            </summary>
+        </member>
+        <member name="M:com.ptrampert.LibVLCBind.IMedia.ParseAsync">
+            <summary>
+            Asynchronously parses the media's local metadata and tracks information.
+            Needs to be called before much of the media's metadata can be accessed.
+            The ParsedChanged event is called when parsing is complete.
+            </summary>
+        </member>
+        <member name="M:com.ptrampert.LibVLCBind.IMedia.SaveChanges">
+            <summary>
+            Saves changes made to the media's local metadata.
+            </summary>
+        </member>
+        <member name="E:com.ptrampert.LibVLCBind.IMedia.AlbumChanged">
+            <summary>
+            Called when Album changes.
+            </summary>
+        </member>
+        <member name="E:com.ptrampert.LibVLCBind.IMedia.ArtistChanged">
+            <summary>
+            Called when Artist changes.
+            </summary>
+        </member>
+        <member name="E:com.ptrampert.LibVLCBind.IMedia.ArtworkUrlChanged">
+            <summary>
+            Called when ArtworkURL changes.
+            </summary>
+        </member>
+        <member name="E:com.ptrampert.LibVLCBind.IMedia.CopyrightChanged">
+            <summary>
+            Called when Copyright changes.
+            </summary>
+        </member>
+        <member name="E:com.ptrampert.LibVLCBind.IMedia.DateChanged">
+            <summary>
+            Called when Date changes.
+            </summary>
+        </member>
+        <member name="E:com.ptrampert.LibVLCBind.IMedia.DescriptionChanged">
+            <summary>
+            Called when Description changes.
+            </summary>
+        </member>
+        <member name="E:com.ptrampert.LibVLCBind.IMedia.DurationChanged">
+            <summary>
+            Called when Duration changes.
+            </summary>
+        </member>
+        <member name="E:com.ptrampert.LibVLCBind.IMedia.EncodedByChanged">
+            <summary>
+            Called when EncodedBy changes.
+            </summary>
+        </member>
+        <member name="E:com.ptrampert.LibVLCBind.IMedia.GenreChanged">
+            <summary>
+            Called when Genre changes.
+            </summary>
+        </member>
+        <member name="E:com.ptrampert.LibVLCBind.IMedia.IsParsedChanged">
+            <summary>
+            Called when IsParsed changes.
+            </summary>
+        </member>
+        <member name="E:com.ptrampert.LibVLCBind.IMedia.LanguageChanged">
+            <summary>
+            Called when Language changes.
+            </summary>
+        </member>
+        <member name="E:com.ptrampert.LibVLCBind.IMedia.MediaFreed">
+            <summary>
+            Called when the underlying Media is freed.
+            </summary>
+        </member>
+        <member name="E:com.ptrampert.LibVLCBind.IMedia.NowPlayingChanged">
+            <summary>
+            Called when NowPlaying changes.
+            </summary>
+        </member>
+        <member name="E:com.ptrampert.LibVLCBind.IMedia.PublisherChanged">
+            <summary>
+            Called when Publisher changes.
+            </summary>
+        </member>
+        <member name="E:com.ptrampert.LibVLCBind.IMedia.RatingChanged">
+            <summary>
+            Called when Rating changes.
+            </summary>
+        </member>
+        <member name="E:com.ptrampert.LibVLCBind.IMedia.SettingChanged">
+            <summary>
+            Called when Setting changes.
+            </summary>
+        </member>
+        <member name="E:com.ptrampert.LibVLCBind.IMedia.StateChanged">
+            <summary>
+            Called when State changes.
+            </summary>
+        </member>
+        <member name="E:com.ptrampert.LibVLCBind.IMedia.TitleChanged">
+            <summary>
+            Called when Title changes.
+            </summary>
+        </member>
+        <member name="E:com.ptrampert.LibVLCBind.IMedia.TrackIdChanged">
+            <summary>
+            Called when TrackId changes.
+            </summary>
+        </member>
+        <member name="E:com.ptrampert.LibVLCBind.IMedia.TrackNumberChanged">
+            <summary>
+            Called when TrackNumber changes.
+            </summary>
+        </member>
+        <member name="P:com.ptrampert.LibVLCBind.IMedia.Handle">
+            <summary>
+            The media's handle.
+            </summary>
+        </member>
+        <member name="E:com.ptrampert.LibVLCBind.IMedia.UrlChanged">
+            <summary>
+            Called when URL changes.
+            </summary>
+        </member>
+        <member name="P:com.ptrampert.LibVLCBind.IMedia.Album">
+            <summary>
+            Gets/Sets album.
+            </summary>
+        </member>
+        <member name="P:com.ptrampert.LibVLCBind.IMedia.Artist">
+            <summary>
+            Gets/Sets media artist.
+            </summary>
+        </member>
+        <member name="P:com.ptrampert.LibVLCBind.IMedia.ArtworkURL">
+            <summary>
+            Gets/Sets artwork url.
+            </summary>
+        </member>
+        <member name="P:com.ptrampert.LibVLCBind.IMedia.Copyright">
+            <summary>
+            Gets/Sets copyright
+            </summary>
+        </member>
+        <member name="P:com.ptrampert.LibVLCBind.IMedia.Date">
+            <summary>
+            Gets/Sets date.
+            </summary>
+        </member>
+        <member name="P:com.ptrampert.LibVLCBind.IMedia.Description">
+            <summary>
+            Gets/Sets description
+            </summary>
+        </member>
+        <member name="P:com.ptrampert.LibVLCBind.IMedia.Duration">
+            <summary>
+            Gets the duration (in ms) of the media.
+            </summary>
+        </member>
+        <member name="P:com.ptrampert.LibVLCBind.IMedia.EncodedBy">
+            <summary>
+            Gets/Sets encoded by.
+            </summary>
+        </member>
+        <member name="P:com.ptrampert.LibVLCBind.IMedia.Genre">
+            <summary>
+            Gets/Sets media genre.
+            </summary>
+        </member>
+        <member name="P:com.ptrampert.LibVLCBind.IMedia.IsParsed">
+            <summary>
+            Gets whether or not the media has been parsed yet.
+            </summary>
+        </member>
+        <member name="P:com.ptrampert.LibVLCBind.IMedia.Language">
+            <summary>
+            Gets/Sets language.
+            </summary>
+        </member>
+        <member name="P:com.ptrampert.LibVLCBind.IMedia.MRL">
+            <summary>
+            Gets the Media Resource Locator (MRL) string for this media.
+            </summary>
+        </member>
+        <member name="P:com.ptrampert.LibVLCBind.IMedia.NowPlaying">
+            <summary>
+            Gets/Sets now playing.
+            </summary>
+        </member>
+        <member name="P:com.ptrampert.LibVLCBind.IMedia.Publisher">
+            <summary>
+            Gets/Sets publisher.
+            </summary>
+        </member>
+        <member name="P:com.ptrampert.LibVLCBind.IMedia.Rating">
+            <summary>
+            Gets/Sets rating.
+            </summary>
+        </member>
+        <member name="P:com.ptrampert.LibVLCBind.IMedia.Setting">
+            <summary>
+            Gets/Sets setting.
+            </summary>
+        </member>
+        <member name="P:com.ptrampert.LibVLCBind.IMedia.State">
+            <summary>
+            Gets the media's state. Does not require calling of Parse().
+            </summary>
+        </member>
+        <member name="P:com.ptrampert.LibVLCBind.IMedia.Stats">
+            <summary>
+            Gets the media's statistics. Will return null if media is not playing or if stats are otherwise unavailable.
+            </summary>
+        </member>
+        <member name="P:com.ptrampert.LibVLCBind.IMedia.Title">
+            <summary>
+            Gets/Sets media title.
+            </summary>
+        </member>
+        <member name="P:com.ptrampert.LibVLCBind.IMedia.TrackId">
+            <summary>
+            Gets/Sets track id.
+            </summary>
+        </member>
+        <member name="P:com.ptrampert.LibVLCBind.IMedia.TrackNumber">
+            <summary>
+            Gets/Sets track number.
+            </summary>
+        </member>
+        <member name="P:com.ptrampert.LibVLCBind.IMedia.URL">
+            <summary>
+            Gets/Sets url.
+            </summary>
+        </member>
+        <member name="T:com.ptrampert.LibVLCBind.Implementation.TwoflowerVLCMediaPlayer">
+            <summary>
+            Wrapper around libvlc_media_player_t.
+            </summary>
+        </member>
+        <member name="T:com.ptrampert.LibVLCBind.IMediaPlayer">
+            <summary>
+            Generic media player interface.
+            </summary>
+        </member>
+        <member name="M:com.ptrampert.LibVLCBind.IMediaPlayer.Pause">
+            <summary>
+            Toggles pause on the player.
+            </summary>
+        </member>
+        <member name="M:com.ptrampert.LibVLCBind.IMediaPlayer.Play">
+            <summary>
+            Plays the player.
+            </summary>
+        </member>
+        <member name="M:com.ptrampert.LibVLCBind.IMediaPlayer.Stop">
+            <summary>
+            Stops the player.
+            </summary>
+        </member>
+        <member name="E:com.ptrampert.LibVLCBind.IMediaPlayer.Buffering">
+            <summary>
+            Called when state changes to <value>LIBVLC_STATE.BUFFERING</value>.
+            The percentage complete is passed in the event args.
+            </summary>
+        </member>
+        <member name="E:com.ptrampert.LibVLCBind.IMediaPlayer.EncounteredError">
+            <summary>
+            Called when the media player encounters an error. The exception is passed in the event args.
+            </summary>
+        </member>
+        <member name="E:com.ptrampert.LibVLCBind.IMediaPlayer.EndReached">
+            <summary>
+            Called when state changes to <value>LIBVLC_STATE.END_REACHED</value>
+            </summary>
+        </member>
+        <member name="E:com.ptrampert.LibVLCBind.IMediaPlayer.LengthChanged">
+            <summary>
+            Called when the media player's length is changed. The new length is passed in the event args.
+            </summary>
+        </member>
+        <member name="E:com.ptrampert.LibVLCBind.IMediaPlayer.MediaChanged">
+            <summary>
+            Called when the media is changed. The new media is passed in the event args.
+            </summary>
+        </member>
+        <member name="E:com.ptrampert.LibVLCBind.IMediaPlayer.NothingSpecial">
+            <summary>
+            Called when state changes to <value>LIBVLC_STATE.NOTHING_SPECIAL</value>
+            </summary>
+        </member>
+        <member name="E:com.ptrampert.LibVLCBind.IMediaPlayer.Opening">
+            <summary>
+            Called when state changes to <value>LIBVLC_STATE.OPENING</value>
+            </summary>
+        </member>
+        <member name="E:com.ptrampert.LibVLCBind.IMediaPlayer.IsPausableChanged">
+            <summary>
+            Called when <code>IsPausable</code> changes. The new state is passed in the event args.
+            </summary>
+        </member>
+        <member name="E:com.ptrampert.LibVLCBind.IMediaPlayer.PositionChanged">
+            <summary>
+            Called when the media player's position changes. The new position is passed in the event args.
+            </summary>
+        </member>
+        <member name="E:com.ptrampert.LibVLCBind.IMediaPlayer.Playing">
+            <summary>
+            Called when state changes to <value>LIBVLC_STATE.PLAYING</value>
+            </summary>
+        </member>
+        <member name="E:com.ptrampert.LibVLCBind.IMediaPlayer.Paused">
+            <summary>
+            Called when state changes to <value>LIBVLC_STATE.PAUSED</value>
+            </summary>
+        </member>
+        <member name="E:com.ptrampert.LibVLCBind.IMediaPlayer.IsSeekableChanged">
+            <summary>
+            Called when <code>IsSeekable</code> changes. The new state is passed in the event args.
+            </summary>
+        </member>
+        <member name="E:com.ptrampert.LibVLCBind.IMediaPlayer.Stopped">
+            <summary>
+            Called when state changes to <value>LIBVLC_STATE.STOPPED</value>
+            </summary>
+        </member>
+        <member name="E:com.ptrampert.LibVLCBind.IMediaPlayer.TimeChanged">
+            <summary>
+            Called when the media player's Time changes. The new time is passed in the event args.
+            </summary>
+        </member>
+        <member name="E:com.ptrampert.LibVLCBind.IMediaPlayer.Forward">
+            <summary>
+            Called when state changes to <value>LIBVLC_STATE.FORWARD</value>
+            </summary>
+        </member>
+        <member name="E:com.ptrampert.LibVLCBind.IMediaPlayer.Backward">
+            <summary>
+            Called when state changes to <value>LIBVLC_STATE.BACKWARD</value>
+            </summary>
+        </member>
+        <member name="P:com.ptrampert.LibVLCBind.IMediaPlayer.IsPausable">
+            <summary>
+            Can the player be paused?
+            </summary>
+        </member>
+        <member name="P:com.ptrampert.LibVLCBind.IMediaPlayer.IsPlaying">
+            <summary>
+            Is the player playing?
+            </summary>
+        </member>
+        <member name="P:com.ptrampert.LibVLCBind.IMediaPlayer.IsSeekable">
+            <summary>
+            Is the player seekable?
+            </summary>
+        </member>
+        <member name="P:com.ptrampert.LibVLCBind.IMediaPlayer.Length">
+            <summary>
+            Gets the length of the current media.
+            </summary>
+        </member>
+        <member name="P:com.ptrampert.LibVLCBind.IMediaPlayer.Media">
+            <summary>
+            Gets/Sets the current media.
+            </summary>
+        </member>
+        <member name="P:com.ptrampert.LibVLCBind.IMediaPlayer.Position">
+            <summary>
+            Gets/Sets the current position of the current media (percentage between 0.0 and 1.0).
+            </summary>
+        </member>
+        <member name="P:com.ptrampert.LibVLCBind.IMediaPlayer.Rate">
+            <summary>
+            Gets/Sets the requested playback rate.
+            </summary>
+        </member>
+        <member name="P:com.ptrampert.LibVLCBind.IMediaPlayer.State">
+            <summary>
+            Gets the current player state.
+            </summary>
+        </member>
+        <member name="P:com.ptrampert.LibVLCBind.IMediaPlayer.Time">
+            <summary>
+            Gets/Sets the current time of the current media (in milliseconds).
+            </summary>
+        </member>
+        <member name="P:com.ptrampert.LibVLCBind.IMediaPlayer.WillPlay">
+            <summary>
+            Will the player play if <code>Play()</code> is called?
+            </summary>
+        </member>
+        <member name="F:com.ptrampert.LibVLCBind.Implementation.TwoflowerVLCMediaPlayer.handler">
+            <summary>
+            Delegate used by the event manager to signal callbacks.
+            </summary>
+        </member>
+        <member name="F:com.ptrampert.LibVLCBind.Implementation.TwoflowerVLCMediaPlayer.eventManager">
+            <summary>
+            Pointer to this media player's event manager.
+            </summary>
+        </member>
+        <member name="M:com.ptrampert.LibVLCBind.Implementation.TwoflowerVLCMediaPlayer.Play">
+            <summary>
+            Plays the player.
+            </summary>
+        </member>
+        <member name="M:com.ptrampert.LibVLCBind.Implementation.TwoflowerVLCMediaPlayer.Pause">
+            <summary>
+            Toggles pause on the player.
+            </summary>
+        </member>
+        <member name="M:com.ptrampert.LibVLCBind.Implementation.TwoflowerVLCMediaPlayer.Stop">
+            <summary>
+            Stops the player.
+            </summary>
+        </member>
+        <member name="M:com.ptrampert.LibVLCBind.Implementation.TwoflowerVLCMediaPlayer.ToggleTeletext">
+            <summary>
+            Toggles teletext on the player.
+            </summary>
+        </member>
+        <member name="M:com.ptrampert.LibVLCBind.Implementation.TwoflowerVLCMediaPlayer.PreviousChapter">
+            <summary>
+            Jump to previous chapter.
+            </summary>
+        </member>
+        <member name="M:com.ptrampert.LibVLCBind.Implementation.TwoflowerVLCMediaPlayer.NextChapter">
+            <summary>
+            Jump to next chapter.
+            </summary>
+        </member>
+        <member name="M:com.ptrampert.LibVLCBind.Implementation.TwoflowerVLCMediaPlayer.GetLogoInt(com.ptrampert.LibVLCBind.LIBVLC_LOGO_OPTIONS)">
+            <summary>
+            Get an integer valued logo option.
+            </summary>
+            <param name="option">Option to get the value for.</param>
+            <returns>Value of the option.</returns>
+        </member>
+        <member name="M:com.ptrampert.LibVLCBind.Implementation.TwoflowerVLCMediaPlayer.GetLogoString(com.ptrampert.LibVLCBind.LIBVLC_LOGO_OPTIONS)">
+            <summary>
+            Get a string valued logo option.
+            </summary>
+            <param name="option">Option to get the value for.</param>
+            <returns>Value of the option.</returns>
+        </member>
+        <member name="M:com.ptrampert.LibVLCBind.Implementation.TwoflowerVLCMediaPlayer.SetLogoOption(com.ptrampert.LibVLCBind.LIBVLC_LOGO_OPTIONS,System.String)">
+            <summary>
+            Set a logo option.
+            </summary>
+            <param name="option">Option to set.</param>
+            <param name="value">String to set as the value.</param>
+        </member>
+        <member name="M:com.ptrampert.LibVLCBind.Implementation.TwoflowerVLCMediaPlayer.SetLogoOption(com.ptrampert.LibVLCBind.LIBVLC_LOGO_OPTIONS,System.Int32)">
+            <summary>
+            Set a logo option.
+            </summary>
+            <param name="option">Option to set.</param>
+            <param name="value">Integer to set as the value.</param>
+        </member>
+        <member name="M:com.ptrampert.LibVLCBind.Implementation.TwoflowerVLCMediaPlayer.GetAdjustOptionInt(com.ptrampert.LibVLCBind.LIBVLC_ADJUST_OPTIONS)">
+            <summary>
+            Get an integer valued adjust option.
+            </summary>
+            <param name="option">Option to get the value for.</param>
+            <returns>Value of the option.</returns>
+        </member>
+        <member name="M:com.ptrampert.LibVLCBind.Implementation.TwoflowerVLCMediaPlayer.GetAdjustOptionFloat(com.ptrampert.LibVLCBind.LIBVLC_ADJUST_OPTIONS)">
+            <summary>
+            Get a float valued adjust option.
+            </summary>
+            <param name="option">Option to get the value for.</param>
+            <returns>Value of the option.</returns>
+        </member>
+        <member name="M:com.ptrampert.LibVLCBind.Implementation.TwoflowerVLCMediaPlayer.SetAdjustOption(com.ptrampert.LibVLCBind.LIBVLC_ADJUST_OPTIONS,System.Int32)">
+            <summary>
+            Set the value of an adjust option.
+            </summary>
+            <param name="option">Option to set.</param>
+            <param name="value">Integer value to set the option to.</param>
+        </member>
+        <member name="M:com.ptrampert.LibVLCBind.Implementation.TwoflowerVLCMediaPlayer.SetAdjustOption(com.ptrampert.LibVLCBind.LIBVLC_ADJUST_OPTIONS,System.Single)">
+            <summary>
+            Set the value of an adjust option.
+            </summary>
+            <param name="option">Option to set.</param>
+            <param name="value">Float value to set the option to.</param>
+        </member>
+        <member name="M:com.ptrampert.LibVLCBind.Implementation.TwoflowerVLCMediaPlayer.HandleEvent(com.ptrampert.LibVLCBind.Hooks.libvlc_event_t)">
+            <summary>
+            Handles an event callback from this object's event manager.
+            </summary>
+            <param name="e">The event data</param>
+        </member>
+        <member name="M:com.ptrampert.LibVLCBind.Implementation.TwoflowerVLCMediaPlayer.GetTracks(System.Int32,System.IntPtr)">
+            <summary>
+            Gets an <code>IEnumerable&lt;VLCTrackDescription&gt;</code> with the given number of elements for a pointer.
+            </summary>
+            <param name="count">Expected number of elements.</param>
+            <param name="ptr">Pointer to the first element.</param>
+            <returns><code>IEnumerable&lt;VLCTrackDescription&gt;</code> for the pointer.</returns>
+        </member>
+        <member name="P:com.ptrampert.LibVLCBind.Implementation.TwoflowerVLCMediaPlayer.Media">
+            <summary>
+            Gets/Sets the current media.
+            </summary>
+        </member>
+        <member name="P:com.ptrampert.LibVLCBind.Implementation.TwoflowerVLCMediaPlayer.IsPlaying">
+            <summary>
+            Is the player playing?
+            </summary>
+        </member>
+        <member name="P:com.ptrampert.LibVLCBind.Implementation.TwoflowerVLCMediaPlayer.Length">
+            <summary>
+            Gets the length of the current media.
+            </summary>
+        </member>
+        <member name="P:com.ptrampert.LibVLCBind.Implementation.TwoflowerVLCMediaPlayer.Time">
+            <summary>
+            Gets/Sets the current time of the current media (in milliseconds).
+            </summary>
+        </member>
+        <member name="P:com.ptrampert.LibVLCBind.Implementation.TwoflowerVLCMediaPlayer.Position">
+            <summary>
+            Gets/Sets the current position of the current media (percentage between 0.0 and 1.0).
+            </summary>
+        </member>
+        <member name="P:com.ptrampert.LibVLCBind.Implementation.TwoflowerVLCMediaPlayer.Rate">
+            <summary>
+            Gets/Sets the requested playback rate.
+            </summary>
+        </member>
+        <member name="P:com.ptrampert.LibVLCBind.Implementation.TwoflowerVLCMediaPlayer.State">
+            <summary>
+            Gets the current player state.
+            </summary>
+        </member>
+        <member name="P:com.ptrampert.LibVLCBind.Implementation.TwoflowerVLCMediaPlayer.IsSeekable">
+            <summary>
+            Is the player seekable?
+            </summary>
+        </member>
+        <member name="P:com.ptrampert.LibVLCBind.Implementation.TwoflowerVLCMediaPlayer.IsPausable">
+            <summary>
+            Can the player be paused?
+            </summary>
+        </member>
+        <member name="P:com.ptrampert.LibVLCBind.Implementation.TwoflowerVLCMediaPlayer.WillPlay">
+            <summary>
+            Will the player play if <code>Play()</code> is called?
+            </summary>
+        </member>
+        <member name="E:com.ptrampert.LibVLCBind.Implementation.TwoflowerVLCMediaPlayer.MediaChanged">
+            <summary>
+            Called when the media is changed. The new media is passed in the event args.
+            </summary>
+        </member>
+        <member name="E:com.ptrampert.LibVLCBind.Implementation.TwoflowerVLCMediaPlayer.NothingSpecial">
+            <summary>
+            Called when state changes to <value>LIBVLC_STATE.NOTHING_SPECIAL</value>
+            </summary>
+        </member>
+        <member name="E:com.ptrampert.LibVLCBind.Implementation.TwoflowerVLCMediaPlayer.Opening">
+            <summary>
+            Called when state changes to <value>LIBVLC_STATE.OPENING</value>
+            </summary>
+        </member>
+        <member name="E:com.ptrampert.LibVLCBind.Implementation.TwoflowerVLCMediaPlayer.Buffering">
+            <summary>
+            Called when state changes to <value>LIBVLC_STATE.BUFFERING</value>.
+            The percentage complete is passed in the event args.
+            </summary>
+        </member>
+        <member name="E:com.ptrampert.LibVLCBind.Implementation.TwoflowerVLCMediaPlayer.Playing">
+            <summary>
+            Called when state changes to <value>LIBVLC_STATE.PLAYING</value>
+            </summary>
+        </member>
+        <member name="E:com.ptrampert.LibVLCBind.Implementation.TwoflowerVLCMediaPlayer.Paused">
+            <summary>
+            Called when state changes to <value>LIBVLC_STATE.PAUSED</value>
+            </summary>
+        </member>
+        <member name="E:com.ptrampert.LibVLCBind.Implementation.TwoflowerVLCMediaPlayer.Stopped">
+            <summary>
+            Called when state changes to <value>LIBVLC_STATE.STOPPED</value>
+            </summary>
+        </member>
+        <member name="E:com.ptrampert.LibVLCBind.Implementation.TwoflowerVLCMediaPlayer.Forward">
+            <summary>
+            Called when state changes to <value>LIBVLC_STATE.FORWARD</value>
+            </summary>
+        </member>
+        <member name="E:com.ptrampert.LibVLCBind.Implementation.TwoflowerVLCMediaPlayer.Backward">
+            <summary>
+            Called when state changes to <value>LIBVLC_STATE.BACKWARD</value>
+            </summary>
+        </member>
+        <member name="E:com.ptrampert.LibVLCBind.Implementation.TwoflowerVLCMediaPlayer.EndReached">
+            <summary>
+            Called when state changes to <value>LIBVLC_STATE.END_REACHED</value>
+            </summary>
+        </member>
+        <member name="E:com.ptrampert.LibVLCBind.Implementation.TwoflowerVLCMediaPlayer.EncounteredError">
+            <summary>
+            Called when the media player encounters an error. The exception is passed in the event args.
+            </summary>
+        </member>
+        <member name="E:com.ptrampert.LibVLCBind.Implementation.TwoflowerVLCMediaPlayer.TimeChanged">
+            <summary>
+            Called when the media player's Time changes. The new time is passed in the event args.
+            </summary>
+        </member>
+        <member name="E:com.ptrampert.LibVLCBind.Implementation.TwoflowerVLCMediaPlayer.PositionChanged">
+            <summary>
+            Called when the media player's position changes. The new position is passed in the event args.
+            </summary>
+        </member>
+        <member name="E:com.ptrampert.LibVLCBind.Implementation.TwoflowerVLCMediaPlayer.IsSeekableChanged">
+            <summary>
+            Called when <code>IsSeekable</code> changes. The new state is passed in the event args.
+            </summary>
+        </member>
+        <member name="E:com.ptrampert.LibVLCBind.Implementation.TwoflowerVLCMediaPlayer.IsPausableChanged">
+            <summary>
+            Called when <code>IsPausable</code> changes. The new state is passed in the event args.
+            </summary>
+        </member>
+        <member name="E:com.ptrampert.LibVLCBind.Implementation.TwoflowerVLCMediaPlayer.LengthChanged">
+            <summary>
+            Called when the media player's length is changed. The new length is passed in the event args.
+            </summary>
+        </member>
+        <member name="T:com.ptrampert.LibVLCBind.IAudioPlayer">
+            <summary>
+            Exposes properties specific to audio players.
+            </summary>
+        </member>
+        <member name="P:com.ptrampert.LibVLCBind.IAudioPlayer.AudioChannel">
+            <summary>
+            Gets/Sets the current audio channel.
+            </summary>
+        </member>
+        <member name="P:com.ptrampert.LibVLCBind.IAudioPlayer.AudioDelay">
+            <summary>
+            Gets/Sets the current audio delay (in milliseconds).
+            </summary>
+        </member>
+        <member name="P:com.ptrampert.LibVLCBind.IAudioPlayer.AudioOutput">
+            <summary>
+            Gets/Sets the current audio output.
+            </summary>
+        </member>
+        <member name="P:com.ptrampert.LibVLCBind.IAudioPlayer.AudioTracks">
+            <summary>
+            Gets the available audio tracks.
+            </summary>
+        </member>
+        <member name="P:com.ptrampert.LibVLCBind.IAudioPlayer.AudioTrack">
+            <summary>
+            Gets/Sets the current audio track.
+            </summary>
+        </member>
+        <member name="P:com.ptrampert.LibVLCBind.IAudioPlayer.Mute">
+            <summary>
+            Gets/Sets mute.
+            </summary>
+        </member>
+        <member name="P:com.ptrampert.LibVLCBind.IAudioPlayer.Volume">
+            <summary>
+            Gets/Sets volume.
+            </summary>
+        </member>
+        <member name="P:com.ptrampert.LibVLCBind.Implementation.TwoflowerVLCAudioPlayer.AudioOutput">
+            <summary>
+            Gets/Sets the current audio output.
+            </summary>
+        </member>
+        <member name="P:com.ptrampert.LibVLCBind.Implementation.TwoflowerVLCAudioPlayer.Mute">
+            <summary>
+            Gets/Sets mute.
+            </summary>
+        </member>
+        <member name="P:com.ptrampert.LibVLCBind.Implementation.TwoflowerVLCAudioPlayer.Volume">
+            <summary>
+            Gets/Sets volume.
+            </summary>
+        </member>
+        <member name="P:com.ptrampert.LibVLCBind.Implementation.TwoflowerVLCAudioPlayer.AudioTracks">
+            <summary>
+            Gets the available audio tracks.
+            </summary>
+        </member>
+        <member name="P:com.ptrampert.LibVLCBind.Implementation.TwoflowerVLCAudioPlayer.AudioTrack">
+            <summary>
+            Gets/Sets the current audio track.
+            </summary>
+        </member>
+        <member name="P:com.ptrampert.LibVLCBind.Implementation.TwoflowerVLCAudioPlayer.AudioChannel">
+            <summary>
+            Gets/Sets the current audio channel.
+            </summary>
+        </member>
+        <member name="P:com.ptrampert.LibVLCBind.Implementation.TwoflowerVLCAudioPlayer.AudioDelay">
+            <summary>
+            Gets/Sets the current audio delay (in milliseconds).
+            </summary>
+        </member>
+        <member name="T:com.ptrampert.LibVLCBind.IVideoPlayer">
+            <summary>
+            Exposes properties, events, and methods specific to video players.
+            </summary>
+        </member>
+        <member name="M:com.ptrampert.LibVLCBind.IVideoPlayer.GetAdjustOptionFloat(com.ptrampert.LibVLCBind.LIBVLC_ADJUST_OPTIONS)">
+            <summary>
+            Get a float valued adjust option.
+            </summary>
+            <param name="option">Option to get the value for.</param>
+            <returns>Value of the option.</returns>
+        </member>
+        <member name="M:com.ptrampert.LibVLCBind.IVideoPlayer.GetAdjustOptionInt(com.ptrampert.LibVLCBind.LIBVLC_ADJUST_OPTIONS)">
+            <summary>
+            Get an integer valued adjust option.
+            </summary>
+            <param name="option">Option to get the value for.</param>
+            <returns>Value of the option.</returns>
+        </member>
+        <member name="M:com.ptrampert.LibVLCBind.IVideoPlayer.GetLogoInt(com.ptrampert.LibVLCBind.LIBVLC_LOGO_OPTIONS)">
+            <summary>
+            Get an integer valued logo option.
+            </summary>
+            <param name="option">Option to get the value for.</param>
+            <returns>Value of the option.</returns>
+        </member>
+        <member name="M:com.ptrampert.LibVLCBind.IVideoPlayer.GetLogoString(com.ptrampert.LibVLCBind.LIBVLC_LOGO_OPTIONS)">
+            <summary>
+            Get a string valued logo option.
+            </summary>
+            <param name="option">Option to get the value for.</param>
+            <returns>Value of the option.</returns>
+        </member>
+        <member name="M:com.ptrampert.LibVLCBind.IVideoPlayer.NextChapter">
+            <summary>
+            Jump to next chapter.
+            </summary>
+        </member>
+        <member name="M:com.ptrampert.LibVLCBind.IVideoPlayer.PreviousChapter">
+            <summary>
+            Jump to previous chapter.
+            </summary>
+        </member>
+        <member name="M:com.ptrampert.LibVLCBind.IVideoPlayer.SetAdjustOption(com.ptrampert.LibVLCBind.LIBVLC_ADJUST_OPTIONS,System.Int32)">
+            <summary>
+            Set the value of an adjust option.
+            </summary>
+            <param name="option">Option to set.</param>
+            <param name="value">Integer value to set the option to.</param>
+        </member>
+        <member name="M:com.ptrampert.LibVLCBind.IVideoPlayer.SetAdjustOption(com.ptrampert.LibVLCBind.LIBVLC_ADJUST_OPTIONS,System.Single)">
+            <summary>
+            Set the value of an adjust option.
+            </summary>
+            <param name="option">Option to set.</param>
+            <param name="value">Float value to set the option to.</param>
+        </member>
+        <member name="M:com.ptrampert.LibVLCBind.IVideoPlayer.SetLogoOption(com.ptrampert.LibVLCBind.LIBVLC_LOGO_OPTIONS,System.Int32)">
+            <summary>
+            Set a logo option.
+            </summary>
+            <param name="option">Option to set.</param>
+            <param name="value">String to set as the value.</param>
+        </member>
+        <member name="M:com.ptrampert.LibVLCBind.IVideoPlayer.SetLogoOption(com.ptrampert.LibVLCBind.LIBVLC_LOGO_OPTIONS,System.String)">
+            <summary>
+            Set a logo option.
+            </summary>
+            <param name="option">Option to set.</param>
+            <param name="value">Integer to set as the value.</param>
+        </member>
+        <member name="M:com.ptrampert.LibVLCBind.IVideoPlayer.ToggleTeletext">
+            <summary>
+            Toggles teletext on the player.
+            </summary>
+        </member>
+        <member name="E:com.ptrampert.LibVLCBind.IVideoPlayer.SnapshotTaken">
+            <summary>
+            Called when a snapshot is taken. The location the snapshot was saved to is passed in the event args.
+            </summary>
+        </member>
+        <member name="E:com.ptrampert.LibVLCBind.IVideoPlayer.TitleChanged">
+            <summary>
+            Called when <code>Title</code> changes. The new title is passed in the event args.
+            </summary>
+        </member>
+        <member name="E:com.ptrampert.LibVLCBind.IVideoPlayer.Vout">
+            <summary>
+            Called when the number of video outputs changes. The new count is passed in the event args.
+            </summary>
+        </member>
+        <member name="P:com.ptrampert.LibVLCBind.IVideoPlayer.AspectRatio">
+            <summary>
+            Gets/Sets the current aspect ratio.
+            </summary>
+        </member>
+        <member name="P:com.ptrampert.LibVLCBind.IVideoPlayer.Chapter">
+            <summary>
+            The currently playing chapter.
+            </summary>
+        </member>
+        <member name="P:com.ptrampert.LibVLCBind.IVideoPlayer.ChapterCount">
+            <summary>
+            The number of chapters.
+            </summary>
+        </member>
+        <member name="P:com.ptrampert.LibVLCBind.IVideoPlayer.CropGeometry">
+            <summary>
+            Gets/Sets the current crop geometry.
+            </summary>
+        </member>
+        <member name="P:com.ptrampert.LibVLCBind.IVideoPlayer.Drawable">
+            <summary>
+            Gets/Sets the windows drawable handle on which to render video content.
+            </summary>
+        </member>
+        <member name="P:com.ptrampert.LibVLCBind.IVideoPlayer.FPS">
+            <summary>
+            Gets the current FPS.
+            </summary>
+        </member>
+        <member name="P:com.ptrampert.LibVLCBind.IVideoPlayer.IsFullscreen">
+            <summary>
+            Gets/Sets Fullscreen mode.
+            </summary>
+        </member>
+        <member name="P:com.ptrampert.LibVLCBind.IVideoPlayer.SubtitleDelay">
+            <summary>
+            Gets/Sets the current subtitle delay (in milliseconds).
+            </summary>
+        </member>
+        <member name="P:com.ptrampert.LibVLCBind.IVideoPlayer.SubtitleFile">
+            <summary>
+            Gets/Sets the current subtitle file.
+            </summary>
+        </member>
+        <member name="P:com.ptrampert.LibVLCBind.IVideoPlayer.Subtitles">
+            <summary>
+            Gets/Sets the current subtitle track.
+            </summary>
+        </member>
+        <member name="P:com.ptrampert.LibVLCBind.IVideoPlayer.SubtitleTracks">
+            <summary>
+            Gets the available subtitle tracks.
+            </summary>
+        </member>
+        <member name="P:com.ptrampert.LibVLCBind.IVideoPlayer.TeletextPage">
+            <summary>
+            Gets/Sets the current teletext page.
+            </summary>
+        </member>
+        <member name="P:com.ptrampert.LibVLCBind.IVideoPlayer.Title">
+            <summary>
+            Gets/Sets the current title (if applicable).
+            </summary>
+        </member>
+        <member name="P:com.ptrampert.LibVLCBind.IVideoPlayer.TitleCount">
+            <summary>
+            Gets the number of titles in the current media (if applicable).
+            </summary>
+        </member>
+        <member name="P:com.ptrampert.LibVLCBind.IVideoPlayer.VideoChapter">
+            <summary>
+            Gets/Sets the currently playing chapter.
+            </summary>
+        </member>
+        <member name="P:com.ptrampert.LibVLCBind.IVideoPlayer.VideoScale">
+            <summary>
+            Gets/Sets the current video scale.
+            </summary>
+        </member>
+        <member name="P:com.ptrampert.LibVLCBind.IVideoPlayer.VideoTitle">
+            <summary>
+            Gets/Sets the currently playing title.
+            </summary>
+        </member>
+        <member name="P:com.ptrampert.LibVLCBind.IVideoPlayer.VideoTitles">
+            <summary>
+            Gets the available video titles.
+            </summary>
+        </member>
+        <member name="P:com.ptrampert.LibVLCBind.IVideoPlayer.VideoTrack">
+            <summary>
+            Gets/Sets the current video track.
+            </summary>
+        </member>
+        <member name="P:com.ptrampert.LibVLCBind.IVideoPlayer.VideoTracks">
+            <summary>
+            Gets the available video tracks.
+            </summary>
+        </member>
+        <member name="P:com.ptrampert.LibVLCBind.IVideoPlayer.VoutCount">
+            <summary>
+            Gets the current number of Video Outputs for the player.
+            </summary>
+        </member>
+        <member name="E:com.ptrampert.LibVLCBind.Implementation.TwoflowerVLCVideoPlayer.TitleChanged">
+            <summary>
+            Called when <code>Title</code> changes. The new title is passed in the event args.
+            </summary>
+        </member>
+        <member name="E:com.ptrampert.LibVLCBind.Implementation.TwoflowerVLCVideoPlayer.SnapshotTaken">
+            <summary>
+            Called when a snapshot is taken. The location the snapshot was saved to is passed in the event args.
+            </summary>
+        </member>
+        <member name="E:com.ptrampert.LibVLCBind.Implementation.TwoflowerVLCVideoPlayer.Vout">
+            <summary>
+            Called when the number of video outputs changes. The new count is passed in the event args.
+            </summary>
+        </member>
+        <member name="P:com.ptrampert.LibVLCBind.Implementation.TwoflowerVLCVideoPlayer.Drawable">
+            <summary>
+            Gets/Sets the windows drawable handle on which to render video content.
+            </summary>
+        </member>
+        <member name="P:com.ptrampert.LibVLCBind.Implementation.TwoflowerVLCVideoPlayer.Chapter">
+            <summary>
+            Gets/Sets the current chapter (if applicable).
+            </summary>
+        </member>
+        <member name="P:com.ptrampert.LibVLCBind.Implementation.TwoflowerVLCVideoPlayer.ChapterCount">
+            <summary>
+            Gets the number of chapters in the current media (if applicable).
+            </summary>
+        </member>
+        <member name="P:com.ptrampert.LibVLCBind.Implementation.TwoflowerVLCVideoPlayer.Title">
+            <summary>
+            Gets/Sets the current title (if applicable).
+            </summary>
+        </member>
+        <member name="P:com.ptrampert.LibVLCBind.Implementation.TwoflowerVLCVideoPlayer.TitleCount">
+            <summary>
+            Gets the number of titles in the current media (if applicable).
+            </summary>
+        </member>
+        <member name="P:com.ptrampert.LibVLCBind.Implementation.TwoflowerVLCVideoPlayer.FPS">
+            <summary>
+            Gets the current FPS.
+            </summary>
+        </member>
+        <member name="P:com.ptrampert.LibVLCBind.Implementation.TwoflowerVLCVideoPlayer.VoutCount">
+            <summary>
+            Gets the current number of Video Outputs for the player.
+            </summary>
+        </member>
+        <member name="P:com.ptrampert.LibVLCBind.Implementation.TwoflowerVLCVideoPlayer.IsFullscreen">
+            <summary>
+            Gets/Sets Fullscreen mode.
+            </summary>
+        </member>
+        <member name="P:com.ptrampert.LibVLCBind.Implementation.TwoflowerVLCVideoPlayer.VideoScale">
+            <summary>
+            Gets/Sets the current video scale.
+            </summary>
+        </member>
+        <member name="P:com.ptrampert.LibVLCBind.Implementation.TwoflowerVLCVideoPlayer.AspectRatio">
+            <summary>
+            Gets/Sets the current aspect ratio.
+            </summary>
+        </member>
+        <member name="P:com.ptrampert.LibVLCBind.Implementation.TwoflowerVLCVideoPlayer.SubtitleTracks">
+            <summary>
+            Gets the available subtitle tracks.
+            </summary>
+        </member>
+        <member name="P:com.ptrampert.LibVLCBind.Implementation.TwoflowerVLCVideoPlayer.Subtitles">
+            <summary>
+            Gets/Sets the current subtitle track.
+            </summary>
+        </member>
+        <member name="P:com.ptrampert.LibVLCBind.Implementation.TwoflowerVLCVideoPlayer.SubtitleFile">
+            <summary>
+            Gets/Sets the current subtitle file.
+            </summary>
+        </member>
+        <member name="P:com.ptrampert.LibVLCBind.Implementation.TwoflowerVLCVideoPlayer.SubtitleDelay">
+            <summary>
+            Gets/Sets the current subtitle delay (in milliseconds).
+            </summary>
+        </member>
+        <member name="P:com.ptrampert.LibVLCBind.Implementation.TwoflowerVLCVideoPlayer.VideoTitles">
+            <summary>
+            Gets the available video titles.
+            </summary>
+        </member>
+        <member name="P:com.ptrampert.LibVLCBind.Implementation.TwoflowerVLCVideoPlayer.VideoTitle">
+            <summary>
+            Gets/Sets the currently playing title.
+            </summary>
+        </member>
+        <member name="P:com.ptrampert.LibVLCBind.Implementation.TwoflowerVLCVideoPlayer.VideoChapter">
+            <summary>
+            Gets/Sets the currently playing chapter.
+            </summary>
+        </member>
+        <member name="P:com.ptrampert.LibVLCBind.Implementation.TwoflowerVLCVideoPlayer.CropGeometry">
+            <summary>
+            Gets/Sets the current crop geometry.
+            </summary>
+        </member>
+        <member name="P:com.ptrampert.LibVLCBind.Implementation.TwoflowerVLCVideoPlayer.TeletextPage">
+            <summary>
+            Gets/Sets the current teletext page.
+            </summary>
+        </member>
+        <member name="P:com.ptrampert.LibVLCBind.Implementation.TwoflowerVLCVideoPlayer.VideoTracks">
+            <summary>
+            Gets the available video tracks.
+            </summary>
+        </member>
+        <member name="P:com.ptrampert.LibVLCBind.Implementation.TwoflowerVLCVideoPlayer.VideoTrack">
+            <summary>
+            Gets/Sets the current video track.
+            </summary>
+        </member>
+        <member name="T:com.ptrampert.LibVLCBind.IVLCInstance">
+            <summary>
+            Exposes methods available to an instance of VLC.
+            </summary>
+        </member>
+        <member name="M:com.ptrampert.LibVLCBind.IVLCInstance.CreateMediaPlayer">
+            <summary>
+            Creates a new, empty IMediaPlayer
+            </summary>
+            <returns>New IMediaPlayer</returns>
+        </member>
+        <member name="M:com.ptrampert.LibVLCBind.IVLCInstance.CreateMediaPlayer``1">
+            <summary>
+            Creates a new, empty TMediaPlayer, where TMediaPlayer implements IMediaPlayer
+            </summary>
+            <typeparam name="TMediaPlayer">Type of media player to create.</typeparam>
+            <returns>New TMediaPlayer</returns>
+        </member>
+        <member name="M:com.ptrampert.LibVLCBind.IVLCInstance.CreateMediaPlayer``1(com.ptrampert.LibVLCBind.IMedia)">
+            <summary>
+            Creates a new TMediaPlayer from an existing IMedia.
+            </summary>
+            <typeparam name="TMediaPlayer">Type of media player to create</typeparam>
+            <param name="media">Media to load into the player.</param>
+            <returns>New TMediaPlayer</returns>
+        </member>
+        <member name="M:com.ptrampert.LibVLCBind.IVLCInstance.GetVLCMedia(System.String,System.Boolean)">
+            <summary>
+            Creates a new IMedia object.
+            </summary>
+            <param name="url">Resource location string for the media.</param>
+            <param name="local">If url is a local filepath, use true. Otherwise, use false.</param>
+            <returns>New IMedia object.</returns>
+        </member>
+        <member name="P:com.ptrampert.LibVLCBind.IVLCInstance.AudioOutputs">
+            <summary>
+            Gets a list of the available AudioOutputs and their associated devices.
+            </summary>
+        </member>
+        <member name="T:com.ptrampert.LibVLCBind.TwoflowerVLCFactory">
+            <summary>
+            IVLCFactory that instantiates a Twoflower (VLC v2.x.x) instance.
+            </summary>
+        </member>
+        <member name="T:com.ptrampert.LibVLCBind.IVLCFactory">
+            <summary>
+            Interface that exposes the underlying vlc version, compiler version, and changeset, and allows for the creation of new vlc instances.
+            A concrete instance of this interface is the main entry point into LibVLCBind.
+            </summary>
+        </member>
+        <member name="M:com.ptrampert.LibVLCBind.IVLCFactory.InitializeVLC">
+            <summary>
+            Initializes a new IVLCInstance
+            </summary>
+            <returns>A new IVLCInstance</returns>
+        </member>
+        <member name="M:com.ptrampert.LibVLCBind.IVLCFactory.InitializeVLC(System.String[])">
+            <summary>
+            Initialize a new IVLCInstance with the given command line arguments. This generally should not be used,
+            since the command line arguments are subject to change.
+            </summary>
+            <param name="args">The command line arguments to initialize with.</param>
+            <returns>A new IVLCInstance</returns>
+        </member>
+        <member name="P:com.ptrampert.LibVLCBind.IVLCFactory.LibVLCVersion">
+            <summary>
+            Gets the version of LibVLC.
+            </summary>
+        </member>
+        <member name="P:com.ptrampert.LibVLCBind.IVLCFactory.LibVLCCompiler">
+            <summary>
+            Gets the version of the compiler LibVLC was compiled with.
+            </summary>
+        </member>
+        <member name="P:com.ptrampert.LibVLCBind.IVLCFactory.LibVLCChangeset">
+            <summary>
+            Gets the changeset of LibVLC
+            </summary>
+        </member>
+        <member name="M:com.ptrampert.LibVLCBind.TwoflowerVLCFactory.InitializeVLC">
+            <summary>
+            Initializes a new IVLCInstance
+            </summary>
+            <returns>A new IVLCInstance</returns>
+        </member>
+        <member name="M:com.ptrampert.LibVLCBind.TwoflowerVLCFactory.InitializeVLC(System.String[])">
+            <summary>
+            Initializes a new IVLCInstance with the provided command line arguments.
+            </summary>
+            <param name="args">Command line arguments.</param>
+            <returns>A new IVLCInstance</returns>
+        </member>
+        <member name="P:com.ptrampert.LibVLCBind.TwoflowerVLCFactory.LibVLCVersion">
+            <summary>
+            Gets the version of LibVLC.
+            </summary>
+        </member>
+        <member name="P:com.ptrampert.LibVLCBind.TwoflowerVLCFactory.LibVLCCompiler">
+            <summary>
+            Gets the version of the compiler LibVLC was compiled with.
+            </summary>
+        </member>
+        <member name="P:com.ptrampert.LibVLCBind.TwoflowerVLCFactory.LibVLCChangeset">
+            <summary>
+            Gets the changeset of LibVLC
+            </summary>
+        </member>
+        <member name="M:com.ptrampert.LibVLCBind.Util.EventHelpers.SafeEventInvoke(System.Object,System.EventHandler,System.EventArgs)">
+            <summary>
+            Safely invokes an <code>EventHandler</code>.
+            </summary>
+            <param name="sender">The object sending the event.</param>
+            <param name="e">Event handler to invoke.</param>
+            <param name="args">EventArgs.</param>
+        </member>
+        <member name="M:com.ptrampert.LibVLCBind.Util.EventHelpers.SafeEventInvoke``1(System.Object,System.EventHandler{``0},``0)">
+            <summary>
+            Safely invokes an <code>EventHandler&lt;T&gt;</code>.
+            </summary>
+            <typeparam name="T">EventArgs type.</typeparam>
+            <param name="sender">The object sending the event.</param>
+            <param name="e">Event handler to invoke.</param>
+            <param name="args">EventArgs.</param>
+        </member>
+        <member name="M:com.ptrampert.LibVLCBind.Util.EventHelpers.RegisterEvents(System.IntPtr,com.ptrampert.LibVLCBind.LIBVLC_EVENT,com.ptrampert.LibVLCBind.LIBVLC_EVENT,com.ptrampert.LibVLCBind.Hooks.libvlc_callback_t)">
+            <summary>
+            Registers <code>callback</code> for all events between <code>min</code> and <code>max</code> (inclusive) with <code>eventManager</code>.
+            </summary>
+            <param name="eventManager">Event manager to register with.</param>
+            <param name="min">Min event.</param>
+            <param name="max">Max event.</param>
+            <param name="callback">Callback on event.</param>
+        </member>
+        <member name="M:com.ptrampert.LibVLCBind.Util.EventHelpers.UnregisterEvents(System.IntPtr,com.ptrampert.LibVLCBind.LIBVLC_EVENT,com.ptrampert.LibVLCBind.LIBVLC_EVENT,com.ptrampert.LibVLCBind.Hooks.libvlc_callback_t)">
+            <summary>
+            Unregisters <code>callback</code> for all events between <code>min</code> and <code>max</code> (inclusive) with <code>eventManager</code>.
+            </summary>
+            <param name="eventManager">Event manger to unregister with.</param>
+            <param name="min">Min event.</param>
+            <param name="max">Max event.</param>
+            <param name="callback">Callback on event.</param>
+        </member>
+        <member name="T:com.ptrampert.LibVLCBind.Hooks.libvlc_callback_t">
+            <summary>
+            Callback delegate for libvlc async api.
+            </summary>
+            <param name="e">Pointer to libvlc_event_t</param>
+            <param name="data">User data pointer</param>
+        </member>
+        <member name="T:com.ptrampert.LibVLCBind.Hooks.NativeMethods">
+            <summary>
+            Provides hooks into the native functions in libvlc.dll
+            </summary>
+        </member>
+        <member name="M:com.ptrampert.LibVLCBind.Hooks.NativeMethods.libvlc_new(System.Int32,System.String[])">
+            <summary>
+            Create and initialize a libvlc instance.
+            This function accepts a list of "command line" arguments similar to the main(). These arguments affect the LibVLC instance default configuration.
+            </summary>
+            <param name="argc">the number of arguments (should be 0)</param>
+            <param name="argv">list of arguments (should be NULL)</param>
+            <returns>the libvlc instance or NULL in case of error</returns>
+        </member>
+        <member name="M:com.ptrampert.LibVLCBind.Hooks.NativeMethods.libvlc_release(System.IntPtr)">
+            <summary>
+            Decrement the reference count of a libvlc instance, and destroy it if it reaches zero.
+            </summary>
+            <param name="p_instance">the instance to destroy</param>
+        </member>
+        <member name="M:com.ptrampert.LibVLCBind.Hooks.NativeMethods.libvlc_free(System.IntPtr)">
+            <summary>
+            Frees a heap allocation returned by a LibVLC function.
+            </summary>
+            <param name="ptr"></param>
+        </member>
+        <member name="M:com.ptrampert.LibVLCBind.Hooks.NativeMethods.libvlc_set_user_agent(System.IntPtr,System.String,System.String)">
+            <summary>
+            Sets the application name.
+            LibVLC passes this as the user agent string when a protocol requires it.
+            </summary>
+            <param name="p_instance">LibVLC Instance</param>
+            <param name="name">Human-Readable application name.</param>
+            <param name="http">HTTP User Agent</param>
+        </member>
+        <member name="M:com.ptrampert.LibVLCBind.Hooks.NativeMethods.libvlc_get_version">
+            <summary>
+            Retrieve libvlc version.
+            </summary>
+            <returns>libvlc version</returns>
+        </member>
+        <member name="M:com.ptrampert.LibVLCBind.Hooks.NativeMethods.libvlc_get_compiler">
+            <summary>
+            Retrieve libvlc compiler version
+            </summary>
+            <returns>libvlc compiler version</returns>
+        </member>
+        <member name="M:com.ptrampert.LibVLCBind.Hooks.NativeMethods.libvlc_get_changeset">
+            <summary>
+            Retrieve libvlc changeset
+            </summary>
+            <returns>libvlc changeset</returns>
+        </member>
+        <member name="M:com.ptrampert.LibVLCBind.Hooks.NativeMethods.libvlc_errmsg">
+            <summary>
+            A human-readable error message for the last LibVLC error in the calling thread.
+            The resulting string is valid until another error occurs (at least until the next LibVLC call).
+            </summary>
+            <returns>Human readable error message, or null if there is no error.</returns>
+        </member>
+        <member name="M:com.ptrampert.LibVLCBind.Hooks.NativeMethods.libvlc_clearerr">
+            <summary>
+            Clears the LibVLC error status for the current thread.
+            This is optional. By default, the error status is automatically overridden when a new error occurs, and destroyed when the thread exits.
+            </summary>
+        </member>
+        <member name="M:com.ptrampert.LibVLCBind.Hooks.NativeMethods.libvlc_event_attach(System.IntPtr,com.ptrampert.LibVLCBind.LIBVLC_EVENT,com.ptrampert.LibVLCBind.Hooks.libvlc_callback_t,System.IntPtr)">
+            <summary>
+            Register an event for notification.
+            </summary>
+            <param name="p_event_manager">	the event manager to which you want to attach to. Generally it is obtained by 
+            vlc_my_object_event_manager() where my_object is the object you want to listen to.</param>
+            <param name="i_event_type">the desired event to which we want to listen</param>
+            <param name="f_callback">the function to call when i_event_type occurs</param>
+            <param name="user_data">user provided data to carry with the event</param>
+            <returns>0 on success, ENOMEM on error</returns>
+        </member>
+        <member name="M:com.ptrampert.LibVLCBind.Hooks.NativeMethods.libvlc_event_detach(System.IntPtr,com.ptrampert.LibVLCBind.LIBVLC_EVENT,com.ptrampert.LibVLCBind.Hooks.libvlc_callback_t,System.IntPtr)">
+            <summary>
+            Unregister an event notification.
+            </summary>
+            <param name="p_event_manager">the event manager</param>
+            <param name="i_event_type">the desired event to which we want to unregister</param>
+            <param name="f_callback">the function to call when i_event_type occurs</param>
+            <param name="p_user_data">user provided data to carry with the event</param>
+        </member>
+        <member name="M:com.ptrampert.LibVLCBind.Hooks.NativeMethods.libvlc_event_type_name(com.ptrampert.LibVLCBind.LIBVLC_EVENT)">
+            <summary>
+            Get an event type's name.
+            </summary>
+            <param name="event_type">the desired event</param>
+            <returns>the event's name</returns>
+        </member>
+        <member name="M:com.ptrampert.LibVLCBind.Hooks.NativeMethods.libvlc_media_new_location(System.IntPtr,System.String)">
+            <summary>
+            Create a media with a certain given media resource location, for instance a valid URL.
+            </summary>
+            <param name="p_instance">the instance</param>
+            <param name="psz_mrl">the media location</param>
+            <returns>the newly created media or NULL on error</returns>
+        </member>
+        <member name="M:com.ptrampert.LibVLCBind.Hooks.NativeMethods.libvlc_media_new_path(System.IntPtr,System.String)">
+            <summary>
+            Create a media for a certain file path.
+            </summary>
+            <param name="p_instance">the instance</param>
+            <param name="path">local filesystem path</param>
+            <returns>the newly created media or NULL on error</returns>
+        </member>
+        <member name="M:com.ptrampert.LibVLCBind.Hooks.NativeMethods.libvlc_media_new_fd(System.IntPtr,System.Int32)">
+            <summary>
+            Create a media for an already open file descriptor.
+            The file descriptor shall be open for reading (or reading and writing).
+            Regular file descriptors, pipe read descriptors and character device descriptors (including TTYs) are 
+            supported on all platforms. Block device descriptors are supported where available. Directory 
+            descriptors are supported on systems that provide fdopendir(). Sockets are supported on all platforms 
+            where they are file descriptors, i.e. all except Windows.
+            </summary>
+            <param name="p_instance">the instance</param>
+            <param name="fd">open file descriptor</param>
+            <returns>the newly created media or NULL on error</returns>
+        </member>
+        <member name="M:com.ptrampert.LibVLCBind.Hooks.NativeMethods.libvlc_media_new_as_node(System.IntPtr,System.String)">
+            <summary>
+            Create a media as an empty node with a given name.
+            </summary>
+            <param name="p_instance">the instance</param>
+            <param name="psz_name">the name of the node</param>
+            <returns>the new empty media or NULL on error</returns>
+        </member>
+        <member name="M:com.ptrampert.LibVLCBind.Hooks.NativeMethods.libvlc_media_release(System.IntPtr)">
+            <summary>
+            Decrement the reference count of a media descriptor object.
+            If the reference count is 0, then libvlc_media_release() will release the media descriptor object. 
+            It will send out a libvlc_MediaFreed event to all listeners. If the media descriptor object has been released it should not be used again.
+            </summary>
+            <param name="p_md">the media descriptor</param>
+        </member>
+        <member name="M:com.ptrampert.LibVLCBind.Hooks.NativeMethods.libvlc_media_add_option(System.IntPtr,System.String)">
+            <summary>
+            Add an option to the media.
+            This option will be used to determine how the media_player will read the media. This allows to use VLC's advanced reading/streaming options on a per-media basis.
+            </summary>
+            <param name="p_md">the media descriptor</param>
+            <param name="ppsz_options">the options (as a string)</param>
+        </member>
+        <member name="M:com.ptrampert.LibVLCBind.Hooks.NativeMethods.libvlc_media_add_option_flag(System.IntPtr,System.String,System.UInt32)">
+            <summary>
+            Add an option to the media with configurable flags.
+            This option will be used to determine how the media_player will read the media. This allows the use of VLC's advanced reading/streaming options on a per-media basis.
+            </summary>
+            <param name="p_md">the media descriptor</param>
+            <param name="ppsz_options">the options (as a string)</param>
+            <param name="i_flags">the flags for this option</param>
+        </member>
+        <member name="M:com.ptrampert.LibVLCBind.Hooks.NativeMethods.libvlc_media_get_mrl(System.IntPtr)">
+            <summary>
+            Get the media resource locator (mrl) from a media descriptor object.
+            </summary>
+            <param name="p_md">a media descriptor object</param>
+            <returns>string with mrl of media descriptor object</returns>
+        </member>
+        <member name="M:com.ptrampert.LibVLCBind.Hooks.NativeMethods.libvlc_media_duplicate(System.IntPtr)">
+            <summary>
+            Duplicate a media descriptor object.
+            </summary>
+            <param name="p_md">a media descriptor object.</param>
+            <returns>a new identical media descriptor object.</returns>
+        </member>
+        <member name="M:com.ptrampert.LibVLCBind.Hooks.NativeMethods.libvlc_media_get_meta(System.IntPtr,System.Int32)">
+            <summary>
+            Read the meta of the media.
+            If the media has not yet been parsed this will return NULL.
+            This methods automatically calls libvlc_media_parse_async(), so after calling it you may receive a libvlc_MediaMetaChanged event. 
+            If you prefer a synchronous version ensure that you call libvlc_media_parse() before get_meta().
+            </summary>
+            <param name="p_md">the media descriptor</param>
+            <param name="e_meta">the meta to read</param>
+            <returns>the media's meta</returns>
+        </member>
+        <member name="M:com.ptrampert.LibVLCBind.Hooks.NativeMethods.libvlc_media_set_meta(System.IntPtr,System.Int32,System.String)">
+            <summary>
+            Set the meta of the media (this function will not save the meta, call libvlc_media_save_meta in order to save the meta).
+            </summary>
+            <param name="p_md">the media descriptor</param>
+            <param name="e_meta">the meta to write</param>
+            <param name="psz_value">the media's meta</param>
+        </member>
+        <member name="M:com.ptrampert.LibVLCBind.Hooks.NativeMethods.libvlc_media_save_meta(System.IntPtr)">
+            <summary>
+            Save the meta previously set.
+            </summary>
+            <param name="p_md">the media descriptor</param>
+            <returns>true if the write operation was successful</returns>
+        </member>
+        <member name="M:com.ptrampert.LibVLCBind.Hooks.NativeMethods.libvlc_media_get_state(System.IntPtr)">
+            <summary>
+            Get current state of media descriptor object.
+            Possible media states are defined in libvlc_structures.c ( libvlc_NothingSpecial=0, libvlc_Opening, libvlc_Buffering, libvlc_Playing, libvlc_Paused, libvlc_Stopped, libvlc_Ended, libvlc_Error).
+            </summary>
+            <param name="p_md">a media descriptor object</param>
+            <returns>state of media descriptor object</returns>
+        </member>
+        <member name="M:com.ptrampert.LibVLCBind.Hooks.NativeMethods.libvlc_media_get_stats(System.IntPtr,System.IntPtr)">
+            <summary>
+            Get the current statistics about the media.
+            </summary>
+            <param name="p_md">media descriptor object</param>
+            <param name="p_stats">structure that contains the statistics about the media (this structure must be allocated by the caller)</param>
+            <returns>true if the statistics are available, false otherwise.</returns>
+        </member>
+        <member name="M:com.ptrampert.LibVLCBind.Hooks.NativeMethods.libvlc_media_subitems(System.IntPtr)">
+            <summary>
+            Get subitems of media descriptor object.
+            This will increment the reference count of supplied media descriptor object. Use libvlc_media_list_release() to decrement the reference counting.
+            </summary>
+            <param name="p_md">the media descriptor</param>
+            <returns>list of media descriptor subitems or NULL.</returns>
+        </member>
+        <member name="M:com.ptrampert.LibVLCBind.Hooks.NativeMethods.libvlc_media_event_manager(System.IntPtr)">
+            <summary>
+            Get event manager from media descriptor object.
+            </summary>
+            <param name="p_md">a media descriptor object.</param>
+            <returns>event manager object.</returns>
+        </member>
+        <member name="M:com.ptrampert.LibVLCBind.Hooks.NativeMethods.libvlc_media_get_duration(System.IntPtr)">
+            <summary>
+            Get duration (in ms) of media descriptor object item.
+            </summary>
+            <param name="p_md">media descriptor object.</param>
+            <returns>duration of media item or -1 on error</returns>
+        </member>
+        <member name="M:com.ptrampert.LibVLCBind.Hooks.NativeMethods.libvlc_media_parse(System.IntPtr)">
+            <summary>
+            Parse a media.
+            This fetches (local) meta data and tracks information. The method is synchronous.
+            </summary>
+            <param name="p_md">media descriptor object</param>
+        </member>
+        <member name="M:com.ptrampert.LibVLCBind.Hooks.NativeMethods.libvlc_media_parse_async(System.IntPtr)">
+            <summary>
+            Parse a media.
+            This fetches (local) meta data and tracks information. The method is the asynchronous of libvlc_media_parse().
+            To track when this is over you can listen to libvlc_MediaParsedChanged event. However if the media was already parsed you will not receive this event.
+            </summary>
+            <param name="p_md">media descriptor object</param>
+        </member>
+        <member name="M:com.ptrampert.LibVLCBind.Hooks.NativeMethods.libvlc_media_is_parsed(System.IntPtr)">
+            <summary>
+            Get Parsed status for media descriptor object.
+            </summary>
+            <param name="p_md">media descriptor object</param>
+            <returns>true if media object has been parsed otherwise it returns false</returns>
+        </member>
+        <member name="M:com.ptrampert.LibVLCBind.Hooks.NativeMethods.libvlc_media_get_tracks_info(System.IntPtr,System.IntPtr[])">
+            <summary>
+            Get media descriptor's elementary streams description.
+            Note, you need to call libvlc_media_parse() or play the media at least once before calling this function. Not doing this will result in an empty array.
+            </summary>
+            <param name="p_md">media descriptor object</param>
+            <param name="tracks">address to store an allocated array of Elementary Streams descriptions (must be freed by the caller) [OUT]</param>
+            <returns>the number of Elementary Streams</returns>
+        </member>
+        <member name="M:com.ptrampert.LibVLCBind.Hooks.NativeMethods.libvlc_media_player_new(System.IntPtr)">
+            <summary>
+            Create an empty Media Player object.
+            </summary>
+            <param name="p_libvlc_instance">the libvlc instance in which the Media Player should be created.</param>
+            <returns>a new media player object, or NULL on error.</returns>
+        </member>
+        <member name="M:com.ptrampert.LibVLCBind.Hooks.NativeMethods.libvlc_media_player_new_from_media(System.IntPtr)">
+            <summary>
+            Create a Media Player object from a Media.
+            </summary>
+            <param name="p_md">the media. Afterwards the p_md can be safely destroyed.</param>
+            <returns>a new media player object, or NULL on error.</returns>
+        </member>
+        <member name="M:com.ptrampert.LibVLCBind.Hooks.NativeMethods.libvlc_media_player_get_hwnd(System.IntPtr)">
+            <summary>
+            Get the Windows API window handle (HWND) previously set with libvlc_media_player_set_hwnd().
+            The handle will be returned even if LibVLC is not currently outputting any video to it.
+            </summary>
+            <param name="p_mi">the Media Player</param>
+            <returns>a window handle or NULL if there are none.</returns>
+        </member>
+        <member name="M:com.ptrampert.LibVLCBind.Hooks.NativeMethods.libvlc_media_player_set_hwnd(System.IntPtr,System.IntPtr)">
+            <summary>
+            Set a Win32/Win64 API window handle (HWND) where the media player should render its video output.
+            If LibVLC was built without Win32/Win64 API output support, then this has no effect.
+            </summary>
+            <param name="p_mi">the Media Player</param>
+            <param name="drawable">windows handle of the drawable</param>
+        </member>
+        <member name="M:com.ptrampert.LibVLCBind.Hooks.NativeMethods.libvlc_media_player_release(System.IntPtr)">
+            <summary>
+            Release a media_player after use Decrement the reference count of a media player object.
+            If the reference count is 0, then libvlc_media_player_release() will release the media player object. If the media player object has been released, then it should not be used again.
+            </summary>
+            <param name="p_mi">the Media Player to free</param>
+        </member>
+        <member name="M:com.ptrampert.LibVLCBind.Hooks.NativeMethods.libvlc_media_player_set_media(System.IntPtr,System.IntPtr)">
+            <summary>
+            Set the media that will be used by the media player.
+            If any, previous md will be released.
+            </summary>
+            <param name="p_mi">the Media Player</param>
+            <param name="p_md">the Media. Afterwards the p_md can be safely destroyed.</param>
+        </member>
+        <member name="M:com.ptrampert.LibVLCBind.Hooks.NativeMethods.libvlc_media_player_get_media(System.IntPtr)">
+            <summary>
+            Get the media used by the media_player.
+            </summary>
+            <param name="p_mi">the Media Player</param>
+            <returns>the media associated with p_mi, or NULL if no media is associated</returns>
+        </member>
+        <member name="M:com.ptrampert.LibVLCBind.Hooks.NativeMethods.libvlc_media_player_event_manager(System.IntPtr)">
+            <summary>
+            Get the event manager from which the media player sends events.
+            </summary>
+            <param name="p_mi">the media player</param>
+            <returns>the event manager</returns>
+        </member>
+        <member name="M:com.ptrampert.LibVLCBind.Hooks.NativeMethods.libvlc_media_player_play(System.IntPtr)">
+            <summary>
+            Play
+            </summary>
+            <param name="p_mi">the Media Player</param>
+            <returns>0 if playback started (or was already started), or -1 on error.</returns>
+        </member>
+        <member name="M:com.ptrampert.LibVLCBind.Hooks.NativeMethods.libvlc_media_player_pause(System.IntPtr)">
+            <summary>
+            Toggle pause (no effect if there is no media).
+            </summary>
+            <param name="p_mi">the Media Player</param>
+        </member>
+        <member name="M:com.ptrampert.LibVLCBind.Hooks.NativeMethods.libvlc_media_player_set_pause(System.IntPtr,System.Int32)">
+            <summary>
+            Pause or resume (no effect if there is no media).
+            </summary>
+            <param name="p_mp">the Media Player</param>
+            <param name="do_pause">play/resume if zero, pause if non-zero</param>
+        </member>
+        <member name="M:com.ptrampert.LibVLCBind.Hooks.NativeMethods.libvlc_media_player_stop(System.IntPtr)">
+            <summary>
+            Stop (no effect if there is no media).
+            </summary>
+            <param name="p_mi">the Media Player</param>
+        </member>
+        <member name="M:com.ptrampert.LibVLCBind.Hooks.NativeMethods.libvlc_media_player_will_play(System.IntPtr)">
+            <summary>
+            Is the player able to play.
+            </summary>
+            <param name="p_mi">the Media Player</param>
+            <returns>boolean</returns>
+        </member>
+        <member name="M:com.ptrampert.LibVLCBind.Hooks.NativeMethods.libvlc_media_player_is_seekable(System.IntPtr)">
+            <summary>
+            Is this media player seekable?
+            </summary>
+            <param name="p_mi">the media player</param>
+            <returns>true if the media player can seek</returns>
+        </member>
+        <member name="M:com.ptrampert.LibVLCBind.Hooks.NativeMethods.libvlc_media_player_can_pause(System.IntPtr)">
+            <summary>
+            Can this media player be paused?
+            </summary>
+            <param name="p_mi">the media player</param>
+            <returns>true if the media player can pause</returns>
+        </member>
+        <member name="M:com.ptrampert.LibVLCBind.Hooks.NativeMethods.libvlc_media_player_is_playing(System.IntPtr)">
+            <summary>
+            Is this media player playing?
+            </summary>
+            <param name="p_mi">the Media Player</param>
+            <returns>1 if the media player is playing, 0 otherwise.</returns>
+        </member>
+        <member name="M:com.ptrampert.LibVLCBind.Hooks.NativeMethods.libvlc_media_player_get_length(System.IntPtr)">
+            <summary>
+            Get the current movie length (in ms).
+            </summary>
+            <param name="p_mi">the Media Player</param>
+            <returns>the movie length (in ms), or -1 if there is no media.</returns>
+        </member>
+        <member name="M:com.ptrampert.LibVLCBind.Hooks.NativeMethods.libvlc_media_player_get_time(System.IntPtr)">
+            <summary>
+            Get the current movie time (in ms).
+            </summary>
+            <param name="p_mi">the Media Player</param>
+            <returns>the movie time (in ms), or -1 if there is no media.</returns>
+        </member>
+        <member name="M:com.ptrampert.LibVLCBind.Hooks.NativeMethods.libvlc_media_player_set_time(System.IntPtr,System.Int64)">
+            <summary>
+            Set the movie time (in ms).
+            </summary>
+            <param name="p_mi">the Media Player</param>
+            <param name="i_time">the movie time (in ms)</param>
+            <returns>the movie time (in ms), or -1 if there is no media.</returns>
+        </member>
+        <member name="M:com.ptrampert.LibVLCBind.Hooks.NativeMethods.libvlc_media_player_get_position(System.IntPtr)">
+            <summary>
+            Get movie position as percentage between 0.0 and 1.0.
+            </summary>
+            <param name="p_mi">the Media Player</param>
+            <returns>movie position, or -1. in case of error</returns>
+        </member>
+        <member name="M:com.ptrampert.LibVLCBind.Hooks.NativeMethods.libvlc_media_player_set_position(System.IntPtr,System.Single)">
+            <summary>
+            Set movie position as percentage between 0.0 and 1.0.
+            This has no effect if playback is not enabled. This might not work depending on the underlying input format and protocol.
+            </summary>
+            <param name="p_mi">the Media Player</param>
+            <param name="f_pos">the position</param>
+        </member>
+        <member name="M:com.ptrampert.LibVLCBind.Hooks.NativeMethods.libvlc_media_player_set_chapter(System.IntPtr,System.Int32)">
+            <summary>
+            Set the movie chapter (if applicable).
+            </summary>
+            <param name="p_mi">the Media Player</param>
+            <param name="i_chapter">chapter number to play</param>
+        </member>
+        <member name="M:com.ptrampert.LibVLCBind.Hooks.NativeMethods.libvlc_media_player_get_chapter(System.IntPtr)">
+            <summary>
+            Get movie chapter
+            </summary>
+            <param name="p_mi">the Media Player</param>
+            <returns>chapter number currently playing, or -1 if there is no media.</returns>
+        </member>
+        <member name="M:com.ptrampert.LibVLCBind.Hooks.NativeMethods.libvlc_media_player_get_chapter_count(System.IntPtr)">
+            <summary>
+            Get movie chapter count.
+            </summary>
+            <param name="p_mi">the Media Player</param>
+            <returns>number of chapters in movie, or -1</returns>
+        </member>
+        <member name="M:com.ptrampert.LibVLCBind.Hooks.NativeMethods.libvlc_media_player_get_chapter_count_for_title(System.IntPtr,System.Int32)">
+            <summary>
+            Get title chapter count.
+            </summary>
+            <param name="p_mi">the Media Player</param>
+            <param name="i_title">title</param>
+            <returns>number of chapters in title, or -1</returns>
+        </member>
+        <member name="M:com.ptrampert.LibVLCBind.Hooks.NativeMethods.libvlc_media_player_set_title(System.IntPtr,System.Int32)">
+            <summary>
+            Set the movie title.
+            </summary>
+            <param name="p_mi">the Media Player</param>
+            <param name="i_title">title number to play</param>
+        </member>
+        <member name="M:com.ptrampert.LibVLCBind.Hooks.NativeMethods.libvlc_media_player_get_title(System.IntPtr)">
+            <summary>
+            Get the movie title.
+            </summary>
+            <param name="p_mi">the Media Player</param>
+            <returns>title number currently playing, or -1</returns>
+        </member>
+        <member name="M:com.ptrampert.LibVLCBind.Hooks.NativeMethods.libvlc_media_player_get_title_count(System.IntPtr)">
+            <summary>
+            Get movie title count
+            </summary>
+            <param name="p_mi">the Media Player</param>
+            <returns>title number count, or -1</returns>
+        </member>
+        <member name="M:com.ptrampert.LibVLCBind.Hooks.NativeMethods.libvlc_media_player_previous_chapter(System.IntPtr)">
+            <summary>
+            Set previous chapter (if applicable).
+            </summary>
+            <param name="p_mi">the Media Player</param>
+        </member>
+        <member name="M:com.ptrampert.LibVLCBind.Hooks.NativeMethods.libvlc_media_player_next_chapter(System.IntPtr)">
+            <summary>
+            Set next chapter (if applicable).
+            </summary>
+            <param name="p_mi">the Media Player</param>
+        </member>
+        <member name="M:com.ptrampert.LibVLCBind.Hooks.NativeMethods.libvlc_media_player_get_rate(System.IntPtr)">
+            <summary>
+            Get the requested movie play rate.
+            Warning: Depending on the underlying media, the requested rate may be different from the real playback rate.
+            </summary>
+            <param name="p_mi">the Media Player</param>
+            <returns>movie play rate</returns>
+        </member>
+        <member name="M:com.ptrampert.LibVLCBind.Hooks.NativeMethods.libvlc_media_player_set_rate(System.IntPtr,System.Single)">
+            <summary>
+            Set movie play rate.
+            </summary>
+            <param name="p_mi">the Media Player</param>
+            <param name="rate">-1 if an error was detected, 0 otherwise (but even then, it might not actually work depending on the underlying media protocol).</param>
+        </member>
+        <member name="M:com.ptrampert.LibVLCBind.Hooks.NativeMethods.libvlc_media_player_get_state(System.IntPtr)">
+            <summary>
+            Get current movie state.
+            </summary>
+            <param name="p_mi">the Media Player</param>
+            <returns>the current state of the media player (playing, paused, ...)</returns>
+        </member>
+        <member name="M:com.ptrampert.LibVLCBind.Hooks.NativeMethods.libvlc_media_player_get_fps(System.IntPtr)">
+            <summary>
+            Get movie fps rate.
+            </summary>
+            <param name="p_mi">the Media Player</param>
+            <returns>frames per second (fps) for this playing movie, or 0 if unspecified.</returns>
+        </member>
+        <member name="M:com.ptrampert.LibVLCBind.Hooks.NativeMethods.libvlc_media_player_has_vout(System.IntPtr)">
+            <summary>
+            How many video outputs does this media player have?
+            </summary>
+            <param name="p_mi">the media player</param>
+            <returns>the number of video outputs</returns>
+        </member>
+        <member name="M:com.ptrampert.LibVLCBind.Hooks.NativeMethods.libvlc_track_description_list_release(System.IntPtr)">
+            <summary>
+            Release (free) libvlc_track_description_t.
+            </summary>
+            <param name="p_track_description">the structure to release</param>
+        </member>
+        <member name="M:com.ptrampert.LibVLCBind.Hooks.NativeMethods.libvlc_audio_output_list_get(System.IntPtr)">
+            <summary>
+            Gets the list of available audio outputs.
+            </summary>
+            <param name="p_instance">libvlc instance</param>
+            <returns>list of available audio outputs, or NULL in case of error.</returns>
+        </member>
+        <member name="M:com.ptrampert.LibVLCBind.Hooks.NativeMethods.libvlc_audio_output_set(System.IntPtr,System.String)">
+            <summary>
+            Sets the audio output.
+            Note:
+            Any change will take effect only after playback is stopped and restarted. Audio output cannot be changed while playing.
+            </summary>
+            <param name="p_mi">media player</param>
+            <param name="psz_name">name of audio output, use psz_name</param>
+            <returns>0 if function succeded, -1 if error</returns>
+        </member>
+        <member name="M:com.ptrampert.LibVLCBind.Hooks.NativeMethods.libvlc_audio_output_list_release(System.IntPtr)">
+            <summary>
+            Frees the list of available audio outputs.
+            </summary>
+            <param name="p_list">list with audio outputs for release</param>
+        </member>
+        <member name="M:com.ptrampert.LibVLCBind.Hooks.NativeMethods.libvlc_audio_output_device_list_get(System.IntPtr,System.String)">
+            <summary>
+            Gets a list of audio output devices for a given audio output.
+            Note:
+            Not all audio outputs support this. In particular, an empty (NULL) list of devices does not imply that the specified audio output does not work.
+            The list might not be exhaustive
+            Warning:
+            Some audio output devices in the list might not actually work in some circumstances. By default, it is recommended to not specify any explicit audio device.
+            </summary>
+            <param name="p_instance">libvlc instance</param>
+            <param name="aout">audio output name (as returned by libvlc_audio_output_list_get())</param>
+            <returns>A NULL-terminated linked list of potential audio output devices. It must be freed with libvlc_audio_output_device_list_release().</returns>
+        </member>
+        <member name="M:com.ptrampert.LibVLCBind.Hooks.NativeMethods.libvlc_audio_output_device_list_release(System.IntPtr)">
+            <summary>
+            Frees a list of available audio output devices.
+            </summary>
+            <param name="p_list">list with audio output devices for release</param>
+        </member>
+        <member name="M:com.ptrampert.LibVLCBind.Hooks.NativeMethods.libvlc_audio_output_device_set(System.IntPtr,System.String,System.String)">
+            <summary>
+            Configures an explicit audio output device for a given audio output plugin.
+            A list of possible devices can be obtained with libvlc_audio_output_device_list_get().
+            Note:
+            This function does not select the specified audio output plugin. libvlc_audio_output_set() is used for that purpose.
+            Warning:
+            The syntax for the device parameter depends on the audio output. This is not portable. Only use this function if you know what you are doing. Some audio outputs do not support this function (e.g. PulseAudio, WASAPI). Some audio outputs require further parameters (e.g. ALSA: channels map).
+            </summary>
+            <param name="p_mi">media player</param>
+            <param name="psz_audio_output">name of audio output</param>
+            <param name="psz_device_id">device</param>
+        </member>
+        <member name="M:com.ptrampert.LibVLCBind.Hooks.NativeMethods.libvlc_audio_toggle_mute(System.IntPtr)">
+            <summary>
+            Toggle mute status.
+            </summary>
+            <param name="p_mi">media player</param>
+        </member>
+        <member name="M:com.ptrampert.LibVLCBind.Hooks.NativeMethods.libvlc_audio_get_mute(System.IntPtr)">
+            <summary>
+            Get current mute status.
+            </summary>
+            <param name="p_mi">the Media Player</param>
+            <returns>the mute status (boolean) if defined, -1 if undefined/unapplicable</returns>
+        </member>
+        <member name="M:com.ptrampert.LibVLCBind.Hooks.NativeMethods.libvlc_audio_set_mute(System.IntPtr,System.Int32)">
+            <summary>
+            Set mute status.
+            </summary>
+            <param name="p_mi">the Media Player</param>
+            <param name="status">If status is true then mute, otherwise unmute.</param>
+        </member>
+        <member name="M:com.ptrampert.LibVLCBind.Hooks.NativeMethods.libvlc_audio_get_volume(System.IntPtr)">
+            <summary>
+            Get current software audio volume.
+            </summary>
+            <param name="p_mi">media player</param>
+            <returns>the software volume in percents (0 = mute, 100 = nominal / 0dB)</returns>
+        </member>
+        <member name="M:com.ptrampert.LibVLCBind.Hooks.NativeMethods.libvlc_audio_set_volume(System.IntPtr,System.Int32)">
+            <summary>
+            Set current software audio volume.
+            </summary>
+            <param name="p_mi">media player</param>
+            <param name="i_volume">the volume in percents (0 = mute, 100 = 0dB)</param>
+            <returns>0 if the volume was set, -1 if it was out of range.</returns>
+        </member>
+        <member name="M:com.ptrampert.LibVLCBind.Hooks.NativeMethods.libvlc_audio_get_track_count(System.IntPtr)">
+            <summary>
+            Get number of available audio tracks.
+            </summary>
+            <param name="p_mi">media player</param>
+            <returns>the number of available audio tracks (int), or -1 if unavailable</returns>
+        </member>
+        <member name="M:com.ptrampert.LibVLCBind.Hooks.NativeMethods.libvlc_audio_get_track_description(System.IntPtr)">
+            <summary>
+            Get the description of available audio tracks.
+            Note: This IntPtr points to the first in a list of libvlc_track_description_t structs.
+            </summary>
+            <param name="p_mi">media player</param>
+            <returns>list with description of available audio tracks, or NULL</returns>
+        </member>
+        <member name="M:com.ptrampert.LibVLCBind.Hooks.NativeMethods.libvlc_audio_get_track(System.IntPtr)">
+            <summary>
+            Get the current audio track.
+            </summary>
+            <param name="p_mi">media player</param>
+            <returns>the number of available audio tracks (int), or -1 if unavailable</returns>
+        </member>
+        <member name="M:com.ptrampert.LibVLCBind.Hooks.NativeMethods.libvlc_audio_set_track(System.IntPtr,System.Int32)">
+            <summary>
+            Set current audio track.
+            </summary>
+            <param name="p_mi">media player</param>
+            <param name="i_track">the track ID (i_id field from track description)</param>
+            <returns>0 on success, -1 on error</returns>
+        </member>
+        <member name="M:com.ptrampert.LibVLCBind.Hooks.NativeMethods.libvlc_audio_get_channel(System.IntPtr)">
+            <summary>
+            Get current audio channel.
+            </summary>
+            <param name="p_mi">media player</param>
+            <returns>the audio channel</returns>
+        </member>
+        <member name="M:com.ptrampert.LibVLCBind.Hooks.NativeMethods.libvlc_audio_set_channel(System.IntPtr,System.Int32)">
+            <summary>
+            Set current audio channel.
+            </summary>
+            <param name="p_mi">media player</param>
+            <param name="channel">the audio channel</param>
+            <returns>0 on success, -1 on error</returns>
+        </member>
+        <member name="M:com.ptrampert.LibVLCBind.Hooks.NativeMethods.libvlc_audio_get_delay(System.IntPtr)">
+            <summary>
+            Get current audio delay.
+            </summary>
+            <param name="p_mi">media player</param>
+            <returns>the audio delay (microseconds)</returns>
+        </member>
+        <member name="M:com.ptrampert.LibVLCBind.Hooks.NativeMethods.libvlc_audio_set_delay(System.IntPtr,System.Int64)">
+            <summary>
+            Set current audio delay.
+            </summary>
+            <param name="p_mi">media player</param>
+            <param name="i_delay">the audio delay (microseconds)</param>
+            <returns>0 on success, -1 on error</returns>
+        </member>
+        <member name="M:com.ptrampert.LibVLCBind.Hooks.NativeMethods.libvlc_toggle_fullscreen(System.IntPtr)">
+            <summary>
+            Toggle fullscreen status on non-embedded video outputs.
+            </summary>
+            <param name="p_mi">the media player</param>
+        </member>
+        <member name="M:com.ptrampert.LibVLCBind.Hooks.NativeMethods.libvlc_set_fullscreen(System.IntPtr,System.Int32)">
+            <summary>
+            Enable or disable fullscreen.
+            Warning:
+            With most window managers, only a top-level window can be in full-screen mode. Hence, this function will not operate properly if if libvlc_media_player_set_xwindow() was
+            used to embed the video in a non-top-level window. In that case, the embedding window must be reparented to the root window *before* fullscreen mode is enabled. You will want
+            to reparent it back to its normal parent when disabling fullscreen.
+            </summary>
+            <param name="p_mi">the media player</param>
+            <param name="b_fullscreen">boolean for fullscreen status</param>
+        </member>
+        <member name="M:com.ptrampert.LibVLCBind.Hooks.NativeMethods.libvlc_get_fullscreen(System.IntPtr)">
+            <summary>
+            Get current fullscreen status.
+            </summary>
+            <param name="p_mi">the media player</param>
+            <returns>the fullscreen status (boolean)</returns>
+        </member>
+        <member name="M:com.ptrampert.LibVLCBind.Hooks.NativeMethods.libvlc_video_set_key_input(System.IntPtr,System.UInt32)">
+            <summary>
+            Enable or disable key press events handling, according to the LibVLC hotkeys configuration.
+            By default and for historical reasons, keyboard events are handled by the LibVLC video widget.
+            </summary>
+            <param name="p_mi">media player</param>
+            <param name="on">true to handle key press events, false to ignore them.</param>
+        </member>
+        <member name="M:com.ptrampert.LibVLCBind.Hooks.NativeMethods.libvlc_video_set_mouse_input(System.IntPtr,System.UInt32)">
+            <summary>
+            Enable or disable mouse click events handling.
+            By default, those events are handled. This is needed for DVD menus to work, as well as a few video filters such as "puzzle".
+            </summary>
+            <param name="p_mi">media player</param>
+            <param name="on">true to handle mouse click events, false to ignore them.</param>
+        </member>
+        <member name="M:com.ptrampert.LibVLCBind.Hooks.NativeMethods.libvlc_video_get_size(System.IntPtr,System.UInt32,System.UInt32@,System.UInt32@)">
+            <summary>
+            Get the pixel dimensions of a video.
+            </summary>
+            <param name="p_mi">media player</param>
+            <param name="num">number of the video (starting from and most commonly 0)</param>
+            <param name="px">pointer to get the pixel width</param>
+            <param name="py">pointer to get the pixel height</param>
+            <returns>0 on success, -1 if the specified video does not exist</returns>
+        </member>
+        <member name="M:com.ptrampert.LibVLCBind.Hooks.NativeMethods.libvlc_video_get_cursor(System.IntPtr,System.UInt32,System.Int32@,System.Int32@)">
+            <summary>
+            Get the mouse pointer coordinates over a video.
+            Coordinates are expressed in terms of the decoded video resolution, not in terms of pixels on the screen/viewport (to get the latter, you can query your windowing system directly).
+            Either of the coordinates may be negative or larger than the corresponding dimension of the video, if the cursor is outside the rendering area.
+            </summary>
+            <param name="p_mi">media player</param>
+            <param name="num">number of the video (starting from, and most commonly 0)</param>
+            <param name="px">pointer to get the abscissa (x-coordinate)</param>
+            <param name="py">pointer to get the ordinate (y-coordinate)</param>
+            <returns>0 on success, -1 if the specified video does not exist</returns>
+        </member>
+        <member name="M:com.ptrampert.LibVLCBind.Hooks.NativeMethods.libvlc_video_get_scale(System.IntPtr)">
+            <summary>
+            Get the current video scaling factor.
+            </summary>
+            <param name="p_mi">media player</param>
+            <returns>the currently configured zoom factor, or 0. if the video is set to fit to the output window/drawable automatically</returns>
+        </member>
+        <member name="M:com.ptrampert.LibVLCBind.Hooks.NativeMethods.libvlc_video_set_scale(System.IntPtr,System.Single)">
+            <summary>
+            Set the video scaling factor.
+            That is the ratio of the number of pixels on screen to the number of pixels in the original decoded video in each dimension. Zero is a special value; it will adjust the video to the output window/drawable (in windowed mode) or the entire screen.
+            Note that not all video outputs support scaling.
+            </summary>
+            <param name="p_mi">media player</param>
+            <param name="f_factor">the scaling factor, or zero</param>
+        </member>
+        <member name="M:com.ptrampert.LibVLCBind.Hooks.NativeMethods.libvlc_video_get_aspect_ratio(System.IntPtr)">
+            <summary>
+            Get current video aspect ratio.
+            </summary>
+            <param name="p_mi">the media player</param>
+            <returns>the video aspect ratio or NULL if unspecified</returns>
+        </member>
+        <member name="M:com.ptrampert.LibVLCBind.Hooks.NativeMethods.libvlc_video_set_aspect_ratio(System.IntPtr,System.String)">
+            <summary>
+            Set new video aspect ratio
+            </summary>
+            <param name="p_mi">media player</param>
+            <param name="psz_aspect">new video aspect-ratio or NULL to reset to default</param>
+        </member>
+        <member name="M:com.ptrampert.LibVLCBind.Hooks.NativeMethods.libvlc_video_get_spu(System.IntPtr)">
+            <summary>
+            Get current video subtitle.
+            </summary>
+            <param name="p_mi">the media player</param>
+            <returns>the video subtitle selected, or -1 if none</returns>
+        </member>
+        <member name="M:com.ptrampert.LibVLCBind.Hooks.NativeMethods.libvlc_video_get_spu_count(System.IntPtr)">
+            <summary>
+            Get the number of available video subtitles
+            </summary>
+            <param name="p_mi">the media player</param>
+            <returns>the number of available video subtitles</returns>
+        </member>
+        <member name="M:com.ptrampert.LibVLCBind.Hooks.NativeMethods.libvlc_video_get_spu_description(System.IntPtr)">
+            <summary>
+            Get the description of available video subtitles
+            </summary>
+            <param name="p_mi">the media player</param>
+            <returns>list containing description of available video subtitles</returns>
+        </member>
+        <member name="M:com.ptrampert.LibVLCBind.Hooks.NativeMethods.libvlc_video_set_spu(System.IntPtr,System.UInt32)">
+            <summary>
+            Set the new video subtitle
+            </summary>
+            <param name="p_mi">media player</param>
+            <param name="i_spu">new video subtitle to select</param>
+            <returns>0 on success, -1 if out of range</returns>
+        </member>
+        <member name="M:com.ptrampert.LibVLCBind.Hooks.NativeMethods.libvlc_video_set_subtitle_file(System.IntPtr,System.String)">
+            <summary>
+            Set new video subtitle file.
+            </summary>
+            <param name="p_mi">the media player</param>
+            <param name="psz_subtitle">new video subtitle file</param>
+            <returns>the success status (boolean)</returns>
+        </member>
+        <member name="M:com.ptrampert.LibVLCBind.Hooks.NativeMethods.libvlc_video_get_spu_delay(System.IntPtr)">
+            <summary>
+            Get the current subtitle delay.
+            Positive values means subtitles are being displayed later, negative values earlier.
+            </summary>
+            <param name="p_mi">media player</param>
+            <returns>time (in milliseconds) the display of subtitles is being delayed</returns>
+        </member>
+        <member name="M:com.ptrampert.LibVLCBind.Hooks.NativeMethods.libvlc_video_set_spu_delay(System.IntPtr,System.Int64)">
+            <summary>
+            Set the subtitle delay.
+            This affects the timing of when the subtitle will be displayed. Positive values result in subtitles being displayed later, while negative values will result in subtitles being displayed earlier.
+            The subtitle delay will be reset to zero each time the media changes.
+            </summary>
+            <param name="p_mi">media player</param>
+            <param name="i_delay">time (in microseconds) the display of subtitles should be delayed.</param>
+            <returns>0 on success, -1 on error</returns>
+        </member>
+        <member name="M:com.ptrampert.LibVLCBind.Hooks.NativeMethods.libvlc_video_get_title_description(System.IntPtr)">
+            <summary>
+            Get the description of available titles.
+            </summary>
+            <param name="p_mi">the media player</param>
+            <returns>list containing descripton of available titles</returns>
+        </member>
+        <member name="M:com.ptrampert.LibVLCBind.Hooks.NativeMethods.libvlc_video_get_chapter_description(System.IntPtr,System.Int32)">
+            <summary>
+            Get the description of available chapters for specific title.
+            </summary>
+            <param name="p_mi">media player</param>
+            <param name="i_title">selected title</param>
+            <returns>list containing description of available chapter for title i_title</returns>
+        </member>
+        <member name="M:com.ptrampert.LibVLCBind.Hooks.NativeMethods.libvlc_video_get_crop_geometry(System.IntPtr)">
+            <summary>
+            Get current crop filter geometry.
+            </summary>
+            <param name="p_mi">the media player</param>
+            <returns>the crop filter geometry or NULL if unset</returns>
+        </member>
+        <member name="M:com.ptrampert.LibVLCBind.Hooks.NativeMethods.libvlc_video_set_crop_geometry(System.IntPtr,System.String)">
+            <summary>
+            Set new crop filter geometry.
+            </summary>
+            <param name="p_mi">media player</param>
+            <param name="psz_geometry">new crop filter geometry</param>
+        </member>
+        <member name="M:com.ptrampert.LibVLCBind.Hooks.NativeMethods.libvlc_video_get_teletext(System.IntPtr)">
+            <summary>
+            Get current teletext page requested.
+            </summary>
+            <param name="p_mi">the media player</param>
+            <returns>the current teletext page requested.</returns>
+        </member>
+        <member name="M:com.ptrampert.LibVLCBind.Hooks.NativeMethods.libvlc_video_set_teletext(System.IntPtr,System.Int32)">
+            <summary>
+            Set new teletext page to retrieve.
+            </summary>
+            <param name="p_mi">media player</param>
+            <param name="i_page">teletext page number requested</param>
+        </member>
+        <member name="M:com.ptrampert.LibVLCBind.Hooks.NativeMethods.libvlc_toggle_teletext(System.IntPtr)">
+            <summary>
+            Toggle teletext transparent status on video output.
+            </summary>
+            <param name="p_mi">the media player</param>
+        </member>
+        <member name="M:com.ptrampert.LibVLCBind.Hooks.NativeMethods.libvlc_video_get_track_count(System.IntPtr)">
+            <summary>
+            Get number of available video tracks.
+            </summary>
+            <param name="p_mi">media player</param>
+            <returns>the number of available video tracks (int)</returns>
+        </member>
+        <member name="M:com.ptrampert.LibVLCBind.Hooks.NativeMethods.libvlc_video_get_track_description(System.IntPtr)">
+            <summary>
+            Get the description of available video tracks.
+            </summary>
+            <param name="p_mi">media player</param>
+            <returns>list with description of available video tracks, or NULL on error</returns>
+        </member>
+        <member name="M:com.ptrampert.LibVLCBind.Hooks.NativeMethods.libvlc_video_get_track(System.IntPtr)">
+            <summary>
+            Get current video track
+            </summary>
+            <param name="p_mi">media player</param>
+            <returns>the video track ID (int) or -1 if no active input</returns>
+        </member>
+        <member name="M:com.ptrampert.LibVLCBind.Hooks.NativeMethods.libvlc_video_set_track(System.IntPtr,System.Int32)">
+            <summary>
+            Set video track.
+            </summary>
+            <param name="p_mi">media player</param>
+            <param name="i_track">the track ID (i_id field from track description)</param>
+            <returns>0 on success, -1 if out of range</returns>
+        </member>
+        <member name="M:com.ptrampert.LibVLCBind.Hooks.NativeMethods.libvlc_video_take_snapshot(System.IntPtr,System.UInt32,System.String,System.UInt32,System.UInt32)">
+            <summary>
+            Take a snapshot of the current video window.
+            If i_width AND i_height is 0, original size is used. If i_width XOR i_height is 0, original aspect-ratio is preserved.
+            </summary>
+            <param name="p_mi">media player instance</param>
+            <param name="num">number of video output (typically 0 for the first/only one)</param>
+            <param name="psz_filepath">the path where to save the screenshot to</param>
+            <param name="i_width">the snapshot's width</param>
+            <param name="i_height">the snapshot's height</param>
+            <returns>0 on success, -1 if the video was not found</returns>
+        </member>
+        <member name="M:com.ptrampert.LibVLCBind.Hooks.NativeMethods.libvlc_video_set_deinterlace(System.IntPtr,System.String)">
+            <summary>
+            Enable or disable deinterlace filter.
+            </summary>
+            <param name="p_mi">media player</param>
+            <param name="psz_mode">type of deinterlace filter, NULL to disable</param>
+        </member>
+        <member name="M:com.ptrampert.LibVLCBind.Hooks.NativeMethods.libvlc_video_get_marquee_int(System.IntPtr,System.UInt32)">
+            <summary>
+            Get an integer marquee option value.
+            </summary>
+            <param name="p_mi">media player</param>
+            <param name="option">marq option to get</param>
+            <returns></returns>
+        </member>
+        <member name="M:com.ptrampert.LibVLCBind.Hooks.NativeMethods.libvlc_video_get_marquee_string(System.IntPtr,System.UInt32)">
+            <summary>
+            Get a string marquee option value.
+            </summary>
+            <param name="p_mi">media player</param>
+            <param name="option">marq option to get</param>
+            <returns></returns>
+        </member>
+        <member name="M:com.ptrampert.LibVLCBind.Hooks.NativeMethods.libvlc_video_set_marquee_int(System.IntPtr,System.UInt32,System.Int32)">
+            <summary>
+            Enable, disable or set an integer marquee option.
+            Setting libvlc_marquee_Enable has the side effect of enabling (arg !0) or disabling (arg 0) the marq filter.
+            </summary>
+            <param name="p_mi">media player</param>
+            <param name="option">marq option to set. values of libvlc_video_marquee_int_option_t</param>
+            <param name="i_val">marq option value</param>
+        </member>
+        <member name="M:com.ptrampert.LibVLCBind.Hooks.NativeMethods.libvlc_video_set_marquee_string(System.IntPtr,System.UInt32,System.String)">
+            <summary>
+            Set a marquee string option.
+            </summary>
+            <param name="p_mi">media player</param>
+            <param name="option">marq option to set. values of libvlc_video_marquee_string_option_t</param>
+            <param name="psz_text">marq option value</param>
+        </member>
+        <member name="M:com.ptrampert.LibVLCBind.Hooks.NativeMethods.libvlc_video_get_logo_int(System.IntPtr,System.UInt32)">
+            <summary>
+            Get integer logo option
+            </summary>
+            <param name="p_mi">media player</param>
+            <param name="option">logo option to get, values of libvlc_video_logo_option_t</param>
+            <returns></returns>
+        </member>
+        <member name="M:com.ptrampert.LibVLCBind.Hooks.NativeMethods.libvlc_video_set_logo_int(System.IntPtr,System.UInt32,System.Int32)">
+            <summary>
+            Set logo option as integer.
+            Options that take a different type value are ignored. Passing libvlc_logo_enable as option value has the side effect of starting (arg !0) or stopping (arg 0) the logo filter.
+            </summary>
+            <param name="p_mi">libvlc media player instance</param>
+            <param name="option">logo option to set, values of libvlc_video_logo_option_t</param>
+            <param name="value">logo option value</param>
+        </member>
+        <member name="M:com.ptrampert.LibVLCBind.Hooks.NativeMethods.libvlc_video_set_logo_string(System.IntPtr,System.UInt32,System.String)">
+            <summary>
+            Set logo option as string.
+            Options that take a different type value are ignored.
+            </summary>
+            <param name="p_mi">media player</param>
+            <param name="option">logo option to set, values of libvlc_video_logo_option_t</param>
+            <param name="psz_value">logo option value</param>
+        </member>
+        <member name="M:com.ptrampert.LibVLCBind.Hooks.NativeMethods.libvlc_video_get_adjust_int(System.IntPtr,System.UInt32)">
+            <summary>
+            Get integer adjust option
+            </summary>
+            <param name="p_mi">the media player</param>
+            <param name="option">adjust option to get, values of libvlc_video_adjust_option_t</param>
+            <returns></returns>
+        </member>
+        <member name="M:com.ptrampert.LibVLCBind.Hooks.NativeMethods.libvlc_video_set_adjust_int(System.IntPtr,System.UInt32,System.Int32)">
+            <summary>
+            Set adjust option as integer
+            Options that take a different type value are ignored. Passing libvlc_adjust_enable as option value has the side effect of starting (arg !0) or stopping (arg 0) the adjust filter.
+            </summary>
+            <param name="p_mi">media player</param>
+            <param name="option">adjust option to set, values of libvlc_video_adjust_option_t</param>
+            <param name="value">adjust option value</param>
+        </member>
+        <member name="M:com.ptrampert.LibVLCBind.Hooks.NativeMethods.libvlc_video_get_adjust_float(System.IntPtr,System.UInt32)">
+            <summary>
+            Get float adjust option.
+            </summary>
+            <param name="p_mi">the media player</param>
+            <param name="option">adjust option to get, values of libvlc_video_adjust_option_t</param>
+            <returns></returns>
+        </member>
+        <member name="M:com.ptrampert.LibVLCBind.Hooks.NativeMethods.libvlc_video_set_adjust_float(System.IntPtr,System.UInt32,System.Single)">
+            <summary>
+            Set adjust option as float.
+            </summary>
+            <param name="p_mi">media player</param>
+            <param name="option">adjust option to set, values of libvlc_video_adjust_option_t</param>
+            <param name="value">adjust option value</param>
+        </member>
+        <member name="M:com.ptrampert.LibVLCBind.Hooks.NativeMethods.libvlc_vlm_release(System.IntPtr)">
+            <summary>
+            Release the vlm instance releated to the given libvlc_instance_t.
+            </summary>
+            <param name="p_instance">the instance</param>
+        </member>
+        <member name="M:com.ptrampert.LibVLCBind.Hooks.NativeMethods.libvlc_vlm_add_broadcast(System.IntPtr,System.String,System.String,System.String,System.Int32,System.String[],System.Int32,System.Int32)">
+            <summary>
+            Add a broadcast, with one input.
+            </summary>
+            <param name="p_instance">the instance</param>
+            <param name="psz_name">the name of the new broadcast</param>
+            <param name="psz_input">the input MRL</param>
+            <param name="psz_output">the output MRL (the parameter to the "sout" variable)</param>
+            <param name="i_options">number of additional options</param>
+            <param name="ppsz_options">additional options</param>
+            <param name="b_enabled">boolean for enabling the new broadcast</param>
+            <param name="b_loop">Should this broadcast be played in a loop?</param>
+            <returns>0 on success, -1 on error</returns>
+        </member>
+        <member name="M:com.ptrampert.LibVLCBind.Hooks.NativeMethods.libvlc_vlm_add_vod(System.IntPtr,System.String,System.String,System.String,System.Int32,System.String[],System.Int32,System.String)">
+            <summary>
+            Add a VOD, with one input.
+            </summary>
+            <param name="p_instance">the instance</param>
+            <param name="psz_name">the name of the new broadcast</param>
+            <param name="psz_input">the input MRL</param>
+            <param name="psz_output">the output MRL (the parameter to the "sout" variable)</param>
+            <param name="i_options">number of additional options</param>
+            <param name="ppsz_options">additional options</param>
+            <param name="b_enabled">boolean for enabling the new VOD</param>
+            <param name="psz_mux">the muxer of the vod media</param>
+            <returns>0 on success, -1 on error</returns>
+        </member>
+        <member name="M:com.ptrampert.LibVLCBind.Hooks.NativeMethods.libvlc_vlm_del_media(System.IntPtr,System.String)">
+            <summary>
+            Delete a media (VOD or broadcast).
+            </summary>
+            <param name="p_instance">the instance</param>
+            <param name="psz_name">the media to delete</param>
+            <returns>0 on success, -1 on error</returns>
+        </member>
+        <member name="M:com.ptrampert.LibVLCBind.Hooks.NativeMethods.libvlc_vlm_set_enabled(System.IntPtr,System.String,System.Int32)">
+            <summary>
+            Enable or disable a media (VOD or broadcast)
+            </summary>
+            <param name="p_instance">the instance</param>
+            <param name="psz_name">the media to work on</param>
+            <param name="b_enabled">the new status</param>
+            <returns>0 on success, -1 on error</returns>
+        </member>
+        <member name="M:com.ptrampert.LibVLCBind.Hooks.NativeMethods.libvlc_vlm_set_output(System.IntPtr,System.String,System.String)">
+            <summary>
+            Set the output for a media.
+            </summary>
+            <param name="p_instance">the instance</param>
+            <param name="psz_name">the media to work on</param>
+            <param name="psz_output">the output MRL (the parameter to the "sout" variable)</param>
+            <returns>0 on success, -1 on error</returns>
+        </member>
+        <member name="M:com.ptrampert.LibVLCBind.Hooks.NativeMethods.libvlc_vlm_set_input(System.IntPtr,System.String,System.String)">
+            <summary>
+            Set a media's input MRL.
+            This will delete all existing inputs and add the specified one.
+            </summary>
+            <param name="p_instance">the instance</param>
+            <param name="psz_name">the media to work on</param>
+            <param name="psz_input">the input MRL</param>
+            <returns>0 on success, -1 on error</returns>
+        </member>
+        <member name="M:com.ptrampert.LibVLCBind.Hooks.NativeMethods.libvlc_vlm_add_input(System.IntPtr,System.String,System.String)">
+            <summary>
+            Add a media's input MRL.
+            This will add the specified one.
+            </summary>
+            <param name="p_instance">the instance</param>
+            <param name="psz_name">the media to work on</param>
+            <param name="psz_input">the input MRL</param>
+            <returns>0 on success, -1 on error</returns>
+        </member>
+        <member name="M:com.ptrampert.LibVLCBind.Hooks.NativeMethods.libvlc_vlm_set_loop(System.IntPtr,System.String,System.Int32)">
+            <summary>
+            Set a media's loop status
+            </summary>
+            <param name="p_instance">the instance</param>
+            <param name="psz_name">the media to work on</param>
+            <param name="b_loop">the input MRL</param>
+            <returns>0 on success, -1 on error</returns>
+        </member>
+        <member name="M:com.ptrampert.LibVLCBind.Hooks.NativeMethods.libvlc_vlm_set_mux(System.IntPtr,System.String,System.String)">
+            <summary>
+            Set a media's vod muxer.
+            </summary>
+            <param name="p_instance">the instance</param>
+            <param name="psz_name">the media to work on</param>
+            <param name="psz_mux">the new muxer</param>
+            <returns>0 on success, -1 on error</returns>
+        </member>
+        <member name="M:com.ptrampert.LibVLCBind.Hooks.NativeMethods.libvlc_vlm_change_media(System.IntPtr,System.String,System.String,System.String,System.Int32,System.String[],System.Int32,System.Int32)">
+            <summary>
+            Edit the parameters of a media.
+            This will delete all existing inputs and add the specified one.
+            </summary>
+            <param name="p_instance">the instance</param>
+            <param name="psz_name">the name of the new broadcast</param>
+            <param name="psz_input">the input MRL</param>
+            <param name="psz_output">the output MRL (the parameter to the "sout" variable)</param>
+            <param name="i_options">number of additional options</param>
+            <param name="ppsz_options">additional options</param>
+            <param name="b_enabled">boolean for enabling the new broadcast</param>
+            <param name="b_loop">should this broadcast be played in a loop?</param>
+            <returns>0 on success, -1 on error</returns>
+        </member>
+        <member name="M:com.ptrampert.LibVLCBind.Hooks.NativeMethods.libvlc_vlm_play_media(System.IntPtr,System.String)">
+            <summary>
+            Play the named broadcast.
+            </summary>
+            <param name="p_instance">the instance</param>
+            <param name="psz_name">the name of the broadcast</param>
+            <returns>0 on success, -1 on error</returns>
+        </member>
+        <member name="M:com.ptrampert.LibVLCBind.Hooks.NativeMethods.libvlc_vlm_stop_media(System.IntPtr,System.String)">
+            <summary>
+            Stop the named broadcast.
+            </summary>
+            <param name="p_instance">the instance</param>
+            <param name="psz_name">the name of the broadcast</param>
+            <returns>0 on success, -1 on error</returns>
+        </member>
+        <member name="M:com.ptrampert.LibVLCBind.Hooks.NativeMethods.libvlc_vlm_pause_media(System.IntPtr,System.String)">
+            <summary>
+            Pause the named broadcast.
+            </summary>
+            <param name="p_instance">the instance</param>
+            <param name="psz_name">the name of the broadcast</param>
+            <returns>0 on success, -1 on error</returns>
+        </member>
+        <member name="M:com.ptrampert.LibVLCBind.Hooks.NativeMethods.libvlc_vlm_seek_media(System.IntPtr,System.String,System.Single)">
+            <summary>
+            Seek in the named broadcast.
+            </summary>
+            <param name="p_instance">the instance</param>
+            <param name="psz_name">the name of the broadcast</param>
+            <param name="f_percentage">the percentage to seek to</param>
+            <returns>0 on success, -1 on error</returns>
+        </member>
+        <member name="M:com.ptrampert.LibVLCBind.Hooks.NativeMethods.libvlc_vlm_show_media(System.IntPtr,System.String)">
+            <summary>
+            Return information about the named media as a JSON string representation.
+            This function is mainly intended for debugging use, if you want programmatic access to the state of a vlm_media_instance_t, 
+            please use the corresponding libvlc_vlm_get_media_instance_xxx functions. Currently there are no such functions available for vlm_media_t though.
+            </summary>
+            <param name="p_instance">the instance</param>
+            <param name="psz_name">the name of the media, if the name is an empty string, all media is described</param>
+            <returns>string with information about named media, or NULL on error</returns>
+        </member>
+        <member name="M:com.ptrampert.LibVLCBind.Hooks.NativeMethods.libvlc_vlm_get_media_instance_position(System.IntPtr,System.String,System.Int32)">
+            <summary>
+            Get vlm_media instance position by name or instance id.
+            </summary>
+            <param name="p_instance">a libvlc instance</param>
+            <param name="psz_name">name of vlm media instance</param>
+            <param name="i_instance">instance id</param>
+            <returns>position as float or -1. on error</returns>
+        </member>
+        <member name="M:com.ptrampert.LibVLCBind.Hooks.NativeMethods.libvlc_vlm_get_media_instance_time(System.IntPtr,System.String,System.Int32)">
+            <summary>
+            Get vlm_media instance time by name or instance id.
+            </summary>
+            <param name="p_instance">a libvlc instance</param>
+            <param name="psz_name">instance id</param>
+            <param name="i_instance">time as integer or -1 on error</param>
+            <returns>0 on success, -1 on error</returns>
+        </member>
+        <member name="M:com.ptrampert.LibVLCBind.Hooks.NativeMethods.libvlc_vlm_get_media_instance_length(System.IntPtr,System.String,System.Int32)">
+            <summary>
+            Get vlm_media instance length by name or instance id.
+            </summary>
+            <param name="p_instance">a libvlc instance</param>
+            <param name="psz_name">name of vlm media instance</param>
+            <param name="i_instance">instance id</param>
+            <returns>length of media item or -1 on error</returns>
+        </member>
+        <member name="M:com.ptrampert.LibVLCBind.Hooks.NativeMethods.libvlc_vlm_get_media_instance_rate(System.IntPtr,System.String,System.Int32)">
+            <summary>
+            Get vlm_media instance playback rate by name or instance id.
+            </summary>
+            <param name="p_instance">a libvlc instance</param>
+            <param name="psz_name">name of vlm media instance</param>
+            <param name="i_instance">instance id</param>
+            <returns>playback rate or -1 on error</returns>
+        </member>
+        <member name="T:com.ptrampert.LibVLCBind.LIBVLC_STATE">
+            <summary>
+            Enum representing the state of a VLCMediaPlayer.
+            </summary>
+        </member>
+        <member name="F:com.ptrampert.LibVLCBind.LIBVLC_STATE.NOTHING_SPECIAL">
+            <summary>
+            Player is Idle.
+            </summary>
+        </member>
+        <member name="F:com.ptrampert.LibVLCBind.LIBVLC_STATE.OPENING">
+            <summary>
+            Player is opening.
+            </summary>
+        </member>
+        <member name="F:com.ptrampert.LibVLCBind.LIBVLC_STATE.BUFFERING">
+            <summary>
+            Player is buffering.
+            </summary>
+        </member>
+        <member name="F:com.ptrampert.LibVLCBind.LIBVLC_STATE.PLAYING">
+            <summary>
+            Player is playing.
+            </summary>
+        </member>
+        <member name="F:com.ptrampert.LibVLCBind.LIBVLC_STATE.PAUSED">
+            <summary>
+            Player is paused.
+            </summary>
+        </member>
+        <member name="F:com.ptrampert.LibVLCBind.LIBVLC_STATE.STOPPED">
+            <summary>
+            Player is stopped.
+            </summary>
+        </member>
+        <member name="F:com.ptrampert.LibVLCBind.LIBVLC_STATE.ENDED">
+            <summary>
+            Player has ended.
+            </summary>
+        </member>
+        <member name="F:com.ptrampert.LibVLCBind.LIBVLC_STATE.ERROR">
+            <summary>
+            Player has encountered an error.
+            </summary>
+        </member>
+        <member name="T:com.ptrampert.LibVLCBind.LIBVLC_LOGO_OPTIONS">
+            <summary>
+            Used to specify the requested logo option to get/set.
+            </summary>
+        </member>
+        <member name="F:com.ptrampert.LibVLCBind.LIBVLC_LOGO_OPTIONS.ENABLE">
+            <summary>
+            Enable the logo.
+            </summary>
+        </member>
+        <member name="F:com.ptrampert.LibVLCBind.LIBVLC_LOGO_OPTIONS.FILE">
+            <summary>
+            Logo file.
+            </summary>
+        </member>
+        <member name="F:com.ptrampert.LibVLCBind.LIBVLC_LOGO_OPTIONS.POS_X">
+            <summary>
+            Logo x position.
+            </summary>
+        </member>
+        <member name="F:com.ptrampert.LibVLCBind.LIBVLC_LOGO_OPTIONS.POX_Y">
+            <summary>
+            Logo y position.
+            </summary>
+        </member>
+        <member name="F:com.ptrampert.LibVLCBind.LIBVLC_LOGO_OPTIONS.DELAY">
+            <summary>
+            Logo display delay.
+            </summary>
+        </member>
+        <member name="F:com.ptrampert.LibVLCBind.LIBVLC_LOGO_OPTIONS.REPEAT">
+            <summary>
+            Repeat the logo?
+            </summary>
+        </member>
+        <member name="F:com.ptrampert.LibVLCBind.LIBVLC_LOGO_OPTIONS.OPACITY">
+            <summary>
+            Logo opacity.
+            </summary>
+        </member>
+        <member name="F:com.ptrampert.LibVLCBind.LIBVLC_LOGO_OPTIONS.POSITION">
+            <summary>
+            Logo position.
+            </summary>
+        </member>
+        <member name="T:com.ptrampert.LibVLCBind.LIBVLC_ADJUST_OPTIONS">
+            <summary>
+            Used to specify the requested adjust option to get/set.
+            </summary>
+        </member>
+        <member name="F:com.ptrampert.LibVLCBind.LIBVLC_ADJUST_OPTIONS.ENABLE">
+            <summary>
+            Enable video adjusting.
+            </summary>
+        </member>
+        <member name="F:com.ptrampert.LibVLCBind.LIBVLC_ADJUST_OPTIONS.CONTRAST">
+            <summary>
+            Contrast value.
+            </summary>
+        </member>
+        <member name="F:com.ptrampert.LibVLCBind.LIBVLC_ADJUST_OPTIONS.BRIGHTNESS">
+            <summary>
+            Brightness value.
+            </summary>
+        </member>
+        <member name="F:com.ptrampert.LibVLCBind.LIBVLC_ADJUST_OPTIONS.HUE">
+            <summary>
+            Hue value.
+            </summary>
+        </member>
+        <member name="F:com.ptrampert.LibVLCBind.LIBVLC_ADJUST_OPTIONS.SATURATION">
+            <summary>
+            Saturation value.
+            </summary>
+        </member>
+        <member name="F:com.ptrampert.LibVLCBind.LIBVLC_ADJUST_OPTIONS.GAMMA">
+            <summary>
+            Gamma value.
+            </summary>
+        </member>
+        <member name="T:com.ptrampert.LibVLCBind.Util.MarshalHelpers">
+            <summary>
+            Static methods to help with marshaling.
+            </summary>
+        </member>
+        <member name="M:com.ptrampert.LibVLCBind.Util.MarshalHelpers.BytesToStruct``1(System.Byte[],``0@)">
+            <summary>
+            Converts a managed byte array to a struct.
+            </summary>
+            <typeparam name="T">Struct type.</typeparam>
+            <param name="bytes">Bytes to convert.</param>
+            <param name="str">Struct to store conversion in.</param>
+            <exception cref="T:System.ArgumentException">ArgumentException</exception>
+        </member>
+        <member name="M:com.ptrampert.LibVLCBind.Util.MarshalHelpers.StructToBytes``1(``0)">
+            <summary>
+            Converts a struct of type T to a managed byte array.
+            </summary>
+            <typeparam name="T">Struct type.</typeparam>
+            <param name="str">Struct to convert.</param>
+            <returns>Struct as a byte array.</returns>
+        </member>
+        <member name="T:com.ptrampert.LibVLCBind.LongEventArgs">
+            <summary>
+            Event args containing a long value.
+            </summary>
+        </member>
+        <member name="P:com.ptrampert.LibVLCBind.LongEventArgs.Value">
+            <summary>
+            The value.
+            </summary>
+        </member>
+        <member name="T:com.ptrampert.LibVLCBind.FloatEventArgs">
+            <summary>
+            Event args containing a float value.
+            </summary>
+        </member>
+        <member name="P:com.ptrampert.LibVLCBind.FloatEventArgs.Value">
+            <summary>
+            The value.
+            </summary>
+        </member>
+        <member name="T:com.ptrampert.LibVLCBind.IntEventArgs">
+            <summary>
+            Event args containing an int value.
+            </summary>
+        </member>
+        <member name="P:com.ptrampert.LibVLCBind.IntEventArgs.Value">
+            <summary>
+            The value.
+            </summary>
+        </member>
+        <member name="T:com.ptrampert.LibVLCBind.BoolEventArgs">
+            <summary>
+            Event args containing a bool value.
+            </summary>
+        </member>
+        <member name="P:com.ptrampert.LibVLCBind.BoolEventArgs.Value">
+            <summary>
+            The value.
+            </summary>
+        </member>
+        <member name="T:com.ptrampert.LibVLCBind.StringEventArgs">
+            <summary>
+            Event args containing a string value.
+            </summary>
+        </member>
+        <member name="P:com.ptrampert.LibVLCBind.StringEventArgs.Value">
+            <summary>
+            The value.
+            </summary>
+        </member>
+        <member name="T:com.ptrampert.LibVLCBind.MediaChangedEventArgs">
+            <summary>
+            Event args for a MediaChanged event.
+            </summary>
+        </member>
+        <member name="P:com.ptrampert.LibVLCBind.MediaChangedEventArgs.Media">
+            <summary>
+            The new media.
+            </summary>
+        </member>
+        <member name="T:com.ptrampert.LibVLCBind.EncounteredErrorEventArgs">
+            <summary>
+            Event args for an EncounteredError event.
+            </summary>
+        </member>
+        <member name="P:com.ptrampert.LibVLCBind.EncounteredErrorEventArgs.E">
+            <summary>
+            The exception that occurred.
+            </summary>
+        </member>
+        <member name="T:com.ptrampert.LibVLCBind.StateChangedEventArgs">
+            <summary>
+            Event args for StateChanged event.
+            </summary>
+        </member>
+        <member name="P:com.ptrampert.LibVLCBind.StateChangedEventArgs.NewState">
+            <summary>
+            New State.
+            </summary>
+        </member>
+        <member name="T:com.ptrampert.LibVLCBind.AudioOutput">
+            <summary>
+            Describes an audio output and its associated devices.
+            </summary>
+        </member>
+        <member name="P:com.ptrampert.LibVLCBind.AudioOutput.Name">
+            <summary>
+            Gets the name of the output.
+            </summary>
+        </member>
+        <member name="P:com.ptrampert.LibVLCBind.AudioOutput.Description">
+            <summary>
+            Gets the description of the output.
+            </summary>
+        </member>
+        <member name="T:com.ptrampert.LibVLCBind.VLCException">
+            <summary>
+            Managed exception for encapsulating LibVLC errors.
+            </summary>
+        </member>
+        <member name="F:com.ptrampert.LibVLCBind.VLCException._err">
+            <summary>
+            Error message.
+            </summary>
+        </member>
+        <member name="M:com.ptrampert.LibVLCBind.VLCException.#ctor">
+            <summary>
+            Creates a new VLCException.
+            </summary>
+        </member>
+        <member name="M:com.ptrampert.LibVLCBind.VLCException.#ctor(System.String)">
+            <summary>
+            Creates a new VLCException with the given message.
+            </summary>
+            <param name="msg">The message</param>
+        </member>
+        <member name="P:com.ptrampert.LibVLCBind.VLCException.Message">
+            <summary>
+            Gets the error message.
+            </summary>
+        </member>
+        <member name="T:com.ptrampert.LibVLCBind.Implementation.TwoflowerVLCInstance">
+            <summary>
+            Wrapper around libvlc_instance_t. This class must be created before any other VLC classes can be used.
+            </summary>
+        </member>
+        <member name="M:com.ptrampert.LibVLCBind.Implementation.TwoflowerVLCInstance.#ctor">
+            <summary>
+            Instantiates a new instance of libvlc.
+            </summary>
+        </member>
+        <member name="M:com.ptrampert.LibVLCBind.Implementation.TwoflowerVLCInstance.#ctor(System.String[])">
+            <summary>
+            Instantiates a new instance of libvlc.
+            </summary>
+            <param name="args">Command line arguments.</param>
+        </member>
+        <member name="M:com.ptrampert.LibVLCBind.Implementation.TwoflowerVLCInstance.GetVLCMedia(System.String,System.Boolean)">
+            <summary>
+            Creates a new IMedia object.
+            </summary>
+            <param name="url">Resource location string for the media.</param>
+            <param name="local">If url is a local filepath, use true. Otherwise, use false.</param>
+            <returns>New IMedia object.</returns>
+        </member>
+        <member name="M:com.ptrampert.LibVLCBind.Implementation.TwoflowerVLCInstance.CreateMediaPlayer``1">
+            <summary>
+            Creates a new, empty TMediaPlayer, where TMediaPlayer implements IMediaPlayer
+            </summary>
+            <typeparam name="TMediaPlayer">Type of media player to create.</typeparam>
+            <returns>New TMediaPlayer</returns>
+        </member>
+        <member name="M:com.ptrampert.LibVLCBind.Implementation.TwoflowerVLCInstance.CreateMediaPlayer``1(com.ptrampert.LibVLCBind.IMedia)">
+            <summary>
+            Creates a new TMediaPlayer from an existing IMedia.
+            </summary>
+            <typeparam name="TMediaPlayer">Type of media player to create</typeparam>
+            <param name="media">Media to load into the player.</param>
+            <returns>New TMediaPlayer</returns>
+        </member>
+        <member name="M:com.ptrampert.LibVLCBind.Implementation.TwoflowerVLCInstance.CreateMediaPlayer">
+            <summary>
+            Creates a new, empty IMediaPlayer
+            </summary>
+            <returns>New IMediaPlayer</returns>
+        </member>
+        <member name="P:com.ptrampert.LibVLCBind.Implementation.TwoflowerVLCInstance.AudioOutputs">
+            <summary>
+            Gets a list of the available AudioOutputs and their associated devices.
+            </summary>
+        </member>
+        <member name="T:com.ptrampert.LibVLCBind.Implementation.TwoflowerVLCMedia">
+            <summary>
+            Wrapper arounda libvlc_media_t. Unless otherwise stated, all properties require Parse() to be called before reading/writing has any meaning.
+            </summary>
+        </member>
+        <member name="F:com.ptrampert.LibVLCBind.Implementation.TwoflowerVLCMedia.handler">
+            <summary>
+            Handler that marshals the native libvlc callbacks for this media to managed events.
+            </summary>
+        </member>
+        <member name="M:com.ptrampert.LibVLCBind.Implementation.TwoflowerVLCMedia.#ctor(com.ptrampert.LibVLCBind.Implementation.TwoflowerVLCInstance,System.String,System.Boolean)">
+            <summary>
+            Constructs a new VLCMedia.
+            </summary>
+            <param name="instance">VLCInstance responsible for creating the media.</param>
+            <param name="url">Media path (either a url or a local path)</param>
+            <param name="local">Should be true if url is a local path.</param>
+            <exception cref="T:com.ptrampert.LibVLCBind.VLCException">VLCException</exception>
+        </member>
+        <member name="M:com.ptrampert.LibVLCBind.Implementation.TwoflowerVLCMedia.#ctor(com.ptrampert.LibVLCBind.Implementation.TwoflowerVLCInstance,System.String)">
+            <summary>
+            Creates an empty VLCMedia with the given name.
+            </summary>
+            <param name="instance">VLCInstance responsible for creating the media.</param>
+            <param name="name">Name for the media.</param>
+            <exception cref="T:com.ptrampert.LibVLCBind.VLCException">VLCException</exception>
+        </member>
+        <member name="M:com.ptrampert.LibVLCBind.Implementation.TwoflowerVLCMedia.#ctor(System.IntPtr)">
+            <summary>
+            Creates a new VLCMedia from a pointer to an existing libvlc_media_t.
+            </summary>
+            <param name="handle">Pointer to existing libvlc_media_t</param>
+            <exception cref="T:com.ptrampert.LibVLCBind.VLCException">VLCException</exception>
+        </member>
+        <member name="M:com.ptrampert.LibVLCBind.Implementation.TwoflowerVLCMedia.AddOption(System.String)">
+            <summary>
+            Adds an option to the VLCMedia.
+            </summary>
+            <param name="options">Option to add.</param>
+        </member>
+        <member name="M:com.ptrampert.LibVLCBind.Implementation.TwoflowerVLCMedia.AddOptionFlag(System.String,System.UInt32)">
+            <summary>
+            Adds an option flag to the VLCMedia.
+            </summary>
+            <param name="options">Option to add.</param>
+            <param name="flags">Flag value (0 or 1)</param>
+        </member>
+        <member name="M:com.ptrampert.LibVLCBind.Implementation.TwoflowerVLCMedia.SaveChanges">
+            <summary>
+            Saves changes made to the media's local metadata.
+            </summary>
+            <exception cref="T:com.ptrampert.LibVLCBind.VLCException">VLCException</exception>
+        </member>
+        <member name="M:com.ptrampert.LibVLCBind.Implementation.TwoflowerVLCMedia.Parse">
+            <summary>
+            Parses the media's local metadata and tracks information. 
+            Needs to be called before much of the media's metadata can be accessed.
+            The ParsedChanged event is called when parsing is complete.
+            </summary>
+        </member>
+        <member name="M:com.ptrampert.LibVLCBind.Implementation.TwoflowerVLCMedia.ParseAsync">
+            <summary>
+            Asynchronously parses the media's local metadata and tracks information.
+            Needs to be called before much of the media's metadata can be accessed.
+            The ParsedChanged event is called when parsing is complete.
+            </summary>
+        </member>
+        <member name="M:com.ptrampert.LibVLCBind.Implementation.TwoflowerVLCMedia.GetMeta(com.ptrampert.LibVLCBind.LIBVLC_META)">
+            <summary>
+            Gets the specified meta value.
+            </summary>
+            <param name="meta">Which meta to get.</param>
+            <returns>Value of the meta or null.</returns>
+        </member>
+        <member name="M:com.ptrampert.LibVLCBind.Implementation.TwoflowerVLCMedia.HandleMediaEvent(System.IntPtr,System.IntPtr)">
+            <summary>
+            Handles a callback from this media's event manager and dispatches the appropriate managed event.
+            </summary>
+            <param name="eventData">Pointer to libvlc_event_t</param>
+            <param name="data">Custom user data (unused)</param>
+        </member>
+        <member name="M:com.ptrampert.LibVLCBind.Implementation.TwoflowerVLCMedia.MetaChangedEventInvoke(com.ptrampert.LibVLCBind.LIBVLC_META)">
+            <summary>
+            Handles a meta changed callback from this media's event manager and dispatches the appropriate managed event.
+            </summary>
+            <param name="metaType">Which meta changed.</param>
+        </member>
+        <member name="M:com.ptrampert.LibVLCBind.Implementation.TwoflowerVLCMedia.Finalize">
+            <summary>
+            Destructor for VLCMedia.
+            </summary>
+        </member>
+        <member name="P:com.ptrampert.LibVLCBind.Implementation.TwoflowerVLCMedia.EventManager">
+            <summary>
+            Pointer to the underlying libvlc_event_manager_t
+            </summary>
+        </member>
+        <member name="P:com.ptrampert.LibVLCBind.Implementation.TwoflowerVLCMedia.Title">
+            <summary>
+            Gets/Sets media title.
+            </summary>
+        </member>
+        <member name="P:com.ptrampert.LibVLCBind.Implementation.TwoflowerVLCMedia.Artist">
+            <summary>
+            Gets/Sets media artist.
+            </summary>
+        </member>
+        <member name="P:com.ptrampert.LibVLCBind.Implementation.TwoflowerVLCMedia.Genre">
+            <summary>
+            Gets/Sets media genre.
+            </summary>
+        </member>
+        <member name="P:com.ptrampert.LibVLCBind.Implementation.TwoflowerVLCMedia.Copyright">
+            <summary>
+            Gets/Sets copyright
+            </summary>
+        </member>
+        <member name="P:com.ptrampert.LibVLCBind.Implementation.TwoflowerVLCMedia.Album">
+            <summary>
+            Gets/Sets album.
+            </summary>
+        </member>
+        <member name="P:com.ptrampert.LibVLCBind.Implementation.TwoflowerVLCMedia.TrackNumber">
+            <summary>
+            Gets/Sets track number.
+            </summary>
+        </member>
+        <member name="P:com.ptrampert.LibVLCBind.Implementation.TwoflowerVLCMedia.Description">
+            <summary>
+            Gets/Sets description
+            </summary>
+        </member>
+        <member name="P:com.ptrampert.LibVLCBind.Implementation.TwoflowerVLCMedia.Rating">
+            <summary>
+            Gets/Sets rating.
+            </summary>
+        </member>
+        <member name="P:com.ptrampert.LibVLCBind.Implementation.TwoflowerVLCMedia.Date">
+            <summary>
+            Gets/Sets date.
+            </summary>
+        </member>
+        <member name="P:com.ptrampert.LibVLCBind.Implementation.TwoflowerVLCMedia.Setting">
+            <summary>
+            Gets/Sets setting.
+            </summary>
+        </member>
+        <member name="P:com.ptrampert.LibVLCBind.Implementation.TwoflowerVLCMedia.URL">
+            <summary>
+            Gets/Sets url.
+            </summary>
+        </member>
+        <member name="P:com.ptrampert.LibVLCBind.Implementation.TwoflowerVLCMedia.Language">
+            <summary>
+            Gets/Sets language.
+            </summary>
+        </member>
+        <member name="P:com.ptrampert.LibVLCBind.Implementation.TwoflowerVLCMedia.NowPlaying">
+            <summary>
+            Gets/Sets now playing.
+            </summary>
+        </member>
+        <member name="P:com.ptrampert.LibVLCBind.Implementation.TwoflowerVLCMedia.Publisher">
+            <summary>
+            Gets/Sets publisher.
+            </summary>
+        </member>
+        <member name="P:com.ptrampert.LibVLCBind.Implementation.TwoflowerVLCMedia.EncodedBy">
+            <summary>
+            Gets/Sets encoded by.
+            </summary>
+        </member>
+        <member name="P:com.ptrampert.LibVLCBind.Implementation.TwoflowerVLCMedia.ArtworkURL">
+            <summary>
+            Gets/Sets artwork url.
+            </summary>
+        </member>
+        <member name="P:com.ptrampert.LibVLCBind.Implementation.TwoflowerVLCMedia.TrackId">
+            <summary>
+            Gets/Sets track id.
+            </summary>
+        </member>
+        <member name="P:com.ptrampert.LibVLCBind.Implementation.TwoflowerVLCMedia.MRL">
+            <summary>
+            Gets the Media Resource Locator (MRL) string for this media.
+            </summary>
+        </member>
+        <member name="P:com.ptrampert.LibVLCBind.Implementation.TwoflowerVLCMedia.State">
+            <summary>
+            Gets the media's state. Does not require calling of Parse().
+            </summary>
+        </member>
+        <member name="P:com.ptrampert.LibVLCBind.Implementation.TwoflowerVLCMedia.Stats">
+            <summary>
+            Gets the media's statistics. Will return null if media is not playing or if stats are otherwise unavailable.
+            </summary>
+        </member>
+        <member name="P:com.ptrampert.LibVLCBind.Implementation.TwoflowerVLCMedia.Duration">
+            <summary>
+            Gets the duration (in ms) of the media.
+            </summary>
+        </member>
+        <member name="P:com.ptrampert.LibVLCBind.Implementation.TwoflowerVLCMedia.IsParsed">
+            <summary>
+            Gets whether or not the media has been parsed yet.
+            </summary>
+        </member>
+        <member name="E:com.ptrampert.LibVLCBind.Implementation.TwoflowerVLCMedia.AlbumChanged">
+            <summary>
+            Called when Album changes.
+            </summary>
+        </member>
+        <member name="E:com.ptrampert.LibVLCBind.Implementation.TwoflowerVLCMedia.ArtistChanged">
+            <summary>
+            Called when Artist changes.
+            </summary>
+        </member>
+        <member name="E:com.ptrampert.LibVLCBind.Implementation.TwoflowerVLCMedia.ArtworkUrlChanged">
+            <summary>
+            Called when ArtworkURL changes.
+            </summary>
+        </member>
+        <member name="E:com.ptrampert.LibVLCBind.Implementation.TwoflowerVLCMedia.CopyrightChanged">
+            <summary>
+            Called when Copyright changes.
+            </summary>
+        </member>
+        <member name="E:com.ptrampert.LibVLCBind.Implementation.TwoflowerVLCMedia.DateChanged">
+            <summary>
+            Called when Date changes.
+            </summary>
+        </member>
+        <member name="E:com.ptrampert.LibVLCBind.Implementation.TwoflowerVLCMedia.DescriptionChanged">
+            <summary>
+            Called when Description changes.
+            </summary>
+        </member>
+        <member name="E:com.ptrampert.LibVLCBind.Implementation.TwoflowerVLCMedia.EncodedByChanged">
+            <summary>
+            Called when EncodedBy changes.
+            </summary>
+        </member>
+        <member name="E:com.ptrampert.LibVLCBind.Implementation.TwoflowerVLCMedia.GenreChanged">
+            <summary>
+            Called when Genre changes.
+            </summary>
+        </member>
+        <member name="E:com.ptrampert.LibVLCBind.Implementation.TwoflowerVLCMedia.LanguageChanged">
+            <summary>
+            Called when Language changes.
+            </summary>
+        </member>
+        <member name="E:com.ptrampert.LibVLCBind.Implementation.TwoflowerVLCMedia.NowPlayingChanged">
+            <summary>
+            Called when NowPlaying changes.
+            </summary>
+        </member>
+        <member name="E:com.ptrampert.LibVLCBind.Implementation.TwoflowerVLCMedia.PublisherChanged">
+            <summary>
+            Called when Publisher changes.
+            </summary>
+        </member>
+        <member name="E:com.ptrampert.LibVLCBind.Implementation.TwoflowerVLCMedia.RatingChanged">
+            <summary>
+            Called when Rating changes.
+            </summary>
+        </member>
+        <member name="E:com.ptrampert.LibVLCBind.Implementation.TwoflowerVLCMedia.SettingChanged">
+            <summary>
+            Called when Setting changes.
+            </summary>
+        </member>
+        <member name="E:com.ptrampert.LibVLCBind.Implementation.TwoflowerVLCMedia.TitleChanged">
+            <summary>
+            Called when Title changes.
+            </summary>
+        </member>
+        <member name="E:com.ptrampert.LibVLCBind.Implementation.TwoflowerVLCMedia.TrackIdChanged">
+            <summary>
+            Called when TrackId changes.
+            </summary>
+        </member>
+        <member name="E:com.ptrampert.LibVLCBind.Implementation.TwoflowerVLCMedia.TrackNumberChanged">
+            <summary>
+            Called when TrackNumber changes.
+            </summary>
+        </member>
+        <member name="E:com.ptrampert.LibVLCBind.Implementation.TwoflowerVLCMedia.UrlChanged">
+            <summary>
+            Called when URL changes.
+            </summary>
+        </member>
+        <member name="E:com.ptrampert.LibVLCBind.Implementation.TwoflowerVLCMedia.DurationChanged">
+            <summary>
+            Called when Duration changes.
+            </summary>
+        </member>
+        <member name="E:com.ptrampert.LibVLCBind.Implementation.TwoflowerVLCMedia.IsParsedChanged">
+            <summary>
+            Called when IsParsed changes.
+            </summary>
+        </member>
+        <member name="E:com.ptrampert.LibVLCBind.Implementation.TwoflowerVLCMedia.MediaFreed">
+            <summary>
+            Called when the underlying Media is freed.
+            </summary>
+        </member>
+        <member name="E:com.ptrampert.LibVLCBind.Implementation.TwoflowerVLCMedia.StateChanged">
+            <summary>
+            Called when State changes.
+            </summary>
+        </member>
+        <member name="T:com.ptrampert.LibVLCBind.Implementation.TwoflowerVLCMediaFromPlayer">
+            <summary>
+            Represents a VLCMedia that was obtained from a MediaPlayer. Enables retreival of Stats property.
+            </summary>
+        </member>
+        <member name="T:com.ptrampert.LibVLCBind.MediaStats">
+            <summary>
+            Represents stats that are collected on a media as a media player is playing.
+            </summary>
+        </member>
+        <member name="P:com.ptrampert.LibVLCBind.MediaStats.ReadBytes">
+            <summary>
+            Number of bytes read.
+            </summary>
+        </member>
+        <member name="P:com.ptrampert.LibVLCBind.MediaStats.InputBitrate">
+            <summary>
+            The input bitrate.
+            </summary>
+        </member>
+        <member name="P:com.ptrampert.LibVLCBind.MediaStats.DemuxReadBytes">
+            <summary>
+            Demux bytes read.
+            </summary>
+        </member>
+        <member name="P:com.ptrampert.LibVLCBind.MediaStats.DemuxBitrate">
+            <summary>
+            Demux bitrate.
+            </summary>
+        </member>
+        <member name="P:com.ptrampert.LibVLCBind.MediaStats.DemuxCorrupted">
+            <summary>
+            Amount of demux corrupted.
+            </summary>
+        </member>
+        <member name="P:com.ptrampert.LibVLCBind.MediaStats.DemuxDiscontinuity">
+            <summary>
+            Amount of demux discontinuity.
+            </summary>
+        </member>
+        <member name="P:com.ptrampert.LibVLCBind.MediaStats.DecodedVideo">
+            <summary>
+            Amount of decoded video.
+            </summary>
+        </member>
+        <member name="P:com.ptrampert.LibVLCBind.MediaStats.DecodedAudio">
+            <summary>
+            Amount of decoded audio.
+            </summary>
+        </member>
+        <member name="P:com.ptrampert.LibVLCBind.MediaStats.DisplayedPictures">
+            <summary>
+            Number of displayed pictures.
+            </summary>
+        </member>
+        <member name="P:com.ptrampert.LibVLCBind.MediaStats.LostPictures">
+            <summary>
+            Number of lost pictures.
+            </summary>
+        </member>
+        <member name="P:com.ptrampert.LibVLCBind.MediaStats.PlayedAudioBuffers">
+            <summary>
+            Number of played audio buffers.
+            </summary>
+        </member>
+        <member name="P:com.ptrampert.LibVLCBind.MediaStats.LostAudioBuffers">
+            <summary>
+            Number of lost audio buffers.
+            </summary>
+        </member>
+        <member name="P:com.ptrampert.LibVLCBind.MediaStats.SentPackets">
+            <summary>
+            Number of sent packets.
+            </summary>
+        </member>
+        <member name="P:com.ptrampert.LibVLCBind.MediaStats.SentBytes">
+            <summary>
+            Number of sent bytes.
+            </summary>
+        </member>
+        <member name="P:com.ptrampert.LibVLCBind.MediaStats.SendBitrate">
+            <summary>
+            The send bitrate.
+            </summary>
+        </member>
+        <member name="T:com.ptrampert.LibVLCBind.TrackDescription">
+            <summary>
+            Describes a track in a VLCMediaPlayer. There are a variety of track types, and the type can be determined by the property name.
+            </summary>
+        </member>
+        <member name="P:com.ptrampert.LibVLCBind.TrackDescription.ID">
+            <summary>
+            Gets the track ID.
+            </summary>
+        </member>
+        <member name="P:com.ptrampert.LibVLCBind.TrackDescription.Name">
+            <summary>
+            Gets the track Name.
+            </summary>
+        </member>
+        <member name="P:com.ptrampert.LibVLCBind.TrackDescription.HasChildren">
+            <summary>
+            Gets whether or not the track has children (e.g. Title tracks may have Chapter child tracks).
+            </summary>
+        </member>
+        <member name="P:com.ptrampert.LibVLCBind.TrackDescription.Children">
+            <summary>
+            Gets the track's children.
+            </summary>
+        </member>
+    </members>
+</doc>
