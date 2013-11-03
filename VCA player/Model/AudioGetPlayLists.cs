@@ -19,7 +19,6 @@ namespace VCA_player.Model
         public async static Task<IEnumerable<VKAudio>> GetFriendPlayList()
         {
             ulong friendId;
-
             if (MainViewModel.Instance.FriendsFilter.SelectedItem != null)
                 friendId = MainViewModel.Instance.FriendsFilter.SelectedItem.Item.Id;
             else
