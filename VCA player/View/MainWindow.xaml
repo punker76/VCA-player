@@ -7,6 +7,9 @@
         xmlns:modelsAudio="clr-namespace:VKapi.Audio"
         xmlns:modelsGroups ="clr-namespace:VKapi.Groups"
         Title="VCA Player" Height="350" Width="795" WindowStartupLocation="CenterScreen" Icon="/VCA player;component/MainIcon.ico">
+    <Window.TaskbarItemInfo>
+        <TaskbarItemInfo />
+    </Window.TaskbarItemInfo>
     <Grid>
         <view:AudioPlayerControl />
     </Grid>

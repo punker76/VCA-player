@@ -76,6 +76,8 @@ namespace VCA_player.ViewModel
                 OnPropertyChanged(() => Position);
             }
         }
+        public bool IsRepeat { get { return audioPlayer.IsRepeat; } set { audioPlayer.IsRepeat = value; } }
+        public bool IsShuffle { get { return audioPlayer.IsShuffle; } set { audioPlayer.IsShuffle = value; } }
         public bool IsPlaying { get { return audioPlayer.IsPlaying; } }
         public bool IsLoading { get { return audioPlayer.IsLoading; } }
         public ObservableCollection<VCAListItem<VKAudio>> Items { get { return audioPlayer.Items; } }
@@ -196,6 +198,7 @@ namespace VCA_player.ViewModel
             audioPlayer.OnPositionChanged       += audioPlayer_OnPositionChangedEventHandler;
             audioPlayer.OnSelectedChanged       += audioPlayer_OnSelectedChanged;
             audioPlayer.OnLoadingStateChanged   += audioPlayer_OnLoadingStateChanged;
+            audioPlayer.OnShuffleStateChanged += audioPlayer_OnShuffleStateChanged;
             audioPlayer.OnPlayingStateChanged   += audioPlayer_OnPlayingStateChanged;
             audioPlayer.OnFinishPlaying         += audioPlayer_OnFinishPlaying;
         }
@@ -203,12 +206,20 @@ namespace VCA_player.ViewModel
 
         #region Events
         public event EventHandler<LoadingStateChangedEventArgs> OnLoadingStateChanged;
+        public event EventHandler<PositionChangedEventArgs> OnPositionChanged;
         #endregion
 
         #region EventHandlers
         void audioPlayer_OnFinishPlaying(object sender, Kernel.FinishPlayingEventArgs e)
         {
-            PlayNextCommand.Execute();
+            if (audioPlayer.IsRepeat)
+            {
+                audioPlayer.Play();
+            }
+            else
+            {
+                PlayNextCommand.Execute();
+            }
         }
         void audioPlayer_OnTimeChangedEventHandler(object sender, TimeChangedEventArgs e)
         {
@@ -218,6 +229,10 @@ namespace VCA_player.ViewModel
         void audioPlayer_OnPositionChangedEventHandler(object sender, PositionChangedEventArgs e)
         {
             OnPropertyChanged(() => Position);
+            if (OnPositionChanged != null)
+            {
+                OnPositionChanged(this, e);
+            }
         }
 
         void audioPlayer_OnSelectedChanged(object sender, SelectedChangedEventArgs<VKAudio> e)
@@ -242,6 +257,11 @@ namespace VCA_player.ViewModel
             {
                 OnLoadingStateChanged(this, new LoadingStateChangedEventArgs(IsLoading));
             }
+        }
+
+        void audioPlayer_OnShuffleStateChanged(object sender, EventArgs e)
+        {
+            OnPropertyChanged(() => IsShuffle);
         }
         #endregion
     }

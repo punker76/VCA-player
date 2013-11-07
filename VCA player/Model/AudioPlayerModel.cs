@@ -26,6 +26,7 @@ namespace VCA_player.Model
         private double _position;
         private bool _isLoading;
         private bool _isPlaying;
+        private bool _isShuffle;
         private VCAAudioList _audioList = new VCAAudioList();
         #endregion
 
@@ -40,6 +41,7 @@ namespace VCA_player.Model
         public event EventHandler<SelectedChangedEventArgs<VKAudio>> OnSelectedChanged;
         public event EventHandler OnLoadingStateChanged;
         public event EventHandler OnPlayingStateChanged;
+        public event EventHandler OnShuffleStateChanged;
         #endregion
 
         #region Properties
@@ -61,6 +63,18 @@ namespace VCA_player.Model
                 _player.SetPositionPercentage(_position);
             }
         }
+        public bool IsShuffle
+        {
+            get { return _isShuffle; }
+            set
+            {
+                _isShuffle = value;
+                if (OnShuffleStateChanged != null) { OnShuffleStateChanged(this, new EventArgs()); }
+                if (_isShuffle) { _audioList.ShuffleItems(); }
+                else { _audioList.RestoreItems(); }
+            }
+        }
+        public bool IsRepeat { get; set; }
         public bool IsPlaying
         {
             get { return _isPlaying; }
@@ -239,6 +253,7 @@ namespace VCA_player.Model
         }
         public void Refresh()
         {
+            IsShuffle = false;
             _audioList.Refresh();
         }
         public void SetListSourceFunc(GetPlayListFunc func)

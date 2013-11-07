@@ -17,7 +17,7 @@ namespace VCA_player.Model
 
         #region Properties
         public T Item { get; set; }
-
+        public int Num { get; set; }
         public bool IsShow
         {
             get { return _isShow; }
@@ -31,11 +31,12 @@ namespace VCA_player.Model
         }
         #endregion
 
-        public VCAListItem(T item, bool isSelected = false, bool isShow = true)
+        public VCAListItem(T item, bool isSelected = false, bool isShow = true, int num = 0)
         {
             Item = item;
             IsSelected = isSelected;
             IsShow = isShow;
+            Num = num;
         }
     }
 }
