@@ -1,10 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using Newtonsoft.Json;
-using System.Reflection;
 
 namespace VKapi
 {
@@ -12,12 +7,13 @@ namespace VKapi
     {
         public override bool CanConvert(Type objectType)
         {
-            return (objectType == typeof(string));
+            return (objectType == typeof (string));
         }
 
-        public override object ReadJson(JsonReader reader, Type objectType, object existingValue, JsonSerializer serializer)
+        public override object ReadJson(JsonReader reader, Type objectType, object existingValue,
+            JsonSerializer serializer)
         {
-            long timestamp = serializer.Deserialize<long>(reader);
+            Int64 timestamp = serializer.Deserialize<Int64>(reader);
 
             return (new DateTime(1970, 1, 1, 0, 0, 0, 0))
                 .AddSeconds(timestamp);
@@ -33,12 +29,13 @@ namespace VKapi
     {
         public override bool CanConvert(Type objectType)
         {
-            return (objectType == typeof(string));
+            return (objectType == typeof (string));
         }
 
-        public override object ReadJson(JsonReader reader, Type objectType, object existingValue, JsonSerializer serializer)
+        public override object ReadJson(JsonReader reader, Type objectType, object existingValue,
+            JsonSerializer serializer)
         {
-            byte flag = serializer.Deserialize<byte>(reader);
+            Int16 flag = serializer.Deserialize<Int16>(reader);
 
             return (flag == 1);
         }
@@ -53,19 +50,19 @@ namespace VKapi
     {
         public override bool CanConvert(Type objectType)
         {
-            return objectType == typeof(T);
+            return objectType == typeof (T);
         }
 
         public override void WriteJson(JsonWriter writer, object
-        value, JsonSerializer serializer)
+            value, JsonSerializer serializer)
         {
-            writer.WriteValue(((T)value).ToString());
+            writer.WriteValue(((T) value).ToString());
         }
 
         public override object ReadJson(JsonReader reader, Type
-        objectType, object existingValue, JsonSerializer serializer)
+            objectType, object existingValue, JsonSerializer serializer)
         {
-            foreach (var item in Enum.GetValues(typeof(T)))
+            foreach (var item in Enum.GetValues(typeof (T)))
             {
                 string val = EnumString.GetStringValue(item as Enum);
                 if (val == reader.Value.ToString())
@@ -74,7 +71,7 @@ namespace VKapi
                 }
             }
 
-            return Enum.Parse(typeof(T), reader.Value.ToString());
+            return Enum.Parse(typeof (T), reader.Value.ToString());
         }
     }
 }

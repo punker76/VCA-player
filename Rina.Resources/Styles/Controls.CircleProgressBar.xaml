@@ -1,0 +1,76 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+                    xmlns:ed="clr-namespace:Microsoft.Expression.Shapes;assembly=Microsoft.Expression.Drawing">
+    
+    <ControlTemplate x:Key="CircleProgressTemplate" TargetType="{x:Type ProgressBar}">
+        <ControlTemplate.Resources>
+            <Storyboard x:Key="IntermediateAnimation">
+                <DoubleAnimation Storyboard.TargetProperty="Angle"
+                             Storyboard.TargetName="rotate"
+                             From="0" To="360"
+                             Duration="0:0:5" RepeatBehavior="Forever"/>
+            </Storyboard>
+        </ControlTemplate.Resources>
+        <Viewbox>
+            <Grid>
+                <ed:Arc ArcThickness="40" ArcThicknessUnit="Pixel"
+                        EndAngle="360" Stretch="None"
+                        StartAngle="0"
+                        Stroke="#FF127799">
+                    <ed:Arc.Fill>
+                        <RadialGradientBrush RadiusX="0.413" RadiusY="0.768"
+                                             GradientOrigin="0.509,-0.056"
+                                             Center="0.512,0.241">
+                            <GradientStop Color="#FF122799" Offset="1"/>
+                            <GradientStop Color="#FF3AD8E4" Offset="0.014"/>
+                        </RadialGradientBrush>
+                    </ed:Arc.Fill>
+                    <ed:Arc.Effect>
+                        <BlurEffect Radius="3"/>
+                    </ed:Arc.Effect>
+                </ed:Arc>
+                <ed:Arc ArcThickness="40" ArcThicknessUnit="Pixel"
+                        EndAngle="{Binding ActualWidth, ElementName=PART_Indicator}"
+                        Stretch="None" StartAngle="0"  RenderTransformOrigin="0.5 0.5"
+                        Stroke="#FF89CA2F">
+                    <ed:Arc.Fill>
+                        <RadialGradientBrush>
+                            <GradientStop Color="#FF89CA2F" Offset="1"/>
+                            <GradientStop Color="#FFC7D205" Offset="0"/>
+                        </RadialGradientBrush>
+                    </ed:Arc.Fill>
+                    <ed:Arc.Effect>
+                        <BlurEffect Radius="2"/>
+                    </ed:Arc.Effect>
+                    <ed:Arc.RenderTransform>
+                        <RotateTransform Angle="0" x:Name="rotate" />
+                    </ed:Arc.RenderTransform>
+                </ed:Arc>
+                <Path Stretch="Fill"
+                      Margin="6.105,7.333,7.587,94.632"
+                      Data="M6.9663634,99.519478 C7.6674051,103.33414 17.250406,110.4671 27.865816,99.188225 C38.481228,87.909348 92.555328,59.047062 173.16785,101.51017 C184.67072,110.00078 190.67107,102.00044 191.74509,100.84669 C195.33749,96.999977 187.33733,9.9981403 97.335518,9.33146 C17.333906,11.998844 1.9322526,95.704811 6.9663634,99.519478 z">
+                    <Path.Fill>
+                        <LinearGradientBrush EndPoint="0.511,1.003"
+                                             StartPoint="0.502,0.023">
+                            <GradientStop Color="Transparent" Offset="1"/>
+                            <GradientStop Color="#2BD6D1D1" Offset="0"/>
+                        </LinearGradientBrush>
+                    </Path.Fill>
+                </Path>
+                <Rectangle Name="PART_Track" Width="{TemplateBinding Width}" Height="{TemplateBinding Height}"/>
+                <Rectangle Name="PART_Indicator"/>
+            </Grid>
+        </Viewbox>
+        <ControlTemplate.Triggers>
+            <Trigger Property="IsIndeterminate" Value="True">
+                <Trigger.EnterActions>
+                    <BeginStoryboard Storyboard="{StaticResource IntermediateAnimation}"/>
+                </Trigger.EnterActions>
+                <Trigger.ExitActions>
+                    <StopStoryboard BeginStoryboardName="IntermediateAnimation"/>
+                </Trigger.ExitActions>
+            </Trigger>
+        </ControlTemplate.Triggers>
+    </ControlTemplate>
+</ResourceDictionary>

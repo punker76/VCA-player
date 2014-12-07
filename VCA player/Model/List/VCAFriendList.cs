@@ -1,28 +1,28 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
-using VKapi;
+using VCA_player.Kernel.FilterLogic;
 using VKapi.Friends;
-using VCA_player.Kernel;
 
-namespace VCA_player.Model
+namespace VCA_player.Model.List
 {
-    class VCAFriendList : VCAList<VKFriend>
+    internal class VCAFriendList : VCAList<VKFriend>
     {
-        private FriendFilterLogic _friendFilter = new FriendFilterLogic();
-        protected override FilterLogicBase<VKFriend> FilterLogic { get { return _friendFilter; } }
+        private readonly FriendFilterLogic _friendFilter = new FriendFilterLogic();
 
-        protected async override Task refreshList()
+        protected override FilterLogicBase<VKFriend> FilterLogic
+        {
+            get { return _friendFilter; }
+        }
+
+        protected override async Task RefreshList()
         {
             try
             {
                 RaiseStartRefreshList();
 
                 Items.Clear();
-                var list = await FriendsRequest.GetExtendedAsync(
-                    new[] { FriendsRequest.FieldsEnum.photo_50, FriendsRequest.FieldsEnum.online });
+                var list = await FriendsAPI.GetExtendedAsync(
+                    new[] {FriendsAPI.FieldsEnum.photo_50, FriendsAPI.FieldsEnum.online});
                 if (list == null) return;
 
                 foreach (var item in list.Items)

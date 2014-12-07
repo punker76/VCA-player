@@ -1,19 +1,23 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using Newtonsoft.Json;
 
-namespace VKapi
+namespace VKapi.Models
 {
     [JsonObject(MemberSerialization.OptIn)]
-    public class VKList<ItemsType>
+    public class VKList<TItemsType>
     {
         [JsonProperty("count")]
-        public string Count { get; set; }
+        public Int32 Count { get; set; }
 
         [JsonProperty("items")]
-        public IEnumerable<ItemsType> Items { get; set; }
+        public IEnumerable<TItemsType> Items { get; set; }
+
+        public VKList(IEnumerable<TItemsType> items)
+        {
+            Items = items;
+            Count = items.Count();
+        }
     }
 }

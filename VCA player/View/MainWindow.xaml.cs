@@ -1,41 +1,26 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Collections.ObjectModel;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.ComponentModel;
+using System.Drawing;
+using System.Runtime.InteropServices;
 using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
 using System.Windows.Forms;
 using System.Windows.Input;
 using System.Windows.Interop;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
-using VCA_player.Model;
-using System.Media;
-using System.Web;
-using System.Net;
+using System.Windows.Shell;
+using System.Windows.Threading;
 using VCA_player.ViewModel;
-using System.Runtime.InteropServices;
+using Cursors = System.Windows.Input.Cursors;
+using MessageBox = System.Windows.MessageBox;
+using MouseEventArgs = System.Windows.Input.MouseEventArgs;
+using Point = System.Windows.Point;
 
 namespace VCA_player.View
 {
     /// <summary>
-    /// Interaction logic for MainWindow.xaml
+    ///     Interaction logic for MainWindow.xaml
     /// </summary>
     public partial class MainWindow : Window
     {
-        private NotifyIcon _notifyIcon;
-        private const int SW_RESTORE = 9;
-        private const int SW_HIDE = 0;
-
-        [DllImport("user32.dll")]
-        static extern bool ShowWindow(IntPtr hWnd, int nCmdShow);
-
         public MainWindow()
         {
             try
@@ -44,56 +29,113 @@ namespace VCA_player.View
                 w.ShowDialog();
                 InitializeComponent();
 
-                _notifyIcon = new NotifyIcon();
-                _notifyIcon.Icon = new System.Drawing.Icon(@"MainIcon.ico");
-                _notifyIcon.Visible = true;
-                _notifyIcon.DoubleClick += delegate(object sender, EventArgs args)
-                {
-                    //this.WindowState = WindowState.Normal;
-                    //this.Show();
-                    //WindowInteropHelper(childWindow).Handle, SW_RESTORE);
-                    ShowWindow(new WindowInteropHelper(this).Handle, SW_RESTORE);
-                    /*this.Visibility = System.Windows.Visibility.Visible;
-                    this.Activate();
-                    this.Focus();*/
-                };
                 MainViewModel.Instance.AudioPlayerVM.PropertyChanged += Instance_PropertyChanged;
+
+                Grip.MouseDown += grip_MouseDown;
+                Grip.MouseMove += Grip_MouseMove;
+                Grip.MouseUp += grip_MouseUp;
             }
             catch (Exception e)
             {
-                System.Windows.MessageBox.Show(e.Message);
+                MessageBox.Show(e.Message);
             }
         }
 
-        void Instance_PropertyChanged(object sender, System.ComponentModel.PropertyChangedEventArgs e)
+        protected override void OnActivated(EventArgs e)
+        {
+            base.OnActivated(e);
+            if (WindowStyle != WindowStyle.None)
+            {
+                Dispatcher.BeginInvoke(DispatcherPriority.ApplicationIdle,
+                    (DispatcherOperationCallback) delegate(object unused)
+                    {
+                        WindowStyle = WindowStyle.None;
+                        return null;
+                    }
+                    , null);
+            }
+        }
+
+        private void Grip_MouseMove(object sender, MouseEventArgs e)
+        {
+            if (Grip.IsMouseCaptured)
+            {
+                this.Height = e.GetPosition(this).Y;
+            }
+        }
+
+        private void grip_MouseDown(object sender, MouseButtonEventArgs e)
+        {
+            if (e.LeftButton == MouseButtonState.Pressed)
+            {
+                Grip.CaptureMouse();
+            }
+        }
+
+        private void grip_MouseUp(object sender, MouseButtonEventArgs e)
+        {
+            if (Grip.IsMouseCaptured)
+            {
+                Grip.ReleaseMouseCapture();
+            }
+        }
+
+        private void Instance_PropertyChanged(object sender, PropertyChangedEventArgs e)
         {
             if (e.PropertyName == "Position")
             {
-                this.Dispatcher.Invoke(() =>
-                    {
-                        TaskbarItemInfo.ProgressValue = MainViewModel.Instance.AudioPlayerVM.Position;
-                    }); ;
+                Dispatcher.Invoke(
+                    () => { TaskbarItemInfo.ProgressValue = MainViewModel.Instance.AudioPlayerVM.Position; });
             }
             if (e.PropertyName == "IsPlaying")
             {
-                this.Dispatcher.Invoke(() =>
-                    {
-                        if (MainViewModel.Instance.AudioPlayerVM.IsPlaying) { TaskbarItemInfo.ProgressState = System.Windows.Shell.TaskbarItemProgressState.Normal; }
-                        else { TaskbarItemInfo.ProgressState = System.Windows.Shell.TaskbarItemProgressState.Paused; }
-                    });
+                Dispatcher.Invoke(() =>
+                {
+                    TaskbarItemInfo.ProgressState = MainViewModel.Instance.AudioPlayerVM.IsPlaying
+                        ? TaskbarItemProgressState.Normal
+                        : TaskbarItemProgressState.Paused;
+                });
             }
         }
 
         protected override void OnStateChanged(EventArgs e)
         {
-            if (WindowState == WindowState.Minimized) { ShowWindow(new WindowInteropHelper(this).Handle, SW_HIDE); }// this.Hide(); }
-
             base.OnStateChanged(e);
         }
 
         protected override void OnClosed(EventArgs e)
         {
             base.OnClosed(e);
+        }
+
+        private void Grid_MouseDown(object sender, MouseButtonEventArgs e)
+        {
+            if (e.ChangedButton != MouseButton.Left) return;
+            if (e.ClickCount == 2)
+            {
+                WindowMaximizeButton_Click(WindowMaximizeButton, new RoutedEventArgs());
+                WindowMaximizeButton.IsChecked = WindowState == WindowState.Maximized;
+            }
+            else
+            {
+                DragMove();
+            }
+        }
+
+        private void WindowCloseButton_Click(object sender, RoutedEventArgs e)
+        {
+            Close();
+        }
+
+        private void WindowMaximizeButton_Click(object sender, RoutedEventArgs e)
+        {
+            WindowState = WindowState != WindowState.Maximized ? WindowState.Maximized : WindowState.Normal;
+        }
+
+        private void WindowHideButton_OnClick(object sender, RoutedEventArgs e)
+        {
+            WindowStyle = System.Windows.WindowStyle.SingleBorderWindow;
+            WindowState = System.Windows.WindowState.Minimized;
         }
     }
 }

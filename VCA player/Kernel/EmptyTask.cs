@@ -1,15 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Threading.Tasks;
 
 namespace VCA_player.Kernel
 {
     public static class Empty<T>
     {
-        public static Task<T> Task { get { return _task; } }
-
-        private static readonly Task<T> _task = System.Threading.Tasks.Task.FromResult(default(T));
+        private static readonly Task<T> Task = System.Threading.Tasks.Task.FromResult(default(T));
     }
 }

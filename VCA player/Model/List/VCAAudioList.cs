@@ -1,53 +1,51 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Collections.ObjectModel;
-using System.Linq;
-using System.Text;
-using System.Threading;
 using System.Threading.Tasks;
-using System.IO;
-using System.Net;
-using NAudio.Wave;
-using System.ComponentModel;
-using VCA_player;
-using VCA_player.Kernel;
-using System.ComponentModel.Design;
-using System.Windows.Input;
+using VCA_player.Kernel.FilterLogic;
 using VKapi.Audio;
-using VKapi.Wall;
-using System.Windows.Data;
-using System.Windows;
 
-namespace VCA_player.Model
+namespace VCA_player.Model.List
 {
     public delegate Task<IEnumerable<VKAudio>> GetPlayListFunc();
+
     public class SelectedIndexChangedEventArgs : EventArgs
     {
-        public int Index { get; set; }
-
         public SelectedIndexChangedEventArgs(int index)
         {
             Index = index;
         }
+
+        public int Index { get; set; }
     }
 
     public class SelectedChangedEventArgs<T> : EventArgs
         where T : class
     {
-        public VCAListItem<T> Item { get; set; }
-
         public SelectedChangedEventArgs(VCAListItem<T> item)
         {
             Item = item;
         }
+
+        public VCAListItem<T> Item { get; set; }
     }
-    class VCAAudioList : VCAList<VKAudio>
+
+    internal class VCAAudioList : VCAList<VKAudio>
     {
+        private readonly AudioFilterLogic _audioFilter = new AudioFilterLogic();
         public GetPlayListFunc GetPlayList;
 
-        private AudioFilterLogic audioFilter = new AudioFilterLogic();
-        protected override FilterLogicBase<VKAudio> FilterLogic { get { return audioFilter; } }
-        protected async override Task refreshList()
+        public VCAAudioList()
+            : base()
+        {
+            GetPlayList = AudioGetPlayLists.GetFriendPlayList;
+        }
+
+        protected override FilterLogicBase<VKAudio> FilterLogic
+        {
+            get { return _audioFilter; }
+        }
+
+        protected override async Task RefreshList()
         {
             try
             {
@@ -83,36 +81,42 @@ namespace VCA_player.Model
             }
         }
 
-        private void setOrder(IEnumerable<VCAListItem<VKAudio>> orderedCollection)
-        {
-            int curIndex = 0;
-
-            foreach (var item in orderedCollection)
-            {
-                int idx = Items.IndexOf(item);
-                Items.Insert(curIndex, item);
-                if (curIndex <= idx) { idx++; }
-                Items.RemoveAt(idx);
-                curIndex++;
-            }
-        }
-
         public void ShuffleItems()
         {
-            var res = Items.OrderBy((e => e.IsSelected ? Guid.Parse("{00000000-0000-0000-0000-000000000000}") : Guid.NewGuid()));
-            setOrder(res);
+            Random random = new Random();
+            int currentIndex = -1;
+            for (int i = Items.Count; i > 0;)
+            {
+                int j = Convert.ToInt32(random.NextDouble()*i);
+                var x = Items[--i];
+                Items[i] = Items[j];
+                if (Items[i].IsSelected)
+                {
+                    currentIndex = i;
+                }
+                Items[j] = x;
+            }
+            if (currentIndex != -1)
+            {
+                var x = Items[currentIndex];
+                Items[currentIndex] = Items[0];
+                Items[0] = x;
+            }
         }
 
         public void RestoreItems()
         {
-            var res = Items.OrderBy(e => e.Num);
-            setOrder(res);
-        }
-
-        public VCAAudioList()
-            : base()
-        {
-            GetPlayList = AudioGetPlayLists.GetFriendPlayList;
+            for (int i = 0; i < Items.Count; i++)
+            {
+                var num = Items[i].Num;
+                if (num == i)
+                {
+                    continue;
+                }
+                var x = Items[num];
+                Items[num] = Items[i];
+                Items[i] = x;
+            }
         }
     }
 }

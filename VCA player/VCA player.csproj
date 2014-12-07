@@ -37,38 +37,12 @@
     <ApplicationIcon>MainIcon.ico</ApplicationIcon>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Common.Logging, Version=1.2.0.0, Culture=neutral, PublicKeyToken=af08829b84f0328e">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\3rd-party\common-logging\Common.Logging.dll</HintPath>
-    </Reference>
-    <Reference Include="Common.Logging.Log4Net">
-      <HintPath>..\3rd-party\common-logging\Common.Logging.Log4Net.dll</HintPath>
-    </Reference>
-    <Reference Include="Common.Logging.NLog">
-      <HintPath>..\3rd-party\common-logging\Common.Logging.NLog.dll</HintPath>
-    </Reference>
-    <Reference Include="log4net">
-      <HintPath>..\3rd-party\common-logging\log4net.dll</HintPath>
-    </Reference>
-    <Reference Include="NAudio">
-      <HintPath>..\packages\NAudio.1.6\lib\net20\NAudio.dll</HintPath>
-    </Reference>
-    <Reference Include="Newtonsoft.Json">
-      <HintPath>..\packages\Newtonsoft.Json.5.0.6\lib\net45\Newtonsoft.Json.dll</HintPath>
-    </Reference>
-    <Reference Include="NLog">
-      <HintPath>..\3rd-party\common-logging\NLog.dll</HintPath>
-    </Reference>
     <Reference Include="System" />
-    <Reference Include="System.Data" />
     <Reference Include="System.Drawing" />
     <Reference Include="System.Web" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
-    <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Core" />
-    <Reference Include="System.Xml.Linq" />
-    <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="System.Xaml">
       <RequiredTargetFramework>4.0</RequiredTargetFramework>
     </Reference>
@@ -88,8 +62,7 @@
     <Compile Include="Kernel\FilterLogic\FriendFilterLogic.cs" />
     <Compile Include="Kernel\FilterLogic\GroupFilterLogic.cs" />
     <Compile Include="Kernel\IKernelPlayer.cs" />
-    <Compile Include="Kernel\NAudioPlayer.cs" />
-    <Compile Include="Kernel\VLCPlayer.cs" />
+    <Compile Include="Kernel\StandartMediaPlayer.cs" />
     <Compile Include="Model\AudioGetPlayLists.cs" />
     <Page Include="View\AudioPlayerControl.xaml">
       <SubType>Designer</SubType>
@@ -130,6 +103,10 @@
       <SubType>Code</SubType>
     </Compile>
     <Page Include="View\Styles.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\WindowStyles.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -176,10 +153,6 @@
     <Resource Include="View\Icons\prev.png" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\media-player-vlc\media-player-vlc.csproj">
-      <Project>{5af6c9fe-6b19-4c1d-bade-35bff33825b8}</Project>
-      <Name>media-player-vlc</Name>
-    </ProjectReference>
     <ProjectReference Include="..\VKapi\VKapi.csproj">
       <Project>{428a37d0-a3b3-4bf4-8b98-417cf0cc2139}</Project>
       <Name>VKapi</Name>
@@ -207,6 +180,26 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="View\Icons\shuffle.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="View\Icons\delete.png" />
+    <Resource Include="View\Icons\pause-item.png" />
+    <Resource Include="View\Icons\play_item.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="View\Icons\MusicIcon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="View\Icons\WindowCloseIcon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="View\Icons\WindowMaximizeIcon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="View\Icons\WindowMinimizeIcon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="View\Icons\WindowHideIcon.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

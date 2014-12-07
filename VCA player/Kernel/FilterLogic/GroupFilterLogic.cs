@@ -1,20 +1,15 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using VCA_player.Model.List;
 using VKapi.Groups;
-using VCA_player.Model;
 
-namespace VCA_player.Kernel
+namespace VCA_player.Kernel.FilterLogic
 {
-    class GroupFilterLogic: FilterLogicBase<VKGroup>
+    internal class GroupFilterLogic : FilterLogicBase<VKGroup>
     {
         public override bool Filter(VCAListItem<VKGroup> item)
         {
             if (item == null || item.Item == null)
                 return false;
-            else if (!checkContains(item.Item.Name, SearchFilter))
+            if (!CheckContains(item.Item.Name, SearchFilter))
                 return false;
 
             return true;

@@ -1,0 +1,15 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <ResourceDictionary.MergedDictionaries>
+        <ResourceDictionary Source="pack://application:,,,/Rina.StyleResources;component/Icons/Icons.Play.xaml"/>
+        <ResourceDictionary Source="pack://application:,,,/Rina.StyleResources;component/Icons/Icons.Pause.xaml"/>
+        <ResourceDictionary Source="pack://application:,,,/Rina.StyleResources;component/Icons/Icons.Next.xaml"/>
+        <ResourceDictionary Source="pack://application:,,,/Rina.StyleResources;component/Icons/Icons.Prev.xaml"/>
+        <ResourceDictionary Source="pack://application:,,,/Rina.StyleResources;component/Icons/Icons.Repeat.xaml"/>
+        <ResourceDictionary Source="pack://application:,,,/Rina.StyleResources;component/Icons/Icons.Shuffle.xaml"/>
+        <ResourceDictionary Source="pack://application:,,,/Rina.StyleResources;component/Icons/Icons.Add.xaml"/>
+        <ResourceDictionary Source="pack://application:,,,/Rina.StyleResources;component/Icons/Icons.Delete.xaml"/>
+        <ResourceDictionary Source="pack://application:,,,/Rina.StyleResources;component/Icons/Icons.Check.xaml"/>
+        <ResourceDictionary Source="pack://application:,,,/Rina.StyleResources;component/Icons/Icons.Download.xaml"/>
+    </ResourceDictionary.MergedDictionaries>
+</ResourceDictionary>

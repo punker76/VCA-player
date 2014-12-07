@@ -1,31 +1,32 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using VKapi.Groups;
-using System.ComponentModel;
 using System.Collections.ObjectModel;
-using VCA_player.Kernel;
+using System.Linq;
+using VCA_player.Model.List;
 using VKapi;
+using VKapi.Groups;
 
 namespace VCA_player.Model
 {
-    class GroupModel
+    internal class GroupModel
     {
         #region Events
+
         public event EventHandler<SelectedIndexChangedEventArgs> OnSelectedIndexChanged;
         public event EventHandler OnStartRefreshPlayList;
         public event EventHandler OnFinishRefreshPlayList;
         public event EventHandler OnLoadingStateChanged;
+
         #endregion
 
         #region Private Fields
-        private int _selectedIndex;
+
         private bool _isLoading;
+        private int _selectedIndex;
+
         #endregion
 
         #region Properties
+
         public ObservableCollection<VKGroup> Items { get; private set; }
 
         public int SelectedIndex
@@ -71,17 +72,21 @@ namespace VCA_player.Model
                 }
             }
         }
+
         #endregion
 
         #region Constructor
+
         public GroupModel()
         {
             Items = new ObservableCollection<VKGroup>();
             SelectedIndex = 0;
         }
+
         #endregion
 
         #region Public Methods
+
         public async void RefreshList()
         {
             try
@@ -93,10 +98,11 @@ namespace VCA_player.Model
                 }
 
                 Items.Clear();
-                var list = await GroupRequest.GetExtendedAsync(VKSession.Instance.UserId);
+                var list = await GroupAPI.GetExtendedAsync(VKSession.Instance.UserId);
                 if (list == null) return;
 
-                var listFilter = list.Items.Where(x => x.Type == VKGroup.TypeEnum.Page || x.Type == VKGroup.TypeEnum.Group);
+                var listFilter =
+                    list.Items.Where(x => x.Type == VKGroup.TypeEnum.Page || x.Type == VKGroup.TypeEnum.Group);
                 foreach (var item in listFilter)
                 {
                     Items.Add(item);
@@ -115,6 +121,7 @@ namespace VCA_player.Model
                 }
             }
         }
+
         #endregion
     }
 }

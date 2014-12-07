@@ -1,0 +1,112 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+
+
+    <Style x:Key="FlayoutToggleButton"
+           TargetType="{x:Type ToggleButton}">
+        <Setter Property="Foreground"
+                Value="{DynamicResource FlyoutLightBrush}"/>
+        <Setter Property="Background"
+                Value="Transparent"/>
+        <Setter Property="Cursor"
+                Value="Hand"/>
+        <Setter Property="BorderBrush"
+                Value="Transparent"/>
+        <Setter Property="BorderThickness"
+                Value="0"/>
+        <Setter Property="Padding"
+                Value="3"/>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type ToggleButton}">
+                    <ControlTemplate.Resources>
+                        <CircleEase x:Key="RinaEasingFunction" EasingMode="EaseOut"/>
+                    </ControlTemplate.Resources>
+                    <Grid>
+                        <VisualStateManager.VisualStateGroups>
+                            <VisualStateGroup x:Name="CheckStates">
+                                <VisualStateGroup.Transitions>
+                                    <VisualTransition GeneratedDuration="0:0:0.2"/>
+                                </VisualStateGroup.Transitions>
+                                <VisualState x:Name="Unchecked" />
+                                <VisualState x:Name="Checked">
+                                    <Storyboard>
+                                        <DoubleAnimation Storyboard.TargetName="BorderCommon"
+                                                         Duration="0"
+                                                         Storyboard.TargetProperty="Opacity"
+                                                         To="0"
+                                                         EasingFunction="{StaticResource RinaEasingFunction}"/>
+                                        <DoubleAnimation Storyboard.TargetName="BorderSelected"
+                                                         Duration="0"
+                                                         Storyboard.TargetProperty="Opacity"
+                                                         To="1"
+                                                         EasingFunction="{StaticResource RinaEasingFunction}"/>
+                                    </Storyboard>
+                                </VisualState>
+                            </VisualStateGroup>
+                            <VisualStateGroup x:Name="CommonStates">
+                                <VisualStateGroup.Transitions>
+                                    <VisualTransition GeneratedDuration="0:0:0.2"/>
+                                    <VisualTransition To="MouseOver" GeneratedDuration="0"/>
+                                </VisualStateGroup.Transitions>
+                                <VisualState x:Name="Normal"/>
+                                <VisualState x:Name="MouseOver">
+                                    <Storyboard>
+                                        <ColorAnimation Storyboard.TargetName="BorderCommon"
+                                                        Storyboard.TargetProperty="Background.Color"
+                                                        To="{StaticResource GrayHover}"
+                                                        Duration="0"/>
+                                    </Storyboard>
+                                </VisualState>
+                                <VisualState x:Name="Pressed">
+                                    <Storyboard>
+                                        <ColorAnimation Storyboard.TargetName="BorderCommon"
+                                                        Storyboard.TargetProperty="Background.Color"
+                                                        To="{StaticResource GrayNormal}"
+                                                        Duration="0"/>
+                                    </Storyboard>
+                                </VisualState>
+                                <VisualState x:Name="Disabled">
+                                    <Storyboard>
+                                        <ColorAnimation Storyboard.TargetName="BorderCommon"
+                                                        Storyboard.TargetProperty="Background.Color"
+                                                        To="{StaticResource Gray9}"
+                                                        Duration="0"/>
+                                    </Storyboard>
+                                </VisualState>
+                            </VisualStateGroup>
+                        </VisualStateManager.VisualStateGroups>
+                        <Border x:Name="BorderCommon"
+                                Opacity="1"
+                                CornerRadius="0"
+                                BorderBrush="{TemplateBinding BorderBrush}"
+                                BorderThickness="{TemplateBinding BorderThickness}"
+                                VerticalAlignment="{TemplateBinding VerticalAlignment}"
+                                HorizontalAlignment="{TemplateBinding HorizontalAlignment}"
+                                Background="Transparent"/>
+                        <Border x:Name="BorderSelected"
+                                CornerRadius="0"
+                                Opacity="0"
+                                BorderBrush="{TemplateBinding BorderBrush}"
+                                BorderThickness="{TemplateBinding BorderThickness}"
+                                VerticalAlignment="{TemplateBinding VerticalAlignment}"
+                                HorizontalAlignment="{TemplateBinding HorizontalAlignment}"
+                                Background="{DynamicResource MenuItemSelectionFillBrush}"/>
+                        <ContentPresenter x:Name="contentPresenter"
+                                          HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"
+                                          VerticalAlignment="{TemplateBinding VerticalContentAlignment}"
+                                          SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}"
+                                          Margin="{TemplateBinding Padding}"
+                                          RecognizesAccessKey="True"/>
+                    </Grid>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsChecked" Value="True">
+                            <Setter Property="Foreground"
+                                    Value="{DynamicResource BlackBrush}"/>
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+</ResourceDictionary>

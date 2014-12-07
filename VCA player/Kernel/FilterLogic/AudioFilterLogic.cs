@@ -1,20 +1,15 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using VCA_player.Model.List;
 using VKapi.Audio;
-using VCA_player.Model;
 
-namespace VCA_player.Kernel
+namespace VCA_player.Kernel.FilterLogic
 {
-    public class AudioFilterLogic: FilterLogicBase<VKAudio>
+    public class AudioFilterLogic : FilterLogicBase<VKAudio>
     {
         public override bool Filter(VCAListItem<VKAudio> item)
         {
             if (item == null || item.Item == null)
                 return false;
-            else if (!checkContains(item.Item.Artist + " " + item.Item.Title, SearchFilter))
+            if (!CheckContains(item.Item.Artist + " " + item.Item.Title, SearchFilter))
                 return false;
 
             return true;

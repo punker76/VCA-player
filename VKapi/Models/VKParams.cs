@@ -1,20 +1,19 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.Diagnostics;
 
-namespace VKapi
+namespace VKapi.Models
 {
-    class VKParams : IEnumerable
+    public class VKParams : IEnumerable
     {
-        Dictionary<string, string> _values = new Dictionary<string, string>();
+        private readonly Dictionary<string, string> _values = new Dictionary<string, string>();
 
         IEnumerator IEnumerable.GetEnumerator()
         {
             return _values.GetEnumerator();
         }
+
         public Dictionary<string, string>.Enumerator GetEnumerator()
         {
             return _values.GetEnumerator();
@@ -22,6 +21,8 @@ namespace VKapi
 
         public void Add(string param, object value)
         {
+            Debug.Assert(value != null);
+
             if (!_values.ContainsKey(param))
             {
                 _values.Add(param, value.ToString());

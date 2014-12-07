@@ -23,9 +23,6 @@
     <Brush x:Key="SliderColor">#5f7e9e</Brush>
     <Brush x:Key="SliderBackgroundColor">#bac7d4</Brush>
 
-
-
-
     <Style TargetType="{x:Type ListBoxItem}" x:Key="FriendListStyler">
         <Setter Property="Height" Value="38" />
         <Setter Property="FontSize" Value="11" />
@@ -38,12 +35,9 @@
                     <Border x:Name="Border" Background="Transparent"
                             BorderThickness="0" Margin="0">
                         <Grid HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
-                            <Grid.RowDefinitions>
-                                <RowDefinition />
-                            </Grid.RowDefinitions>
                             <Grid.ColumnDefinitions>
-                                <ColumnDefinition Width="auto"></ColumnDefinition>
-                                <ColumnDefinition Width="118"></ColumnDefinition>
+                                <ColumnDefinition Width="auto" />
+                                <ColumnDefinition Width="118" />
                             </Grid.ColumnDefinitions>
                             <Image HorizontalAlignment="Center" VerticalAlignment="Center"
                                    Grid.Column="0" Grid.Row="0" Source="{Binding Item.Photo50}"
@@ -53,9 +47,6 @@
                                     <ColumnDefinition Width="auto"/>
                                     <ColumnDefinition/>
                                 </Grid.ColumnDefinitions>
-                                <Grid.RowDefinitions>
-                                    <RowDefinition/>
-                                </Grid.RowDefinitions>
                                 <TextBlock Grid.Column="0" Grid.Row="0" VerticalAlignment="Center"
                                            FontSize="11" Background="Transparent" Text="{Binding Item.FirstName}"
                                            Foreground="{StaticResource TextColor}"
@@ -101,8 +92,8 @@
                                 <RowDefinition />
                             </Grid.RowDefinitions>
                             <Grid.ColumnDefinitions>
-                                <ColumnDefinition Width="auto"></ColumnDefinition>
-                                <ColumnDefinition Width="118"></ColumnDefinition>
+                                <ColumnDefinition Width="auto" />
+                                <ColumnDefinition Width="118" />
                             </Grid.ColumnDefinitions>
                             <Image HorizontalAlignment="Center" VerticalAlignment="Center"
                                    Grid.Column="0" Grid.Row="0" Source="{Binding Item.Photo50}"
@@ -348,7 +339,31 @@
             <Setter.Value>
                 <ControlTemplate TargetType="{x:Type TextBox}">
                     <Border Name="BorderS" BorderBrush="{StaticResource FilterTextBoxBorderColor}"
+                            Background="Transparent"
                             BorderThickness="1" Height="25" Focusable="True">
+                        <VisualStateManager.VisualStateGroups>
+                            <VisualStateGroup x:Name="FocusStates">
+                                <VisualStateGroup.Transitions>
+                                    <VisualTransition GeneratedDuration="0:0:0.6"/>
+                                </VisualStateGroup.Transitions>
+                                <VisualState x:Name="Focused">
+                                    <Storyboard>
+                                        <ColorAnimation Storyboard.TargetName="PlaceholderText"
+                                                        Storyboard.TargetProperty="Foreground.Color"
+                                                        Duration="0"
+                                                        To="#ccc"/>
+                                    </Storyboard>
+                                </VisualState>
+                                <VisualState x:Name="Unfocused">
+                                    <Storyboard>
+                                        <ColorAnimation Storyboard.TargetName="PlaceholderText"
+                                                        Storyboard.TargetProperty="Foreground.Color"
+                                                        Duration="0"
+                                                        To="#777"/>
+                                    </Storyboard>
+                                </VisualState>
+                            </VisualStateGroup>
+                        </VisualStateManager.VisualStateGroups>
                         <Grid>
                             <Grid.ColumnDefinitions>
                                 <ColumnDefinition Width="auto" />
@@ -359,35 +374,13 @@
                                           Grid.Column="1" x:Name="PART_ContentHost"
                                           SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" />
                             <TextBlock Grid.Column="1" Visibility="Hidden" HorizontalAlignment="Left" VerticalAlignment="Center"
-                                       Text="Поиск" Name="Placeholder" Margin="2 0 0 0" Foreground="{StaticResource PlaceholderColor}" />
+                                       Text="Поиск" Name="PlaceholderText" Margin="2 0 0 0" Foreground="{DynamicResource PlaceholderColor}" />
                         </Grid>
                     </Border>
                     <ControlTemplate.Triggers>
                         <Trigger Property="Text" Value="{x:Static sys:String.Empty}">
-                            <Setter TargetName="Placeholder" Property="Visibility" Value="Visible" />
+                            <Setter TargetName="PlaceholderText" Property="Visibility" Value="Visible" />
                         </Trigger>
-                        <EventTrigger RoutedEvent="GotFocus">
-                            <EventTrigger.Actions>
-                                <BeginStoryboard>
-                                    <Storyboard>
-                                        <ColorAnimation Duration="0:0:0.6" BeginTime="0:0:0.2"
-                                                 Storyboard.TargetName="Placeholder"
-                                                 Storyboard.TargetProperty="Foreground.Color"
-                                                 To="#CCCCCC" />
-                                    </Storyboard>
-                                </BeginStoryboard>
-                            </EventTrigger.Actions>
-                        </EventTrigger>
-                        <EventTrigger RoutedEvent="LostFocus">
-                            <BeginStoryboard>
-                                <Storyboard>
-                                    <ColorAnimation Duration="0:0:0.3"
-                                                     Storyboard.TargetName="Placeholder"
-                                                 Storyboard.TargetProperty="Foreground.Color"
-                                                 To="#777777" />
-                                </Storyboard>
-                            </BeginStoryboard>
-                        </EventTrigger>
                         <!--<Trigger Property="IsMouseCaptured" Value="True">
                             <Setter TargetName="Placeholder" Property="Foreground" Value="{StaticResource DisabledColor}" />
                         </Trigger>-->
@@ -463,8 +456,7 @@
                           Margin="20"
                           Data="M 0,40 L15,50 15,80 150,80 150,0 15,0 15,30"
                           Fill="{TemplateBinding Background}"
-                          Stroke="Black">
-                        </Path>
+                          Stroke="Black" />
                         <TextBlock Canvas.Left="0"
                                Canvas.Top="0"
                                Width="30"

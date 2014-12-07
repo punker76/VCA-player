@@ -1,8 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Input;
 
 namespace VCA_player.Kernel
@@ -51,6 +48,29 @@ namespace VCA_player.Kernel
         #region Public Methods
 
         /// <summary>
+        ///     Property to enable or disable CommandManager's automatic requery on this command
+        /// </summary>
+        public bool IsAutomaticRequeryDisabled
+        {
+            get { return _isAutomaticRequeryDisabled; }
+            set
+            {
+                if (_isAutomaticRequeryDisabled != value)
+                {
+                    if (value)
+                    {
+                        CommandManagerHelper.RemoveHandlersFromRequerySuggested(_canExecuteChangedHandlers);
+                    }
+                    else
+                    {
+                        CommandManagerHelper.AddHandlersToRequerySuggested(_canExecuteChangedHandlers);
+                    }
+                    _isAutomaticRequeryDisabled = value;
+                }
+            }
+        }
+
+        /// <summary>
         ///     Method to determine if the command can be executed
         /// </summary>
         public bool CanExecute()
@@ -70,32 +90,6 @@ namespace VCA_player.Kernel
             if (_executeMethod != null)
             {
                 _executeMethod();
-            }
-        }
-
-        /// <summary>
-        ///     Property to enable or disable CommandManager's automatic requery on this command
-        /// </summary>
-        public bool IsAutomaticRequeryDisabled
-        {
-            get
-            {
-                return _isAutomaticRequeryDisabled;
-            }
-            set
-            {
-                if (_isAutomaticRequeryDisabled != value)
-                {
-                    if (value)
-                    {
-                        CommandManagerHelper.RemoveHandlersFromRequerySuggested(_canExecuteChangedHandlers);
-                    }
-                    else
-                    {
-                        CommandManagerHelper.AddHandlersToRequerySuggested(_canExecuteChangedHandlers);
-                    }
-                    _isAutomaticRequeryDisabled = value;
-                }
             }
         }
 
@@ -156,10 +150,10 @@ namespace VCA_player.Kernel
 
         #region Data
 
-        private readonly Action _executeMethod = null;
         private readonly Func<bool> _canExecuteMethod = null;
-        private bool _isAutomaticRequeryDisabled = false;
+        private readonly Action _executeMethod = null;
         private List<WeakReference> _canExecuteChangedHandlers;
+        private bool _isAutomaticRequeryDisabled = false;
 
         #endregion
     }
@@ -209,6 +203,29 @@ namespace VCA_player.Kernel
         #region Public Methods
 
         /// <summary>
+        ///     Property to enable or disable CommandManager's automatic requery on this command
+        /// </summary>
+        public bool IsAutomaticRequeryDisabled
+        {
+            get { return _isAutomaticRequeryDisabled; }
+            set
+            {
+                if (_isAutomaticRequeryDisabled != value)
+                {
+                    if (value)
+                    {
+                        CommandManagerHelper.RemoveHandlersFromRequerySuggested(_canExecuteChangedHandlers);
+                    }
+                    else
+                    {
+                        CommandManagerHelper.AddHandlersToRequerySuggested(_canExecuteChangedHandlers);
+                    }
+                    _isAutomaticRequeryDisabled = value;
+                }
+            }
+        }
+
+        /// <summary>
         ///     Method to determine if the command can be executed
         /// </summary>
         public bool CanExecute(T parameter)
@@ -247,32 +264,6 @@ namespace VCA_player.Kernel
             CommandManagerHelper.CallWeakReferenceHandlers(_canExecuteChangedHandlers);
         }
 
-        /// <summary>
-        ///     Property to enable or disable CommandManager's automatic requery on this command
-        /// </summary>
-        public bool IsAutomaticRequeryDisabled
-        {
-            get
-            {
-                return _isAutomaticRequeryDisabled;
-            }
-            set
-            {
-                if (_isAutomaticRequeryDisabled != value)
-                {
-                    if (value)
-                    {
-                        CommandManagerHelper.RemoveHandlersFromRequerySuggested(_canExecuteChangedHandlers);
-                    }
-                    else
-                    {
-                        CommandManagerHelper.AddHandlersToRequerySuggested(_canExecuteChangedHandlers);
-                    }
-                    _isAutomaticRequeryDisabled = value;
-                }
-            }
-        }
-
         #endregion
 
         #region ICommand Members
@@ -306,26 +297,26 @@ namespace VCA_player.Kernel
             // set yet, then return false if CanExecute delegate
             // exists, else return true
             if (parameter == null &&
-                typeof(T).IsValueType)
+                typeof (T).IsValueType)
             {
                 return (_canExecuteMethod == null);
             }
-            return CanExecute((T)parameter);
+            return CanExecute((T) parameter);
         }
 
         void ICommand.Execute(object parameter)
         {
-            Execute((T)parameter);
+            Execute((T) parameter);
         }
 
         #endregion
 
         #region Data
 
-        private readonly Action<T> _executeMethod = null;
         private readonly Func<T, bool> _canExecuteMethod = null;
-        private bool _isAutomaticRequeryDisabled = false;
+        private readonly Action<T> _executeMethod = null;
         private List<WeakReference> _canExecuteChangedHandlers;
+        private bool _isAutomaticRequeryDisabled = false;
 
         #endregion
     }
@@ -406,7 +397,8 @@ namespace VCA_player.Kernel
             AddWeakReferenceHandler(ref handlers, handler, -1);
         }
 
-        internal static void AddWeakReferenceHandler(ref List<WeakReference> handlers, EventHandler handler, int defaultListSize)
+        internal static void AddWeakReferenceHandler(ref List<WeakReference> handlers, EventHandler handler,
+            int defaultListSize)
         {
             if (handlers == null)
             {

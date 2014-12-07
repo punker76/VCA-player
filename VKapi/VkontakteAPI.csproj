@@ -1,0 +1,154 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{428A37D0-A3B3-4BF4-8B98-417CF0CC2139}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>VkontakteAPI</RootNamespace>
+    <AssemblyName>VkontakteAPI</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <CodeContractsAssemblyMode>0</CodeContractsAssemblyMode>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeContractsEnableRuntimeChecking>True</CodeContractsEnableRuntimeChecking>
+    <CodeContractsRuntimeOnlyPublicSurface>False</CodeContractsRuntimeOnlyPublicSurface>
+    <CodeContractsRuntimeThrowOnFailure>True</CodeContractsRuntimeThrowOnFailure>
+    <CodeContractsRuntimeCallSiteRequires>False</CodeContractsRuntimeCallSiteRequires>
+    <CodeContractsRuntimeSkipQuantifiers>False</CodeContractsRuntimeSkipQuantifiers>
+    <CodeContractsRunCodeAnalysis>True</CodeContractsRunCodeAnalysis>
+    <CodeContractsNonNullObligations>True</CodeContractsNonNullObligations>
+    <CodeContractsBoundsObligations>True</CodeContractsBoundsObligations>
+    <CodeContractsArithmeticObligations>False</CodeContractsArithmeticObligations>
+    <CodeContractsEnumObligations>False</CodeContractsEnumObligations>
+    <CodeContractsRedundantAssumptions>False</CodeContractsRedundantAssumptions>
+    <CodeContractsMissingPublicRequiresAsWarnings>True</CodeContractsMissingPublicRequiresAsWarnings>
+    <CodeContractsInferRequires>True</CodeContractsInferRequires>
+    <CodeContractsInferEnsures>False</CodeContractsInferEnsures>
+    <CodeContractsInferObjectInvariants>False</CodeContractsInferObjectInvariants>
+    <CodeContractsSuggestAssumptions>False</CodeContractsSuggestAssumptions>
+    <CodeContractsSuggestRequires>True</CodeContractsSuggestRequires>
+    <CodeContractsSuggestObjectInvariants>False</CodeContractsSuggestObjectInvariants>
+    <CodeContractsRunInBackground>True</CodeContractsRunInBackground>
+    <CodeContractsShowSquigglies>True</CodeContractsShowSquigglies>
+    <CodeContractsUseBaseLine>False</CodeContractsUseBaseLine>
+    <CodeContractsEmitXMLDocs>False</CodeContractsEmitXMLDocs>
+    <CodeContractsCustomRewriterAssembly />
+    <CodeContractsCustomRewriterClass />
+    <CodeContractsLibPaths />
+    <CodeContractsExtraRewriteOptions />
+    <CodeContractsExtraAnalysisOptions />
+    <CodeContractsSQLServerOption />
+    <CodeContractsBaseLineFile />
+    <CodeContractsCacheAnalysisResults>True</CodeContractsCacheAnalysisResults>
+    <CodeContractsFailBuildOnWarnings>False</CodeContractsFailBuildOnWarnings>
+    <CodeContractsRuntimeCheckingLevel>Full</CodeContractsRuntimeCheckingLevel>
+    <CodeContractsReferenceAssembly>%28none%29</CodeContractsReferenceAssembly>
+    <CodeContractsAnalysisWarningLevel>3</CodeContractsAnalysisWarningLevel>
+    <RunCodeAnalysis>true</RunCodeAnalysis>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>false</SignAssembly>
+  </PropertyGroup>
+  <PropertyGroup>
+    <AssemblyOriginatorKeyFile>VKapiKey.pfx</AssemblyOriginatorKeyFile>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\packages\Newtonsoft.Json.5.0.6\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Audio\AudioAPI.Add.cs" />
+    <Compile Include="Audio\AudioAPI.Delete.cs" />
+    <Compile Include="Audio\AudioAPI.Get.cs" />
+    <Compile Include="Audio\AudioAPI.GetAlbums.cs" />
+    <Compile Include="Audio\AudioAPI.GetBroadcastList.cs" />
+    <Compile Include="Audio\AudioAPI.GetById.cs" />
+    <Compile Include="Audio\AudioAPI.GetCount.cs" />
+    <Compile Include="Audio\AudioAPI.cs" />
+    <Compile Include="Audio\AudioAPI.GetLyrics.cs" />
+    <Compile Include="Audio\AudioAPI.Old.cs" />
+    <Compile Include="Audio\AudioAPI.GetPopular.cs" />
+    <Compile Include="Audio\AudioAPI.Reorder.cs" />
+    <Compile Include="Audio\AudioAPI.Restore.cs" />
+    <Compile Include="Audio\AudioAPI.Search.cs" />
+    <Compile Include="Audio\AudioAPI.SetBroadcast.cs" />
+    <Compile Include="Converters\VKDescriptionAttribute.cs" />
+    <Compile Include="Models\APIBase.cs" />
+    <Compile Include="Models\Enums\VKAdminLevelEnum.cs" />
+    <Compile Include="Models\Enums\VKBroadcastFilterEnum.cs" />
+    <Compile Include="Models\Enums\VKGroupIsClosedEnum.cs" />
+    <Compile Include="Models\Enums\VKGroupTypeEnum.cs" />
+    <Compile Include="Models\Enums\VKSearchSortEnum.cs" />
+    <Compile Include="Models\VKAlbum.cs" />
+    <Compile Include="Models\VKAudio.cs" />
+    <Compile Include="Models\VKBroadcast.cs" />
+    <Compile Include="Models\Enums\VKGenreEnum.cs" />
+    <Compile Include="Models\VKLyrics.cs" />
+    <Compile Include="BooleanExtenions.cs" />
+    <Compile Include="Friends\FriendsAPI.cs" />
+    <Compile Include="Models\VKFriend.cs" />
+    <Compile Include="Groups\GroupAPI.cs" />
+    <Compile Include="Models\VKGroup.cs" />
+    <Compile Include="Helper.cs" />
+    <Compile Include="Interfaces\IAPIMethod.cs" />
+    <Compile Include="Models\VKList.cs" />
+    <Compile Include="Models\VKParams.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="VKApi.cs" />
+    <Compile Include="VKJsonConverters.cs" />
+    <Compile Include="VKSession.cs" />
+    <Compile Include="VKSettings.cs" />
+    <Compile Include="Models\VKAttachment.cs" />
+    <Compile Include="Models\VKComments.cs" />
+    <Compile Include="Models\VKGeo.cs" />
+    <Compile Include="Models\VKLikes.cs" />
+    <Compile Include="Models\VKPost.cs" />
+    <Compile Include="Models\VKReposts.cs" />
+    <Compile Include="Wall\WallAPI.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Audio\AudioAPI.GetRecommendations.cs" />
+    <None Include="packages.config" />
+    <None Include="VKapiKey.pfx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Exceptions\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,32 +1,16 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Collections.ObjectModel;
-using System.Linq;
-using System.Linq.Expressions;
-using System.Text;
-using System.Threading.Tasks;
-using System.IO;
-using System.Net;
-using NAudio.Wave;
-using System.ComponentModel;
-using VCA_player;
-using VCA_player.Kernel;
-using System.ComponentModel.Design;
 using System.Windows.Input;
-using VKapi.Audio;
-using VKapi.Wall;
-using System.Windows.Data;
-using VCA_player.Model;
-using VKapi.Groups;
+using VCA_player.Kernel;
+using VCA_player.Model.List;
 
-namespace VCA_player.ViewModel
+namespace VCA_player.ViewModel.Interface
 {
     /*public interface IAudioFilterViewModel
     {
         bool IsLoading { get; }
         Object SelectedItem { get; set; }
     }*/
-    
+
     public interface IAudioFilterViewModel<T>
         where T : class
     {

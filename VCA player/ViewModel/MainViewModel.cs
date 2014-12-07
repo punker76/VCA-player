@@ -1,26 +1,13 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Collections.ObjectModel;
-using System.Linq;
-using System.Linq.Expressions;
-using System.Text;
-using System.Threading.Tasks;
-using System.IO;
-using System.Net;
-using NAudio.Wave;
-using System.ComponentModel;
-using VCA_player;
-using VCA_player.Kernel;
-using System.ComponentModel.Design;
-using System.Windows.Input;
-using VKapi;
-using VKapi.Audio;
-using VKapi.Wall;
-using System.Windows.Data;
-using VCA_player.View;
-using VCA_player.Model;
 using System.Globalization;
 using System.Windows;
+using System.Windows.Data;
+using System.Windows.Input;
+using VCA_player.Kernel;
+using VCA_player.Model.List;
+using VCA_player.ViewModel.AudioFilter;
+using VKapi.Friends;
+using VKapi.Groups;
 
 namespace VCA_player.ViewModel
 {
@@ -28,23 +15,23 @@ namespace VCA_player.ViewModel
     {
         public object Convert(object value, Type targetType, object parameter, CultureInfo culture)
         {
-            var ParameterString = parameter as string;
-            if (ParameterString == null)
+            var parameterString = parameter as string;
+            if (parameterString == null)
                 return DependencyProperty.UnsetValue;
 
             if (Enum.IsDefined(value.GetType(), value) == false)
                 return DependencyProperty.UnsetValue;
 
-            object paramvalue = Enum.Parse(value.GetType(), ParameterString);
+            object paramvalue = Enum.Parse(value.GetType(), parameterString);
             return paramvalue.Equals(value);
         }
 
         public object ConvertBack(object value, Type targetType, object parameter, CultureInfo culture)
         {
-            var ParameterString = parameter as string;
-            var valueAsBool = (bool)value;
+            var parameterString = parameter as string;
+            var valueAsBool = (bool) value;
 
-            if (ParameterString == null || !valueAsBool)
+            if (parameterString == null || !valueAsBool)
             {
                 try
                 {
@@ -55,7 +42,7 @@ namespace VCA_player.ViewModel
                     return DependencyProperty.UnsetValue;
                 }
             }
-            return Enum.Parse(targetType, ParameterString);
+            return Enum.Parse(targetType, parameterString);
         }
     }
 
@@ -66,8 +53,10 @@ namespace VCA_player.ViewModel
         Album
     }
 
-    public sealed class MainViewModel: ViewModelBase
+    public sealed class MainViewModel : ViewModelBase
     {
+        private static MainViewModel _instance;
+        private AudioFilters _selectedFilter;
         public FriendsViewModel FriendsFilter { get; private set; }
         public GroupsViewModel GroupsFilter { get; private set; }
 
@@ -93,7 +82,6 @@ namespace VCA_player.ViewModel
             }
         }
 
-        private AudioFilters _selectedFilter;
         public AudioFilters SelectedFilter
         {
             get { return _selectedFilter; }
@@ -128,62 +116,64 @@ namespace VCA_player.ViewModel
             }
         }
 
-        private static MainViewModel instance;
         public static MainViewModel Instance
         {
             get
             {
-                if (instance == null)
+                if (_instance == null)
                 {
-                    instance = new MainViewModel();
-                    instance.Init();
+                    _instance = new MainViewModel();
+                    _instance.Init();
                 }
-                return instance;
+                return _instance;
             }
         }
 
         #region Commands
+
         public ICommand ShowMyAudiosCommand { get; private set; }
+
         #endregion
 
         #region Constructor
+
         private void Init()
         {
             FriendsFilter = new FriendsViewModel();
             GroupsFilter = new GroupsViewModel();
             AudioPlayerVM = new AudioPlayerViewModel();
-            this.ShowMyAudiosCommand = new DelegateCommand(() =>
-                {
-                    AudioPlayerVM.ShowMyAudios();
-                });
+            ShowMyAudiosCommand = new DelegateCommand(() => AudioPlayerVM.ShowMyAudios());
             SelectedFilter = AudioFilters.My;
             AudioPlayerVM.OnLoadingStateChanged += audioPlayerVM_OnLoadingStateChanged;
         }
+
         #endregion
 
         #region Event Handlers
-        void audioPlayerVM_OnLoadingStateChanged(object sender, LoadingStateChangedEventArgs e)
+
+        private void audioPlayerVM_OnLoadingStateChanged(object sender, LoadingStateChangedEventArgs e)
         {
             OnPropertyChanged(() => IsLoading);
         }
 
-        void audioFilterVM_OnSelectedChanged(object sender, SelectedChangedEventArgs<Object> e)
+        private void audioFilterVM_OnSelectedChanged(object sender, SelectedChangedEventArgs<Object> e)
         {
             AudioPlayerVM.SearchFilter = String.Empty;
             AudioPlayerVM.RefreshCommand.Execute();
         }
 
-        void friendsFilter_OnSelectedChanged(object sender, SelectedChangedEventArgs<VKapi.Friends.VKFriend> e)
+        private void friendsFilter_OnSelectedChanged(object sender, SelectedChangedEventArgs<VKFriend> e)
         {
             AudioPlayerVM.SearchFilter = String.Empty;
             AudioPlayerVM.RefreshCommand.Execute();
         }
 
-        void groupsFilter_OnSelectedChanged(object sender, SelectedChangedEventArgs<VKapi.Groups.VKGroup> e)
+        private void groupsFilter_OnSelectedChanged(object sender, SelectedChangedEventArgs<VKGroup> e)
         {
             AudioPlayerVM.SearchFilter = String.Empty;
             AudioPlayerVM.RefreshCommand.Execute();
         }
+
         #endregion
     }
 }
