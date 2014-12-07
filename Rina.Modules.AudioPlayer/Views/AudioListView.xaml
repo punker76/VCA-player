@@ -1,0 +1,107 @@
+﻿<UserControl x:Class="Rina.Modules.AudioPlayer.Views.AudioListView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:view="clr-namespace:Rina.Modules.AudioPlayer.Views"
+             xmlns:viewmodel="clr-namespace:Rina.Modules.AudioPlayer.ViewModels"
+             xmlns:controls="clr-namespace:Rina.StyleResources.Controls;assembly=Rina.StyleResources"
+             xmlns:beh="clr-namespace:Rina.Infastructure.Behaviors;assembly=Rina.Infastructure"
+             xmlns:conv="clr-namespace:Rina.Infastructure.Converters;assembly=Rina.Infastructure"
+             xmlns:audioItem="clr-namespace:Rina.Modules.AudioPlayer.Views.AudioItem"
+             xmlns:System="clr-namespace:System;assembly=mscorlib"
+             mc:Ignorable="d" 
+             d:DesignHeight="300" d:DesignWidth="300">
+    <UserControl.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary>
+                    <conv:BooleanToVisibilityCollapsedConverter x:Key="BoolToVisCollapseConv"/>
+                    <conv:ValueConverterCollection x:Key="InvBoolToVisCollapseConv">
+                        <conv:InverseBooleanConverter/>
+                        <conv:BooleanToVisibilityCollapsedConverter/>
+                    </conv:ValueConverterCollection>
+                </ResourceDictionary>
+                <ResourceDictionary Source="pack://application:,,,/Rina.Modules.AudioPlayer;component/Views/Settings.xaml"/>
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </UserControl.Resources>
+    <Grid x:Name="root">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        <TextBox Grid.Row="0"
+                 Text="{Binding Audio.TextFilter, UpdateSourceTrigger=PropertyChanged}"/>
+        <ListBox Grid.Row="1"
+                 ItemsSource="{Binding Audio.ItemsView}"
+                 beh:DragDropBehavior.ScrollOnDragDrop="True"
+                 ScrollViewer.CanContentScroll="True"
+                 VirtualizingPanel.ScrollUnit="Pixel"
+                 VirtualizingPanel.VirtualizationMode="Recycling"
+                 AllowDrop="True"
+                 x:Name="uiAudioList">
+            <ListBox.ItemContainerStyle>
+                <Style TargetType="ListBoxItem">
+                    <EventSetter Event="PreviewMouseDown"
+                                 Handler="uiAudioList_PreviewMouseDown"/>
+                    <EventSetter Event="Drop"
+                                 Handler="uiAudioList_Drop"/>
+                    <EventSetter Event="PreviewMouseMove"
+                                 Handler="uiAudioList_MouseMove"/>
+                    <Setter Property="TextOptions.TextFormattingMode"
+                            Value="Display"/>
+                    <Setter Property="MaxWidth"
+                            Value="{StaticResource AudioItemWidth}"/>
+                    <Setter Property="Template">
+                        <Setter.Value>
+                            <ControlTemplate>
+                                <ControlTemplate.Resources>
+                                    <Storyboard x:Key="DragEnterStoryboard">
+                                        <ThicknessAnimation Storyboard.TargetProperty="Padding"
+                                                            Storyboard.TargetName="item"
+                                                            Duration="0:0:0.2"
+                                                            To="{StaticResource AudioItemHeightThickness}"/>
+                                    </Storyboard>
+                                    <Storyboard x:Key="DragLeaveStoryboard">
+                                        <ThicknessAnimation Storyboard.TargetProperty="Padding"
+                                                            Storyboard.TargetName="item"
+                                                            Duration="0:0:0.2"/>
+                                    </Storyboard>
+                                    <Storyboard x:Key="DropStoryboard">
+                                        <ThicknessAnimation Storyboard.TargetProperty="Padding"
+                                                            Storyboard.TargetName="item"
+                                                            Duration="0:0:0.0"/>
+                                    </Storyboard>
+                                </ControlTemplate.Resources>
+                                <Grid Background="Transparent">
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="Auto"/>
+                                    </Grid.RowDefinitions>
+                                    <audioItem:AudioListItemView Grid.Row="0"
+                                                                 Name="item"/>
+                                </Grid>
+                                <ControlTemplate.Triggers>
+                                    <EventTrigger RoutedEvent="DragEnter">
+                                        <BeginStoryboard Storyboard="{StaticResource DragEnterStoryboard}"/>
+                                    </EventTrigger>
+                                    <EventTrigger RoutedEvent="DragLeave">
+                                        <BeginStoryboard Storyboard="{StaticResource DragLeaveStoryboard}"/>
+                                    </EventTrigger>
+                                    <EventTrigger RoutedEvent="Drop">
+                                        <BeginStoryboard Storyboard="{StaticResource DropStoryboard}"/>
+                                    </EventTrigger>
+                                </ControlTemplate.Triggers>
+                            </ControlTemplate>
+                        </Setter.Value>
+                    </Setter>
+                </Style>
+            </ListBox.ItemContainerStyle>
+        </ListBox>
+        <ProgressBar Grid.Row="2"
+                     IsIndeterminate="True"
+                     HorizontalAlignment="Stretch"
+                     Visibility="{Binding Audio.IsLoading, Converter={StaticResource BoolToVisCollapseConv}}"/>
+    </Grid>
+</UserControl>

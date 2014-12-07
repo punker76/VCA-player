@@ -1,0 +1,49 @@
+﻿<UserControl x:Class="Rina.Modules.AudioPlayer.Views.AudioPlayerView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:cal="http://www.codeplex.com/CompositeWPF"
+             xmlns:am="clr-namespace:Rina.Modules.AudioPlayer"
+             mc:Ignorable="d" 
+             d:DesignHeight="300" d:DesignWidth="300">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Border Grid.Row="0"
+                Background="{DynamicResource GrayBrush6}">
+            <ContentControl cal:RegionManager.RegionName="{x:Static am:AudioPlayerRegionNames.CurrentRegion}"/>
+        </Border>
+        <Grid Grid.Row="1"
+              Background="{DynamicResource WhiteBrush}">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="180"/>
+            </Grid.ColumnDefinitions>
+            <Border Grid.Column="0"
+                    Padding="0 10 0 0">
+                <ContentControl cal:RegionManager.RegionName="{x:Static am:AudioPlayerRegionNames.ListRegion}"/>
+            </Border>
+            <Border Grid.Column="1"
+                    Background="{DynamicResource AccentColorBrush7}"
+                    Padding="5 10">
+                <ContentControl cal:RegionManager.RegionName="{x:Static am:AudioPlayerRegionNames.FilterRegion}"/>
+            </Border>
+
+            <Rectangle Grid.ColumnSpan="2"
+                       VerticalAlignment="Top"
+                       Height="1"
+                       Fill="{DynamicResource GrayBrush5}"
+                       Margin="0">
+                <Rectangle.Effect>
+                    <DropShadowEffect Color="{StaticResource Gray4}"
+                                      Direction="270"
+                                      BlurRadius="5"
+                                      ShadowDepth="1"/>
+                </Rectangle.Effect>
+            </Rectangle>
+        </Grid>
+    </Grid>
+</UserControl>

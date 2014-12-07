@@ -1,0 +1,28 @@
+﻿<UserControl x:Class="Rina.Modules.AudioPlayer.Views.AudioItem.AudioItemLyricsView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:Controls="clr-namespace:Rina.StyleResources.Controls;assembly=Rina.StyleResources"
+             xmlns:conv="clr-namespace:Rina.Infastructure.Converters;assembly=Rina.Infastructure"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d" 
+             d:DesignHeight="300" d:DesignWidth="300">
+    <UserControl.Resources>
+        <conv:BooleanToVisibilityCollapsedConverter x:Key="BoolToVisCollapseConv"/>
+        <conv:ValueConverterCollection x:Key="InvBoolToVisCollapseConv">
+            <conv:InverseBooleanConverter/>
+            <conv:BooleanToVisibilityCollapsedConverter/>
+        </conv:ValueConverterCollection>
+    </UserControl.Resources>
+    <Grid>
+        <Controls:ProgressRing IsLarge="True"
+                               IsActive="True"
+                               Visibility="{Binding IsLoading, Converter={StaticResource BoolToVisCollapseConv}, FallbackValue=Collapsed}"/>
+        <TextBox Text="{Binding LyricsText}"
+                 Foreground="{DynamicResource TextBrush}"
+                 TextWrapping="Wrap"
+                 IsReadOnly="True"
+                 FontSize="11"
+                 Visibility="{Binding IsLoading, Converter={StaticResource InvBoolToVisCollapseConv}, FallbackValue=Visible}"/>
+    </Grid>
+</UserControl>

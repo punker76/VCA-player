@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
+  <metadata>
+    <id>Microsoft.WindowsAPICodePack-Core</id>
+    <version>1.1.0.2</version>
+    <title>Windows 7 API Code Pack w/ XML Documentation - Core</title>
+    <authors>Microsoft</authors>
+    <owners>Microsoft</owners>
+    <licenseUrl>http://code.msdn.microsoft.com/WindowsAPICodePack/Project/License.aspx</licenseUrl>
+    <projectUrl>http://code.msdn.microsoft.com/WindowsAPICodePack</projectUrl>
+    <requireLicenseAcceptance>true</requireLicenseAcceptance>
+    <description>Windows® API Code Pack for Microsoft® .NET Framework provides a source code library that can be used to access some features of Windows 7 and Windows Vista from managed code. These Windows features are not available to developers today in the .NET Framework.
+
+This package includes the XML Documentation so you can explore the API while you code using IntelliSense.</description>
+    <summary>Core Windows API Code Pack features (AppRestartRecovery, TaskDialog, NetworkList, PowerManagement) with XML Documentation Comments for IntelliSense. Requires Vista or newer.</summary>
+    <copyright>2010 Microsoft Corporation</copyright>
+    <tags>Microsoft Windows 7 API Code Pack Core</tags>
+  </metadata>
+</package>

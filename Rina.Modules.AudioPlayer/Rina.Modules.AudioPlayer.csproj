@@ -1,0 +1,302 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{83AA239D-19E4-4E68-BAE0-3086514EC596}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Rina.Modules.AudioPlayer</RootNamespace>
+    <AssemblyName>Rina.Modules.AudioPlayer</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <CodeContractsAssemblyMode>0</CodeContractsAssemblyMode>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeContractsEnableRuntimeChecking>True</CodeContractsEnableRuntimeChecking>
+    <CodeContractsRuntimeOnlyPublicSurface>False</CodeContractsRuntimeOnlyPublicSurface>
+    <CodeContractsRuntimeThrowOnFailure>True</CodeContractsRuntimeThrowOnFailure>
+    <CodeContractsRuntimeCallSiteRequires>False</CodeContractsRuntimeCallSiteRequires>
+    <CodeContractsRuntimeSkipQuantifiers>False</CodeContractsRuntimeSkipQuantifiers>
+    <CodeContractsRunCodeAnalysis>True</CodeContractsRunCodeAnalysis>
+    <CodeContractsNonNullObligations>True</CodeContractsNonNullObligations>
+    <CodeContractsBoundsObligations>True</CodeContractsBoundsObligations>
+    <CodeContractsArithmeticObligations>False</CodeContractsArithmeticObligations>
+    <CodeContractsEnumObligations>False</CodeContractsEnumObligations>
+    <CodeContractsRedundantAssumptions>False</CodeContractsRedundantAssumptions>
+    <CodeContractsMissingPublicRequiresAsWarnings>True</CodeContractsMissingPublicRequiresAsWarnings>
+    <CodeContractsInferRequires>True</CodeContractsInferRequires>
+    <CodeContractsInferEnsures>False</CodeContractsInferEnsures>
+    <CodeContractsInferObjectInvariants>False</CodeContractsInferObjectInvariants>
+    <CodeContractsSuggestAssumptions>False</CodeContractsSuggestAssumptions>
+    <CodeContractsSuggestRequires>True</CodeContractsSuggestRequires>
+    <CodeContractsSuggestObjectInvariants>False</CodeContractsSuggestObjectInvariants>
+    <CodeContractsRunInBackground>True</CodeContractsRunInBackground>
+    <CodeContractsShowSquigglies>True</CodeContractsShowSquigglies>
+    <CodeContractsUseBaseLine>False</CodeContractsUseBaseLine>
+    <CodeContractsEmitXMLDocs>False</CodeContractsEmitXMLDocs>
+    <CodeContractsCustomRewriterAssembly />
+    <CodeContractsCustomRewriterClass />
+    <CodeContractsLibPaths />
+    <CodeContractsExtraRewriteOptions />
+    <CodeContractsExtraAnalysisOptions />
+    <CodeContractsSQLServerOption />
+    <CodeContractsBaseLineFile />
+    <CodeContractsCacheAnalysisResults>True</CodeContractsCacheAnalysisResults>
+    <CodeContractsFailBuildOnWarnings>False</CodeContractsFailBuildOnWarnings>
+    <CodeContractsRuntimeCheckingLevel>Full</CodeContractsRuntimeCheckingLevel>
+    <CodeContractsReferenceAssembly>%28none%29</CodeContractsReferenceAssembly>
+    <CodeContractsAnalysisWarningLevel>3</CodeContractsAnalysisWarningLevel>
+    <RunCodeAnalysis>false</RunCodeAnalysis>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>false</SignAssembly>
+  </PropertyGroup>
+  <PropertyGroup>
+    <AssemblyOriginatorKeyFile>
+    </AssemblyOriginatorKeyFile>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.Expression.Drawing, Version=4.5.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.Practices.Prism, Version=4.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.Practices.Prism.Interactivity, Version=4.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.Practices.Prism.MefExtensions, Version=4.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.Practices.ServiceLocation, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.Composition" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xaml" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WindowsBase" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AudioCommands.cs" />
+    <Compile Include="AudioPlayerModule.cs" />
+    <Compile Include="Controllers\AudioController.cs" />
+    <Compile Include="GlobalSuppressions.cs" />
+    <Compile Include="Helpers\AudioProviderHelper.cs" />
+    <Compile Include="Models\FriendParameters.cs" />
+    <Compile Include="Models\PopularParameters.cs" />
+    <Compile Include="Models\SearchParameters.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="AudioPlayerRegionNames.cs" />
+    <Compile Include="Services\AlbumAudioListProvider.cs" />
+    <Compile Include="Services\AudioService.cs" />
+    <Compile Include="Services\FriendsAudioListProvider.cs" />
+    <Compile Include="Services\GroupAudioListProvider.cs" />
+    <Compile Include="Services\Logics\FriendFilterLogic.cs" />
+    <Compile Include="Services\Logics\GroupFilterLogic.cs" />
+    <Compile Include="Services\MyAudioListProvider.cs" />
+    <Compile Include="Services\PlayerService.cs" />
+    <Compile Include="Services\PopularListProvider.cs" />
+    <Compile Include="Services\RecommendationsProvider.cs" />
+    <Compile Include="Services\SearchAudioListProvider.cs" />
+    <Compile Include="ViewModels\Providers\AlbumsProviderViewModel.cs" />
+    <Compile Include="ViewModels\Providers\AudioListProviderParametersViewModelBase.cs" />
+    <Compile Include="ViewModels\Providers\AudioListProviderViewModelBase.cs" />
+    <Compile Include="ViewModels\Providers\FilteredProviderViewModel.cs" />
+    <Compile Include="ViewModels\Providers\FriendsProviderViewModel.cs" />
+    <Compile Include="ViewModels\Providers\GroupsProviderViewModel.cs" />
+    <Compile Include="ViewModels\Providers\MyAudioListProviderViewModel.cs" />
+    <Compile Include="ViewModels\Providers\AudioListProviderItemsViewModelBase.cs" />
+    <Compile Include="ViewModels\LyricsViewModel.cs" />
+    <Compile Include="ViewModels\Providers\PopularListProviderViewModel.cs" />
+    <Compile Include="ViewModels\Providers\RecommendationsProviderViewModel.cs" />
+    <Compile Include="ViewModels\Providers\SearchProviderViewModel.cs" />
+    <Compile Include="Views\AudioItem\AudioItemCommandsView.xaml.cs">
+      <DependentUpon>AudioItemCommandsView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\AudioItem\AudioItemLyricsView.xaml.cs">
+      <DependentUpon>AudioItemLyricsView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\AudioItem\AudioItemTitle.xaml.cs">
+      <DependentUpon>AudioItemTitle.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Providers\AlbumsProviderItemView.xaml.cs">
+      <DependentUpon>AlbumsProviderItemView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Providers\AlbumsProviderView.xaml.cs">
+      <DependentUpon>AlbumsProviderView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Providers\FriensProviderItemView.xaml.cs">
+      <DependentUpon>FriensProviderItemView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Providers\FriensProviderView.xaml.cs">
+      <DependentUpon>FriensProviderView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Providers\GroupsProviderItemView.xaml.cs">
+      <DependentUpon>GroupsProviderItemView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Providers\GroupsProviderView.xaml.cs">
+      <DependentUpon>GroupsProviderView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Providers\MyAudioListProviderView.xaml.cs">
+      <DependentUpon>MyAudioListProviderView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ViewModels\AudioCurrentViewModel.cs" />
+    <Compile Include="ViewModels\AudioListItemViewModel.cs" />
+    <Compile Include="ViewModels\AudioListViewModel.cs" />
+    <Compile Include="Views\AudioCurrentView.xaml.cs">
+      <DependentUpon>AudioCurrentView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\AudioFilterView.xaml.cs">
+      <DependentUpon>AudioFilterView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\AudioItem\AudioItemActiveView.xaml.cs">
+      <DependentUpon>AudioItemActiveView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\AudioItem\AudioItemDefaultView.xaml.cs">
+      <DependentUpon>AudioItemDefaultView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\AudioItem\AudioListItemView.xaml.cs">
+      <DependentUpon>AudioListItemView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\AudioListView.xaml.cs">
+      <DependentUpon>AudioListView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\AudioPlayerView.xaml.cs">
+      <DependentUpon>AudioPlayerView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Providers\PopularProviderView.xaml.cs">
+      <DependentUpon>PopularProviderView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Providers\RecommendationsProviderView.xaml.cs">
+      <DependentUpon>RecommendationsProviderView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Providers\SearchProviderView.xaml.cs">
+      <DependentUpon>SearchProviderView.xaml</DependentUpon>
+    </Compile>
+    <Page Include="Views\AudioItem\AudioItemCommandsView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\AudioItem\AudioItemLyricsView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\AudioItem\AudioItemTitle.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Providers\AlbumsProviderItemView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Providers\AlbumsProviderView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Providers\FriensProviderItemView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Providers\FriensProviderView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Providers\GroupsProviderItemView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Providers\GroupsProviderView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Providers\MyAudioListProviderView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Providers\PopularProviderView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Providers\RecommendationsProviderView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Providers\SearchProviderView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Settings.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Rina.Infastructure\Rina.Infastructure.csproj">
+      <Project>{4fe8080c-6ed5-446a-8c44-0444a206617c}</Project>
+      <Name>Rina.Infastructure</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Rina.StyleResources\Rina.StyleResources.csproj">
+      <Project>{066da0fe-bcf5-4fd2-869b-c3235fb13fff}</Project>
+      <Name>Rina.StyleResources</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\VKapi\VkontakteAPI.csproj">
+      <Project>{428a37d0-a3b3-4bf4-8b98-417cf0cc2139}</Project>
+      <Name>VkontakteAPI</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Page Include="Views\AudioCurrentView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\AudioFilterView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\AudioItem\AudioItemActiveView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\AudioItem\AudioItemDefaultView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\AudioItem\AudioListItemView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\AudioListView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\AudioPlayerView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

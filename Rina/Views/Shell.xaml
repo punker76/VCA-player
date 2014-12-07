@@ -1,0 +1,21 @@
+﻿<Window x:Class="Rina.Shell"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:inf="clr-namespace:Rina.Infastructure;assembly=Rina.Infastructure"
+        xmlns:cal="http://www.codeplex.com/CompositeWPF"
+        xmlns:controls="clr-namespace:Rina.Controls"
+        Style="{StaticResource RinaWindow}"
+        Title="Shell"
+        MinWidth="700" MinHeight="500"
+        Width="700" Height="500">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="150"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <controls:AnimatedContentControl Grid.Column="0"
+                                         cal:RegionManager.RegionName="{x:Static inf:RegionNames.LeftMenuRegion}" />
+        <controls:AnimatedContentControl Grid.Column="1"
+                                         cal:RegionManager.RegionName="{x:Static inf:RegionNames.MainRegion}" />
+    </Grid>
+</Window>
